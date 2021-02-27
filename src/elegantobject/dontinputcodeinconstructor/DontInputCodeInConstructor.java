@@ -5,11 +5,28 @@ public class DontInputCodeInConstructor {
     public static void main(String[] args) {
         final String dollars = "10";
 
+        /**
+         * 장점: 객체 초기화 시, 최초 한 번 필드 값을 파싱하고 셋팅하기에 중복 파싱할 필요 없음
+         * 단점: 객체 필드 값을 사용하지 않는 경우에도 객체 초기화 시, 파싱해야하기 때문에 성능 최적화 불리
+         */
         InvalidCash invalidCash = new InvalidCash(dollars);
         System.out.println(invalidCash.getDollars()); // int value : 10
+        System.out.println(invalidCash.getDollars()); // int value : 10
 
+        /**
+         * 장점: 객체 초기화 시, 필드 값을 파싱하지 않기 때문에 객체의 성능 최적화에 유리
+         * 단점: 객체 초기화 시, 필드 값을 파싱되지 않기 때문에 값을 불러올 때마다 중복 파싱해야해서 성능 최적화에 불리
+         */
         ValidCash validCash = new ValidCash(dollars);
         System.out.println(validCash.getDollars().intValue()); // int value : 10
+        System.out.println(validCash.getDollars().intValue()); // int value : 10
+
+        /**
+         * 장점: (1) 객체 초기화 시, 필드 값을 파싱하지 않음 (2) 필드 값을 사용할 때도 최초 한 번만 파싱 으로 성능 최적화
+         */
+        CachedValidCash cachedValidCash = new CachedValidCash(dollars);
+        System.out.println(cachedValidCash.getDollars().intValue()); // int value : 10
+        System.out.println(cachedValidCash.getDollars().intValue()); // int value : 10
     }
 
     static class InvalidCash {
