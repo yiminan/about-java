@@ -8,6 +8,10 @@ public class DontInputCodeInConstructor {
         public InvalidCash(String dollars) {
             this.dollars = Integer.parseInt(dollars);
         }
+
+        public int getDollars() {
+            return dollars;
+        }
     }
 
     static class ValidCash {
