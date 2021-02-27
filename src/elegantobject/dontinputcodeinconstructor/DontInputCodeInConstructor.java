@@ -4,6 +4,7 @@ public class DontInputCodeInConstructor {
     static class InvalidCash {
         private final int dollars;
 
+        // 값이 바로 변환되어 셋팅되는 생성자
         public InvalidCash(String dollars) {
             this.dollars = Integer.parseInt(dollars);
         }
