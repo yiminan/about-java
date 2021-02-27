@@ -23,12 +23,14 @@ public class DontInputCodeInConstructor {
             this.dollars = dollars;
         }
 
-        interface Number {
-            int intValue();
         }
     }
 
-    static class StringAsInteger implements ValidCash.Number {
+    interface Number {
+        int intValue();
+    }
+
+    static class StringAsInteger implements Number {
 
         private final String source;
 
