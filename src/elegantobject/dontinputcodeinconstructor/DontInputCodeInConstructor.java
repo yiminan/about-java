@@ -13,7 +13,11 @@ public class DontInputCodeInConstructor {
         private final Number dollars;
 
         public ValidCash(String dollars) {
-            this.dollars = new StringAsInteger(dollars);
+            this(new StringAsInteger(dollars));
+        }
+
+        public ValidCash(Number dollars) {
+            this.dollars = dollars;
         }
 
         interface Number {
