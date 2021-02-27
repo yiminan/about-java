@@ -1,6 +1,17 @@
 package elegantobject.dontinputcodeinconstructor;
 
 public class DontInputCodeInConstructor {
+
+    public static void main(String[] args) {
+        final String dollars = "10";
+
+        InvalidCash invalidCash = new InvalidCash(dollars);
+        System.out.println(invalidCash.getDollars()); // int value : 10
+
+        ValidCash validCash = new ValidCash(dollars);
+        System.out.println(validCash.getDollars().intValue()); // int value : 10
+    }
+
     static class InvalidCash {
         private final int dollars;
 
