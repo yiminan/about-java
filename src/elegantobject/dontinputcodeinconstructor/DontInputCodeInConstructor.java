@@ -12,10 +12,13 @@ public class DontInputCodeInConstructor {
     static class ValidCash {
         private final Number dollars;
 
+        // 생성자는 값을 셋팅만 하고, 필요한 시점에 변환해서 가져와서 사용한다.
+        // 부 생성자
         public ValidCash(String dollars) {
             this(new StringAsInteger(dollars));
         }
 
+        // 주 생성자
         public ValidCash(Number dollars) {
             this.dollars = dollars;
         }
@@ -33,6 +36,7 @@ public class DontInputCodeInConstructor {
             this.source = source;
         }
 
+        // 필요한 시점에 source를 변환해서 사용한다.
         @Override
         public int intValue() {
             return Integer.parseInt(this.source);
