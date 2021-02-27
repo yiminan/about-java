@@ -28,6 +28,8 @@ public class DontInputCodeInConstructor {
             this.dollars = dollars;
         }
 
+        public Number getDollars() {
+            return dollars;
         }
     }
 
