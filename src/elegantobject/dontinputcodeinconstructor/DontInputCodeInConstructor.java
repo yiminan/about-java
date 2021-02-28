@@ -15,6 +15,8 @@ import java.util.List;
  * ex) App app = new App(new Data(), new Screen());
  * app.run();
  * App은 App이 해야할 고유의 run()만 수행하고, 내부 필드 생성은 외부에서 파라미터로 전달됩니다.
+ *
+ * "객체를 인스턴스화하는 동안에는 객체를 만드는 일 이외에는 어떤 일도 수행하지 않습니다."
  */
 public class DontInputCodeInConstructor {
 
