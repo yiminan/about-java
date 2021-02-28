@@ -1,5 +1,21 @@
 package elegantobject.dontinputcodeinconstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 'Don't touch the arguments'
+ * 객체의 초기화에는 코드가 없어야합니다. 여기서는 생성자를 이용한 초기화이고, 'InvalidCash'는 코드가 있는 경우입니다.
+ * 대신 해당 값의 로직을 수행하기 위해서 캡슐화를 진행해야합니다. 'StringAsInteger'가 캡슐화된 class 입니다.
+ * 진정한 객체지향에서 인스턴스화(instantiation)은 더 작은 객체들을 조합(compose)해서 더 큰 객체를 만드는 것을 의미합니다.
+ * 객체의 초기화에 코드가 존재하지 않으면 성능이 최적화되고 객체의 생성 속도가 빨라집니다.
+ * 즉, 필요하지 않은 파싱 시간을 아끼게 되어서 성능이 향상되는 것입니다.
+ * 하지만 필요한 시점에 파싱을 하게되면 오히려 계속 파싱해야하는 경우가 생깁니다. 그런 경우에는 캐시를 구현해서 최초 한 번만 파싱하도록 합니다.
+ * 올바르게 설계된 객체지향 소프트웨어를 살펴보면 다음과 같습니다.
+ * ex) App app = new App(new Data(), new Screen());
+ * app.run();
+ * App은 App이 해야할 고유의 run()만 수행하고, 내부 필드 생성은 외부에서 파라미터로 전달됩니다.
+ */
 public class DontInputCodeInConstructor {
 
     public static void main(String[] args) {
