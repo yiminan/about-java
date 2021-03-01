@@ -2,7 +2,7 @@ package elegantobject.minimalizecapsulation;
 
 import java.util.Objects;
 
-public class MinimalizeCapsulation {
+public class MinimizeCapitulation {
 
     public static void main(String[] args) {
         int dollars = 10;
