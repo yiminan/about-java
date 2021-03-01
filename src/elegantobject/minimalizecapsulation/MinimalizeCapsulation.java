@@ -3,6 +3,18 @@ package elegantobject.minimalizecapsulation;
 import java.util.Objects;
 
 public class MinimalizeCapsulation {
+
+    public static void main(String[] args) {
+        int dollars = 10;
+        int cents = 93;
+        String currency = "USD";
+        Cash cash1 = new Cash(dollars, cents, currency);
+        Cash cash2 = new Cash(dollars, cents, currency);
+
+        System.out.println(cash1 == cash2);
+        System.out.println(cash1.equals(cash2));
+    }
+
     static class Cash {
         private final Integer dollars;
         private final Integer cents;
