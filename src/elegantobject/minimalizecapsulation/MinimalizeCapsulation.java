@@ -11,8 +11,8 @@ public class MinimalizeCapsulation {
         Cash cash1 = new Cash(dollars, cents, currency);
         Cash cash2 = new Cash(dollars, cents, currency);
 
-        System.out.println(cash1 == cash2);
-        System.out.println(cash1.equals(cash2));
+        System.out.println(cash1 == cash2);// false
+        System.out.println(cash1.equals(cash2));// true
     }
 
     static class Cash {
