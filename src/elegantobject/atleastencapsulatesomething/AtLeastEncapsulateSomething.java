@@ -15,4 +15,27 @@ public class AtLeastEncapsulateSomething {
 
         long longValue();
     }
+
+    static class MilliSecond implements Number<MilliSecond> {
+        private final long digits;
+
+        public MilliSecond(long digits) {
+            this.digits = digits;
+        }
+
+        @Override
+        public MilliSecond divide(long digits) {
+            return new MilliSecond(this.digits / digits);
+        }
+
+        @Override
+        public MilliSecond plus(long digits) {
+            return new MilliSecond(this.digits + digits);
+        }
+
+        @Override
+        public long longValue() {
+            return digits;
+        }
+    }
 }
