@@ -2,6 +2,13 @@ package elegantobject.atleastencapsulatesomething;
 
 public class AtLeastEncapsulateSomething {
 
+    public static void main(String[] args) {
+        WrongYear wrongYear = new WrongYear();
+        ProperYear properYear = new ProperYear(new MilliSecond(System.currentTimeMillis()));
+        System.out.println(wrongYear.read());
+        System.out.println(properYear.read());
+    }
+
     static class WrongYear {
         public long read() {
             return System.currentTimeMillis() / (1000L * 60L * 60L * 24L * 365L) + 1970L;
