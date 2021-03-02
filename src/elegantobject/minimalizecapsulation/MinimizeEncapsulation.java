@@ -16,7 +16,7 @@ import java.util.Objects;
  * 될 수 있으면 작은 객체로 구성하는 것이 올바른 객체의 구성입니다.
  * Java의 설계적 결함을 해결하기 위해서 '=='연상자를 사용하지 말고, 항상 'equals()'메서드를 오버라이드해서 사용해야합니다.
  */
-public class MinimizeCapitulation {
+class MinimizeEncapsulation {
 
     public static void main(String[] args) {
         int dollars = 10;
@@ -29,7 +29,7 @@ public class MinimizeCapitulation {
         System.out.println(cash1.equals(cash2));// true
     }
 
-    static class Cash {
+    private static class Cash {
         private final Integer dollars;
         private final Integer cents;
         private final String currency;
