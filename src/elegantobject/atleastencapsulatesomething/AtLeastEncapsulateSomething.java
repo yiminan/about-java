@@ -8,7 +8,7 @@ package elegantobject.atleastencapsulatesomething;
  * OOP에서 객체는 다른 객체들과 관계가 정의되어서 객체의 존재 의미가 인정되어야합니다.
  * 다른 객체와의 관계가 정의되지 않은 객체는 OOP에서 객체라고 생각할 수 없습니다.
  */
-public class AtLeastEncapsulateSomething {
+class AtLeastEncapsulateSomething {
 
     public static void main(String[] args) {
         WrongYear wrongYear = new WrongYear();
@@ -17,13 +17,13 @@ public class AtLeastEncapsulateSomething {
         System.out.println(properYear.read());
     }
 
-    static class WrongYear {
+    private static class WrongYear {
         public long read() {
             return System.currentTimeMillis() / (1000L * 60L * 60L * 24L * 365L) + 1970L;
         }
     }
 
-    interface Number<T> {
+    private interface Number<T> {
         T divide(long digits);
 
         T plus(long digits);
@@ -31,7 +31,7 @@ public class AtLeastEncapsulateSomething {
         long longValue();
     }
 
-    static class MilliSecond implements Number<MilliSecond> {
+    private static class MilliSecond implements Number<MilliSecond> {
         private final long digits;
 
         public MilliSecond(long digits) {
@@ -54,7 +54,7 @@ public class AtLeastEncapsulateSomething {
         }
     }
 
-    static class ProperYear {
+    private static class ProperYear {
         private static final long ONE_YEAR_MILLI_SEC = 1000L * 60L * 60L * 24L * 365L;
         private static final long BASE_YEAR = 1970L;
 
