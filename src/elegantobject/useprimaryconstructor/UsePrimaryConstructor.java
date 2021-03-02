@@ -8,7 +8,7 @@ package elegantobject.useprimaryconstructor;
  * 객체의 동일한 행위에 대한 메서드를 많이 만들게 되면 '단일 책임 원칙'에 위배됩니다.
  * 부 생성자를 사용해서 오버라이딩이 가능하게 하고, 주 생성자를 사용하면 '단일 책임 원칙'를 지킬 수 있습니다.
  */
-public class UsePrimaryConstructor {
+class UsePrimaryConstructor {
 
     public static void main(String[] args) {
         Cash secondaryCash1 = new Cash(1.0F);
@@ -16,7 +16,7 @@ public class UsePrimaryConstructor {
         Cash primaryCash = new Cash(1L);
     }
 
-    static class Cash {
+    private static class Cash {
         private final int dollars;
 
         // 부 생성자
