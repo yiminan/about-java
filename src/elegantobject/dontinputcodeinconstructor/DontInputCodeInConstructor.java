@@ -18,7 +18,7 @@ import java.util.List;
  *
  * "객체를 인스턴스화하는 동안에는 객체를 만드는 일 이외에는 어떤 일도 수행하지 않습니다."
  */
-public class DontInputCodeInConstructor {
+class DontInputCodeInConstructor {
 
     public static void main(String[] args) {
         final String dollars = "10";
@@ -47,7 +47,7 @@ public class DontInputCodeInConstructor {
         System.out.println(cachedValidCash.getDollars().intValue()); // int value : 10
     }
 
-    static class InvalidCash {
+    private static class InvalidCash {
         private final int dollars;
 
         // 값이 바로 변환되어 셋팅되는 생성자
@@ -60,7 +60,7 @@ public class DontInputCodeInConstructor {
         }
     }
 
-    static class ValidCash {
+    private static class ValidCash {
         private final Number dollars;
 
         // 생성자는 값을 셋팅만 하고, 필요한 시점에 변환해서 가져와서 사용한다.
@@ -79,7 +79,7 @@ public class DontInputCodeInConstructor {
         }
     }
 
-    static class CachedValidCash {
+    private static class CachedValidCash {
         private final Number dollars;
 
         // 생성자는 값을 셋팅만 하고, 필요한 시점에 변환해서 가져와서 사용한다.
@@ -98,11 +98,11 @@ public class DontInputCodeInConstructor {
         }
     }
 
-    interface Number {
+    private interface Number {
         int intValue();
     }
 
-    static class StringAsInteger implements Number {
+    private static class StringAsInteger implements Number {
 
         private final String source;
 
@@ -117,7 +117,7 @@ public class DontInputCodeInConstructor {
         }
     }
 
-    static class CachedNumber implements Number {
+    private static class CachedNumber implements Number {
 
         private final Number origin;
         private final List<Integer> cached = new ArrayList<>(1);
