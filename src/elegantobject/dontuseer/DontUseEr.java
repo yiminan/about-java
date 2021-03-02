@@ -11,7 +11,7 @@ package elegantobject.dontuseer;
  * 객체는 캡슐화된 데이터의 대표자입니다. 스스로 상태를 가지고, 행위가 가능해야합니다.
  * PrimerFinder(X) => PrimerNumber(O)
  */
-public class DontUseEr {
+class DontUseEr {
 
     public static void main(String[] args) {
         final int dollar = 10;
@@ -23,7 +23,7 @@ public class DontUseEr {
         cash.usd();// $ 10
     }
 
-    static class CashFormatter {
+    private static class CashFormatter {
         private final int dollars;
 
         CashFormatter(int dlr) {
@@ -35,7 +35,7 @@ public class DontUseEr {
         }
     }
 
-    static class Cash {
+    private static class Cash {
         private final int dollars;
 
         Cash(int dlr) {
