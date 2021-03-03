@@ -1,4 +1,4 @@
-package elegantobject.atleastencapsulatesomething;
+package elegantobject.education.atleastencapsulatesomething;
 
 /**
  * "객체는 최소한 무언가를 캡슐화해야합니다."
