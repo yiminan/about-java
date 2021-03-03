@@ -1,6 +1,12 @@
 package elegantobject.usealwaysinterface;
 
 class UseAlwaysInterface {
+    public static void main(String[] args) {
+        Cash cash = new DefaultCash(10);
+        Employee employee = new Employee(cash);
+        System.out.println(employee.getSalary());
+    }
+
     private interface Cash {
         Cash multiply(int factor);
         int getCash();
