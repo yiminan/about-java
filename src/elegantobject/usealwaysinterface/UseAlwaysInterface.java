@@ -8,6 +8,8 @@ package elegantobject.usealwaysinterface;
  * 강한 결합도는 유지보수를 어렵게 하기 때문에 객체의 결합도를 낮추는 인터페이스를 사용해야합니다.
  * 그렇다고 인터페이스와 결합이 사라지는건 아니기 때문에 결합도를 낮추는 것이지 없애는 것은 아닙니다.
  * 즉, 인터페이스는 "느슨한 결합(Loose coupling)"을 구현하는 것입니다.
+ * 결합이 나쁜 것이라고만 느낄 수 있지만, 꼭 그렇지 않습니다. 유지보수성이 떨어지는 것이지 시스템 안정성은 높여줄 수 있습니다.
+ * 개발자가 구현을 하면서 적절하게 절충하는 것이 중요하다고 생각합니다.
  */
 class UseAlwaysInterface {
     public static void main(String[] args) {
