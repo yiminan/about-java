@@ -1,4 +1,4 @@
-package elegantobject.dontuseer;
+package elegantobject.birth.dontuseer;
 
 /**
  * 클래스는 객체의 팩토리입니다.

@@ -1,4 +1,4 @@
-package elegantobject.useprimaryconstructor;
+package elegantobject.birth.useprimaryconstructor;
 
 /**
  * 생성자 하나를 주 생성자로 사용합니다.
