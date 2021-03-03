@@ -23,4 +23,17 @@ class UseAlwaysInterface {
             return this.dollars;
         }
     }
+
+    private static class Employee {
+        private static final int FULL_TIME_WEIGHT = 2;
+        private final Cash salary;
+
+        public Employee(Cash salary) {
+            this.salary = salary;
+        }
+
+        public int getSalary() {
+            return salary.multiply(FULL_TIME_WEIGHT).getCash();
+        }
+    }
 }
