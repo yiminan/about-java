@@ -1,6 +1,6 @@
 package elegantobject.education.makemethodnamecarefully;
 
-public class MakeMethodNameCarefully {
+class MakeMethodNameCarefully {
     private static class Employee {
     }
 }
