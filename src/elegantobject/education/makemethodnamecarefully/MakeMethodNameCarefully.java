@@ -23,7 +23,7 @@ class MakeMethodNameCarefully {
     /**
      * Manipulator Method
      * 반환 타입 : void
-     * 이름 : 동사
+     * 이름 : 동사 (동사 or 부사 + 동사)
      */
     private interface ManipulatorMethod {
         void save(Employee employee);
