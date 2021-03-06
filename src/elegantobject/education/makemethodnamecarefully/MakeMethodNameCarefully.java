@@ -19,6 +19,12 @@ class MakeMethodNameCarefully {
 
     private static class Employee {
     }
+
+    /**
+     * Manipulator Method
+     * 반환 타입 : void
+     * 이름 : 동사
+     */
     private interface ManipulatorMethod {
     }
 }
