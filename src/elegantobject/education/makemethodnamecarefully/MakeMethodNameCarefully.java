@@ -26,5 +26,12 @@ class MakeMethodNameCarefully {
      * 이름 : 동사
      */
     private interface ManipulatorMethod {
+        void save(Employee employee);
+
+        void put(String key, String value);
+
+        void remove(Employee employee);
+
+        void quicklyPrint(int id);
     }
 }
