@@ -14,7 +14,7 @@ class MakeMethodNameCarefully {
 
         Employee employee(int id);
 
-        String parseCell(int x, int y);
+        String parsedCell(int x, int y);
     }
 
     private static class Employee {
