@@ -46,4 +46,23 @@ class MakeMethodNameCarefully {
 
         float speed(float value);
     }
+
+    /**
+     * Separated class for Builder & Manipulator Method
+     * 잘못된 빌더 + 조정자 역할 메서드를 분리한 클래스
+     */
+    private static class PutOperation {
+        private String content;
+
+        // boolean save(Employee employee)의 조정자로 분리된 메서드
+        void save(String content) {
+            // 값에 대한 조작
+            this.content = content;
+        }
+
+        // boolean save(Employee employee)의 빌더로 분리된 메서드
+        boolean success() {
+            return content != null;
+        }
+    }
 }
