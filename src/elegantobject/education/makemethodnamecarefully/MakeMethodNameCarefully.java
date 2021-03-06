@@ -7,7 +7,7 @@ class MakeMethodNameCarefully {
      * 반환 타입 : void가 될 수 없다
      * 이름 : 명사
      */
-    interface BuilderMethod {
+    private interface BuilderMethod {
         int pow(int base, int power);
 
         float speed();
