@@ -2,6 +2,12 @@ package elegantobject.education.makemethodnamecarefully;
 
 class MakeMethodNameCarefully {
 
+    public static void main(String[] args) {
+        PutOperation putOperation = new PutOperation();
+        putOperation.save("content"); // 조정자
+        System.out.println(putOperation.success()); // 빌더
+    }
+
     /**
      * Builder Method
      * 반환 타입 : void가 될 수 없다
