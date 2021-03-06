@@ -34,4 +34,16 @@ class MakeMethodNameCarefully {
 
         void quicklyPrint(int id);
     }
+
+    /**
+     * Builder & Manipulator Method
+     * 잘못된 빌더 + 조정자 역할 메서드
+     */
+    private interface WrongBuilderManipulatorMethod {
+        int save(Employee employee);
+
+        boolean put(String key, String value);
+
+        float speed(float value);
+    }
 }
