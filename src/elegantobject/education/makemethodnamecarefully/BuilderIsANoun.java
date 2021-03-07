@@ -13,4 +13,15 @@ public class BuilderIsANoun {
 
         int add(int x, int y);
     }
+
+    private interface GoodBuilder {
+        // InputStream load(URL url); =변환=>
+        InputStream stream(URL url);
+
+        // String read(File file); =변환=>
+        String content(File file);
+
+        // int add(int x, int y); =변환=>
+        int sum(int x, int y);
+    }
 }
