@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 
-public class BuilderIsANoun {
+class BuilderIsANoun {
 
     /**
      * 잘못된 빌더 이름 예시입니다.
