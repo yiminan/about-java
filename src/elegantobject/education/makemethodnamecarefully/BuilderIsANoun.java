@@ -4,6 +4,13 @@ import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 
+/**
+ * "빌더는 명사다"
+ * 메서드의 이름을 정할 때,
+ * 객체에게 무엇을 '만들어라(build)' 요청하는 것은 협력자에 대한 존중이 없는 예의에 없는 방식입니다.
+ * 무엇을 만들어야 하는 지만 요청하고, 만드는 방법은 객체 스스로 결정하도록 해야 합니다.
+ * 즉, 객체에게 어떤 일을 해야 하는 지를 직접적으로 이야기하지 않습니다.
+ */
 class BuilderIsANoun {
 
     /**
