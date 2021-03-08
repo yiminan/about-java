@@ -2,6 +2,13 @@ package elegantobject.education.makemethodnamecarefully;
 
 import java.io.IOException;
 import java.io.InputStream;
+
+/***
+ * "빌더와 조정자를 혼합해서 사용하는 방법"
+ * 잘못 사용된 빌더 + 조정자 메서드를 객체를 생성해서 본연의 역할을 하는 빌더, 조정자로 분리합니다.
+ * OOP의 전체 목적은 개념을 고립시켜 복잡성을 낮추는 것입니다.
+ * 고립시킨 개념이 작을수록 이해하고 유지보수하기도 더 쉬워집니다.
+ */
 class RefactorMethodForBuilderAndManipulator {
 
     /**
