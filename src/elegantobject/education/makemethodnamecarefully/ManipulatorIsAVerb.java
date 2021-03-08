@@ -41,4 +41,29 @@ class ManipulatorIsAVerb {
             this.name = name;
         }
     }
+
+    /**
+     * 빌더 패턴 예시입니다.
+     * 빌더 패턴은 빌더의 형태를 객체 생성에 필요한 부분을 사용하는 것입니다.
+     */
+    private static class Book {
+        private String author;
+        private String title;
+        private int page;
+
+        private Book withAuthor(String author) {
+            this.author = author;
+            return this;
+        }
+
+        private Book withTitle(String title) {
+            this.title = title;
+            return this;
+        }
+
+        private Book withPage(int page) {
+            this.page = page;
+            return this;
+        }
+    }
 }
