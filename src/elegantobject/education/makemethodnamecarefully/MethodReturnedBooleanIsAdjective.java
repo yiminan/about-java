@@ -13,6 +13,9 @@ class MethodReturnedBooleanIsAdjective {
         boolean exists();
     }
 
+    /**
+     * 좋은 boolean method 예시
+     */
     private interface GoodBooleanMethod {
 
         /**
