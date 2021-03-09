@@ -2,6 +2,10 @@ package elegantobject.education.makemethodnamecarefully;
 
 class MethodReturnedBooleanIsAdjective {
 
+    /**
+     * 잘못 사용된 boolean method 예시
+     * 자주 사용되고 있지만 잘못 네이밍된 메서드 이름
+     */
     private interface WrongBooleanMethod {
 
         boolean equals(Object obj);
