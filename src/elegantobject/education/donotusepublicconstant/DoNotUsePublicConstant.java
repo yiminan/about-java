@@ -27,4 +27,31 @@ class DoNotUsePublicConstant {
      * <p>
      * 여기서 부터는 객체를 이용해서 잘 구현된 퍼블릭 상수의 리팩토링 예시입니다.
      */
+
+    private static class GoodPrivateConstant {
+        private static final String EOL_FORMAT = "%s" + "\r\n";
+
+        private final String origin;
+
+        GoodPrivateConstant(String origin) {
+            this.origin = origin;
+        }
+
+        @Override
+        public String toString() {
+            return String.format(EOL_FORMAT, origin);
+        }
+    }
+
+    private static class GoodExampleCar {
+        void print() {
+            System.out.println(new GoodPrivateConstant("This is car."));
+        }
+    }
+
+    private static class GoodExampleBus {
+        void print() {
+            System.out.println(new GoodPrivateConstant("This is bus."));
+        }
+    }
 }
