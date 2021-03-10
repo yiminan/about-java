@@ -1,5 +1,20 @@
 package elegantobject.education.donotusepublicconstant;
 
+/**
+ * "퍼블릭 상수(Public Constant)를 사용하지 않습니다."
+ * 객체들은 내부의 어떤 것도 공유해서는 안됩니다. 독립적이고, 닫혀(cloded)있어야 합니다.
+ * 'public static final' 프로퍼티는 객체 사이에 데이터를 공유하기 좋습니다.
+ * 결국 퍼블릭 상수는 다른 객체와 내부 내용을 공유하는 용도로 사용되어지게 됩니다.
+ * 퍼블릭 상수를 공유하면서 코드 중복이라는 문제는 잡았지만,
+ * 결합도(coupling)이 높아지고, 응집도(cohesion)이 낮아지게 됩니다.
+ * OOP와 역행하는 방향입니다.
+ * <p>
+ * 애초에 퍼블릭 상수(Public Constant)를 만들면 안됩니다.
+ * 해결책은 상수라는 데이터를 공유하지 말고, 객체를 만들어서 기능을 공유해야합니다.
+ * 기능을 공유하는 객체는 계약(contract)를 통해 추가된 것이며,
+ * 계약에 따라 행동하며 내부에 계약의 의미를 캡슐화합니다.
+ * 결합된 계약은 언제는 분리가 가능하기에 유지보수성이 높습니다.
+ */
 class DoNotUsePublicConstant {
 
     public static void main(String[] args) {
