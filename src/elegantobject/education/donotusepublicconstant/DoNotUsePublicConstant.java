@@ -58,6 +58,7 @@ class DoNotUsePublicConstant {
      */
 
     private static class GoodPrivateConstant {
+        // 다음과 같이 내부 프라이빗 상수를 선언하고, 객체가 랩핑해서 상수를 대체하는 기능으로 사용합니다.
         private static final String EOL_FORMAT = "%s" + "\r\n";
 
         private final String origin;
