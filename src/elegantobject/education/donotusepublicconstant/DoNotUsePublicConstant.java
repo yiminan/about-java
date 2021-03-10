@@ -2,6 +2,20 @@ package elegantobject.education.donotusepublicconstant;
 
 class DoNotUsePublicConstant {
 
+    public static void main(String[] args) {
+        // 잘못 구현된 퍼블릭 상수를 사용한 객체의 메서드 호출
+        WrongExampleBus wrongExampleBus = new WrongExampleBus();
+        WrongExampleCar wrongExampleCar = new WrongExampleCar();
+        wrongExampleBus.print();// This is bus.
+        wrongExampleCar.print();// This is car.
+        
+        // 잘 구현된 퍼블릭 상수를 사용한 객체의 메서드 호출
+        GoodExampleBus goodExampleBus = new GoodExampleBus();
+        GoodExampleCar goodExampleCar = new GoodExampleCar();
+        goodExampleBus.print();// This is bus.
+        goodExampleCar.print();// This is car.
+    }
+
     /**
      * 이 퍼블릭 상수를 사용하는 모든 객체의 결합도는 높아지고, 응집도는 낮아집니다.
      */
