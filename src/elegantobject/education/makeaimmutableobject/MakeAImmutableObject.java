@@ -17,4 +17,21 @@ class MakeAImmutableObject {
             return "$" + dollars;
         }
     }
+
+    private static class ImmutableCash {
+        private final int dollars;
+
+        public ImmutableCash(int dollars) {
+            this.dollars = dollars;
+        }
+
+        public ImmutableCash multiply(int factor) {
+            return new ImmutableCash(this.dollars * factor);
+        }
+
+        @Override
+        public String toString() {
+            return "$" + dollars;
+        }
+    }
 }
