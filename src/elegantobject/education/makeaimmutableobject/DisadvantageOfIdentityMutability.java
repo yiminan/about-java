@@ -3,6 +3,14 @@ package elegantobject.education.makeaimmutableobject;
 import java.util.Objects;
 
 class DisadvantageOfIdentityMutability {
+
+    public static void main(String[] args) {
+        MutableCash five = new MutableCash(5);
+        MutableCash ten = new MutableCash(10);
+        five.multiply(2);
+        System.out.println(five.equals(ten));
+    }
+
     /**
      * 가변 클래스 예시
      */
