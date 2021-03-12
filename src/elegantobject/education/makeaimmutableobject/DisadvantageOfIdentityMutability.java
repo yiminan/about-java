@@ -9,6 +9,10 @@ class DisadvantageOfIdentityMutability {
         MutableCash ten = new MutableCash(10);
         five.multiply(2);
         System.out.println(five.equals(ten));
+
+        ImmutableCash _five = new ImmutableCash(5);
+        ImmutableCash _ten = _five.multiply(2);
+        System.out.println(_five.equals(_ten));
     }
 
     /**
