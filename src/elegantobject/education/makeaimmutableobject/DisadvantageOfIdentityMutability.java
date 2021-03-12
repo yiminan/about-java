@@ -18,5 +18,18 @@ class DisadvantageOfIdentityMutability {
         public String toString() {
             return "$" + dollars;
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            MutableCash that = (MutableCash) o;
+            return dollars == that.dollars;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(dollars);
+        }
     }
 }
