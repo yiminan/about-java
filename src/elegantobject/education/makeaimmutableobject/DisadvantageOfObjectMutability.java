@@ -2,7 +2,7 @@ package elegantobject.education.makeaimmutableobject;
 
 import java.util.Objects;
 
-class DisadvantageOfIdentityMutability {
+class DisadvantageOfObjectMutability {
 
     public static void main(String[] args) {
         MutableCash five = new MutableCash(5);
