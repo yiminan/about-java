@@ -2,6 +2,15 @@ package elegantobject.education.makeaimmutableobject;
 
 import java.util.Objects;
 
+/**
+ * "가변성이 없는 불변 객체"
+ * 불변 객체에는 객체의 가변성 문제가 없습니다.
+ * 가변 객체는 내용물이 변경될 수 있어서 비즈니스 로직에서 변경되면,
+ * 객체 사용시점에 객체의 내용물을 보장할 수 없습니다.
+ * <p>
+ * 불변객체를 사용하면, 객체 내용물에 대한 가변성을 애초에 없애버립니다.
+ * 결국, 객체의 내용물을 보장받을 수 있는 이점을 가집니다.
+ */
 class DisadvantageOfObjectMutability {
 
     public static void main(String[] args) {
