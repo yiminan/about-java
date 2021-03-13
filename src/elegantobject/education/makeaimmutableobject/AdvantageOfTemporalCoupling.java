@@ -26,6 +26,10 @@ class AdvantageOfTemporalCoupling {
         System.out.println(immutableObjectCash);//$29.95
     }
 
+    /**
+     * 시간적 결합도를 가진 JavaBeans 패턴 클래스
+     * 절차지향적
+     */
     private static class JavaBeansPatternCash {
         private int dollars;
         private int cents;
@@ -44,6 +48,10 @@ class AdvantageOfTemporalCoupling {
         }
     }
 
+    /**
+     * 시간적 결합도를 제거한 ImmutableObject 클래스
+     * OOP
+     */
     private static class ImmutableObjectCash {
         private final int dollars;
         private final int cents;
