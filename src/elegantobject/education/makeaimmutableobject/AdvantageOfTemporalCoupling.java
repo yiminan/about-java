@@ -1,5 +1,16 @@
 package elegantobject.education.makeaimmutableobject;
 
+/**
+ * "불변객체를 사용하여 시간적 결합(Temporal Coupling)을 제거합니다."
+ * <p>
+ * JavaBeans 패턴을 사용하면, 가변 객체를 인스턴스화(Instantiation)하고 내용을 초기화(Initialization) 합니다.
+ * 가변 객체가 인스턴스화 되었을 때는 내부 프로퍼티가 NULL로 초기화되고, setter를 이용해서 프로퍼티 값을 초기화합니다.
+ * 절차에 따라서 객체는 코드라인의 제일 하단에서 최종 객체가 정해지게 됩니다. 결국 절차지향이기 때문에 OOP라고 할 수 없습니다.
+ * 결국 프로그래머는 유지보수 과정에서 코드의 절차적이고 시간적인 결합을 고려해야하는 단점을 가지게 됩니다.
+ * <p>
+ * Immutable Object를 사용하면, 인스턴스화 & 내용의 초기화를 항상 동시에 진행합니다.
+ * 불변 객체를 이용하면 견고한 객체를 사용하여 중간에 객체가 변경될 수 있는 여지를 없앨 수 있습니다.
+ */
 class AdvantageOfTemporalCoupling {
 
     public static void main(String[] args) {
