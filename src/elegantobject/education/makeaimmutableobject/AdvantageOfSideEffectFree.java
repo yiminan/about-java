@@ -2,6 +2,12 @@ package elegantobject.education.makeaimmutableobject;
 
 class AdvantageOfSideEffectFree {
 
+    public static void main(String[] args) {
+        MutableObjectCash five = new MutableObjectCash(5);
+        printDoubleDollars(five);// $10 // 메서드 내부에서 객체를 사용하고 나면 다음 객체 사용시 문제가 될 수 있다.
+        System.out.println(five);// $5를 생각했지만 $10가 나오는 사이드 이팩트가 발생한다.
+    }
+
     private static class MutableObjectCash {
         private int dollars;
 
