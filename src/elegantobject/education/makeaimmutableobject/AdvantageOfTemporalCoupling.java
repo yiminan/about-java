@@ -19,4 +19,19 @@ class AdvantageOfTemporalCoupling {
             return String.format("$%d.%d", dollars, cents);
         }
     }
+
+    private static class ImmutableObjectCash {
+        private final int dollars;
+        private final int cents;
+
+        public ImmutableObjectCash(int dollars, int cents) {
+            this.dollars = dollars;
+            this.cents = cents;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("$%d.%d", dollars, cents);
+        }
+    }
 }
