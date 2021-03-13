@@ -18,4 +18,9 @@ class AdvantageOfSideEffectFree {
             return "$" + dollars;
         }
     }
+
+    private static void printDoubleDollars(MutableObjectCash cash) {
+        cash.multiply(2); // Cash를 출력하기 위해서 Cash를 변경 이후에 사이드 이팩트가 날 수 있다.
+        System.out.println(cash);
+    }
 }
