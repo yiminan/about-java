@@ -2,6 +2,16 @@ package elegantobject.education.makeaimmutableobject;
 
 class DisadvantageOfNullReference {
 
+    public static void main(String[] args) {
+        User user1 = new User(1);
+        user1.setAge(new Age(20));
+        System.out.println(user1.age().value());
+
+        User user2 = new User(1);
+        // User의 Age를 초기화하지 않았다.
+        System.out.println(user2.age().value());// NullPointerException 발생
+    }
+
     private static class User {
         private final int id;
         private Age age;
