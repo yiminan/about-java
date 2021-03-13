@@ -14,11 +14,11 @@ class AdvantageOfFailureAtomicity {
         private int cents;
 
         public void multiply(int factor) {
-            this.dollars *= factor;
+            this.dollars *= factor;// 부분 데이터 수정
             if (true) {
                 throw new RuntimeException("객체의 연산 도중 예외 발생");
             }
-            this.cents *= factor;
+            this.cents *= factor;// 예외 발생으로 인해 수정 누락
         }
     }
 
@@ -35,7 +35,7 @@ class AdvantageOfFailureAtomicity {
             if (true) {
                 throw new RuntimeException("객체의 연산 도중 예외 발생");
             }
-            return new ImmutableCash(this.dollars * factor, this.cents * factor);
+            return new ImmutableCash(this.dollars * factor, this.cents * factor);// 원자성 보장
         }
     }
 }
