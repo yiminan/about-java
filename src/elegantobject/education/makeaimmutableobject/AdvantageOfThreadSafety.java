@@ -36,4 +36,23 @@ class AdvantageOfThreadSafety {
             return String.format("$%d.%d", dollars, cents);
         }
     }
+
+    private static class ImmutableObjectCash {
+        private final int dollars;
+        private final int cents;
+
+        public ImmutableObjectCash(int dollars, int cents) {
+            this.dollars = dollars;
+            this.cents = cents;
+        }
+
+        public ImmutableObjectCash multiply(int factor) {
+            return new ImmutableObjectCash(this.dollars * factor, this.cents * factor);
+        }
+
+        @Override
+        public String toString() {
+            return String.format("$%d.%d", dollars, cents);
+        }
+    }
 }
