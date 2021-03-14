@@ -1,13 +1,42 @@
 package elegantobject.education.makeaimmutableobject;
 
+import java.util.concurrent.Callable;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.stream.IntStream;
+
 class AdvantageOfThreadSafety {
+    private static final int TEST_SAMPLE_COUNT = 3;
+
+    public static void main(String[] args) {
+        executeNonThreadSafetyCase();
+        executeThreadSafetyCase();
+    }
+
     private static void executeNonThreadSafetyCase() {
-        final NonThreadSafetyCash nonThreadSafetyCash = new NonThreadSafetyCash(10,45);
+        final NonThreadSafetyCash nonThreadSafetyCash = new NonThreadSafetyCash(10, 45);
         CountDownLatch start = new CountDownLatch(1);
         Callable<Object> script = () -> {
             start.await();
             nonThreadSafetyCash.multiply(2);
-            System.out.println(nonThreadSafetyCash);
+            System.out.println("NonThreadSafety " + nonThreadSafetyCash);
+            return null;
+        };
+        final ExecutorService svc = Executors.newCachedThreadPool();
+        IntStream.rangeClosed(1, TEST_SAMPLE_COUNT).forEach(i -> svc.submit(script));
+        start.countDown();
+
+        svc.shutdown();
+    }
+
+    private static void executeThreadSafetyCase() {
+        final ImmutableObjectCash tenFortyFive = new ImmutableObjectCash(10, 45);
+        CountDownLatch start = new CountDownLatch(1);
+        Callable<Object> script = () -> {
+            start.await();
+            ImmutableObjectCash twentyNinety = tenFortyFive.multiply(2);
+            System.out.println("ThreadSafety " + twentyNinety);
             return null;
         };
         final ExecutorService svc = Executors.newCachedThreadPool();
