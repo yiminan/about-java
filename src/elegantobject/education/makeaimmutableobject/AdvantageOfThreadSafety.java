@@ -11,6 +11,7 @@ class AdvantageOfThreadSafety {
 
     public static void main(String[] args) {
         executeNonThreadSafetyCase();
+        executeNonThreadSafetyWithSyncCase();
         executeThreadSafetyCase();
     }
 
@@ -21,6 +22,22 @@ class AdvantageOfThreadSafety {
             start.await();
             nonThreadSafetyCash.multiply(2);
             System.out.println("NonThreadSafety " + nonThreadSafetyCash);
+            return null;
+        };
+        final ExecutorService svc = Executors.newCachedThreadPool();
+        IntStream.rangeClosed(1, TEST_SAMPLE_COUNT).forEach(i -> svc.submit(script));
+        start.countDown();
+
+        svc.shutdown();
+    }
+
+    private static void executeNonThreadSafetyWithSyncCase() {
+        final NonThreadSafetyCashWithSync nonThreadSafetyCashWithSync = new NonThreadSafetyCashWithSync(10, 45);
+        CountDownLatch start = new CountDownLatch(1);
+        Callable<Object> script = () -> {
+            start.await();
+            nonThreadSafetyCashWithSync.multiply(2);
+            System.out.println("NonThreadSafetyWithSync " + nonThreadSafetyCashWithSync);
             return null;
         };
         final ExecutorService svc = Executors.newCachedThreadPool();
@@ -58,6 +75,28 @@ class AdvantageOfThreadSafety {
         public void multiply(int factor) {
             this.dollars *= factor;
             this.cents *= factor;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("$%d.%d", dollars, cents);
+        }
+    }
+
+    private static class NonThreadSafetyCashWithSync {
+        private int dollars;
+        private int cents;
+
+        public NonThreadSafetyCashWithSync(int dollars, int cents) {
+            this.dollars = dollars;
+            this.cents = cents;
+        }
+
+        public void multiply(int factor) {
+            synchronized (this) {
+                this.dollars *= factor;
+                this.cents *= factor;
+            }
         }
 
         @Override
