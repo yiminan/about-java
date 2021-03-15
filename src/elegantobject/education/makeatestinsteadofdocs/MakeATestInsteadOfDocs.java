@@ -9,6 +9,16 @@ class MakeATestInsteadOfDocs {
     /**
      * 좋은 클래스 설계 예시를 위해서 클래스의 껍데기만 구현하였습니다.
      */
+    private static class Department {
+
+        public Employee employee(String name) {
+            return new Employee(name);
+        }
+    }
+
+    /**
+     * 좋은 클래스 설계 예시를 위해서 클래스의 껍데기만 구현하였습니다.
+     */
     private static class Employee {
         public Employee(String name) {
         }
