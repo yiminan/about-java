@@ -5,7 +5,19 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 class MakeATestInsteadOfDocs {
-    
+
+    /**
+     * 좋은 설계의 예시
+     */
+    public static void main(String[] args) {
+        Department department = new Department();
+        Employee jeff = department.employee("Jeff");
+        jeff.giveRaise(new Cash(6_000));
+        if (jeff.performance() < 3.5) {
+            jeff.fire();
+        }
+    }
+
     /**
      * 좋은 클래스 설계 예시를 위해서 클래스의 껍데기만 구현하였습니다.
      */
