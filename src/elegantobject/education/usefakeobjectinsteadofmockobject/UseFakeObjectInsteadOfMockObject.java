@@ -45,9 +45,16 @@ class UseFakeObjectInsteadOfMockObject {
     }
 
     private interface Exchange {
+        float rate(String target);
+
         float rate(String origin, String target);
 
         final class Fake implements Exchange {
+            @Override
+            public float rate(String target) {
+                return this.rate("USD", target);
+            }
+
             @Override
             public float rate(String origin, String target) {
                 return 1.2345F;
