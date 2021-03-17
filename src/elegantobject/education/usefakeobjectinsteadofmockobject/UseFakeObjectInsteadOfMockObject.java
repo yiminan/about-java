@@ -5,6 +5,19 @@ import org.junit.Assert;
 class UseFakeObjectInsteadOfMockObject {
 
     public static void main(String[] args) {
+        /**
+         * Mock 객체를 사용한 테스트
+         */
+//        Exchange exchange = Mockito.mock(Exchange.class);
+//        Mockito.doReturn(1.15)
+//                .when(exchange)
+//                .rate("USD", "EUR");
+//        Cash dollar = new Cash(exchange, 500);
+//        Cash euro = dollar.in("EUR");
+//        Assert.assertEquals(euro.cents(), 617);
+        /**
+         * Fake 객체를 사용한 테스트
+         */
         Exchange exchange = new Exchange.Fake();
         Cash dollar = new Cash(exchange, 500);
         Cash euro = dollar.in("EUR");
