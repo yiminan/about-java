@@ -69,7 +69,28 @@ class UseShortInterfaceUsingBySmartClass {
             }
         }
     }
+
+    /**
+     * NYSE(New York Stock Exchange)
+     * = 환율 제공 거래소
+     * 최종적으로 float rate(String target);를 구현하지 않아도 되는 구현 클래스
+     */
+    private static class NYSE implements Exchange {
+        @Override
+        public float rate(String origin, String target) {
+            if ("EUR".equals(origin)) {
+                switch (target) {
+                    case "USD":
+                        return 1.19F;
+                }
             }
+            if ("USD".equals(origin)) {
+                switch (target) {
+                    case "EUR":
+                        return 0.84F;
+                }
+            }
+            throw new IllegalArgumentException();
         }
     }
 }
