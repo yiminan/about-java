@@ -1,5 +1,19 @@
 package elegantobject.education.useshortinterfaceusingbysmartclass;
 
+/**
+ * "짧은 인터페이스를 유지하고, 스마트 클래스를 만들어서 사용해야합니다"
+ * <p>
+ * 올바르게 설계된 견고하고, 응집도가 높은 클래스는 적은 수의 public 메서드만 포함합니다.
+ * 클래스를 작게 만드는 것이 중요한 것처럼, 인터페이스를 작게 만드는 것은 훨씬 더 중요합니다.
+ * 두 개의 인터페이스에 각 5개 추상 메서드가 선언되어있으면, '두 개의 인터페이스를 구현하는 클래스'는 총 10개의 메서드를 구현해야합니다.
+ * 이 '두 개의 인터페이스를 구현하는 클래스'는 좋은 클래스라고 볼 수 없습니다.
+ * 결국 SRP(Single Responsibility Principle)을 위반하는 클래스가 만들어지게 됩니다.
+ * 인터페이스에서 중복되는 굳이 필요없는 추상 메서드는 선언하지 않아야합니다. 이럴 떄 사용하는 것이 Smart Class 입니다.
+ * <p>
+ * 기본적으로 인터페이스를 짧게 만들고, Smart Class를 인터페이스와 함께 배포함으로써 공통 기능을 추출하고 코드 중복을 제거할 수 있습니다.
+ * Smart Class를 강화하는 Decorator Class도 존재합니다.
+ * Decorator Class는 인터페이스 구현체의 로직을 강화하는 로직을 적용한 메서드를 구현할 수 있습니다.
+ */
 class UseShortInterfaceUsingBySmartClass {
 
     public static void main(String[] args) {
