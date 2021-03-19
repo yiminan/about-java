@@ -16,8 +16,28 @@ class UseShortInterfaceUsingBySmartClass {
     private interface Exchange {
         float rate(String origin, String target);
 
-        final class Fast implements Exchange {
-            private final Exchange orgin;
+        /**
+         * "Smart Class"
+         * 사용 이유)
+         * - Smart class를 인터페이스와 같이 제공해야하는 이유는 인터페이스를 구현하는 서로 다른 클래스 안에 동일한 기능을 반복 구현하지 않기 위함입니다.
+         * - 필요없는 float rate(String target); 를 중복을 제거하기 위해서 사용하는 Smart 클래스입니다.
+         * - 스마트 클래스에 기능을 추가하면서 크기는 늘어나지만, 인터페이스는 높은 응집도를 유지할 수 있습니다.
+         */
+        final class Smart {
+            private final Exchange origin;
+
+            public Smart(Exchange origin) {
+                this.origin = origin;
+            }
+
+            public float toUsd(String source) {
+                return this.origin.rate(source, "USD");
+            }
+
+            public float eurToUsd() {
+                return this.toUsd("EUR");
+            }
+        }
 
             public Fast(Exchange orgin) {
                 this.orgin = orgin;
