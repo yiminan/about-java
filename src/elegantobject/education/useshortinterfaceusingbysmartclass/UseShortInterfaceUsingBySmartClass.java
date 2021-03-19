@@ -39,23 +39,36 @@ class UseShortInterfaceUsingBySmartClass {
             }
         }
 
-            public Fast(Exchange orgin) {
-                this.orgin = orgin;
+        /**
+         * "Decorator Class with Smart Class"
+         * 사용 이유)
+         * - Decorator를 사용하면 Smart Class와 동일하지만 인터페이스를 오바라이드 구현하여 Smart Class를 더 강력하게 만듦니다.
+         * - Smart Class와 Decorator Class의 차이는 Smart Class가 더 메서드 구현의 자유도가 높다는 것입니다.
+         * - Smart Class의 장점인 메서드 구현 자유도와 Decorator Class의 오버라이드 제약으로 인터페이스 추상 메서드의 기능 강화가 가능합니다.
+         */
+        final class Decorator implements Exchange {
+            private final Exchange origin;
+
+            public Decorator(Exchange origin) {
+                this.origin = origin;
             }
 
             @Override
             public float rate(String source, String target) {
                 final float rate;
                 if (source.equals(target)) {
-                    rate = 1.0f;
+                    rate = 1.0F;
                     return rate;
                 }
-                rate = this.orgin.rate(source, target);
+                rate = this.origin.rate(source, target);
                 return rate;
             }
 
             public float toUsd(String source) {
-                return this.orgin.rate(source, "USD");
+                return this.origin.rate(source, "USD");
+            }
+        }
+    }
             }
         }
     }
