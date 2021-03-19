@@ -2,6 +2,11 @@ package elegantobject.education.useshortinterfaceusingbysmartclass;
 
 class UseShortInterfaceUsingBySmartClass {
 
+    public static void main(String[] args) {
+        System.out.println(new Exchange.Smart(new NYSE()).eurToUsd());// 1.19
+        System.out.println(new Exchange.Decorator(new NYSE()).rate("USD", "USD"));// 1.0
+    }
+
     private interface WrongExchange {
         /**
          * float rate(String origin, String target) 메서드만 있어도 충분합니다.
