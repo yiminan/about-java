@@ -8,4 +8,18 @@ class DontUseStaticMethod {
             return "";
         }
     }
+
+    private static class WebPageWithObject {
+        private final String uri;
+
+        public WebPageWithObject(String uri) {
+            this.uri = uri;
+        }
+
+        public String content() {
+            // HTTP 요청을 만들고,
+            // UTF-8 문자열로 변환한다.
+            return "";
+        }
+    }
 }
