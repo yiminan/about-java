@@ -1,6 +1,15 @@
 package elegantobject.employment.dontusestaticmethod;
 
 class ObjectVsComputerThinking {
+    private static class Math {
+        public static int max(int a, int b) {
+            if (a > b) {
+                return a;
+            }
+            return b;
+        }
+    }
+
     private static class Max implements Number {
         private final Number a;
         private final Number b;
