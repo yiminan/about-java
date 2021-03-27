@@ -19,5 +19,16 @@ class DeclarativeVsImperativeStyle {
             }
             return b;
         }
+
+        public static int min(int a, int b) {
+            if (a < b) {
+                return a;
+            }
+            return b;
+        }
+
+        public static int between(int a, int b, int c) {
+            return Math.min(Math.max(a, c), b);
+        }
     }
 }
