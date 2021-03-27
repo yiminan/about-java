@@ -8,4 +8,6 @@ package elegantobject.employment.dontusestaticmethod;
  *
  */
 class DeclarativeVsImperativeStyle {
+    private interface Number {
+    }
 }
