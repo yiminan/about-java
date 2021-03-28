@@ -26,6 +26,20 @@ class DeclarativeVsImperativeStyle {
             return this.num;
         }
     }
+
+    private static class Between implements Number {
+
+        private final Number num;
+
+        public Between(Number left, Number right, Number middle) {
+            this.num = new Min(new Max(left, middle), right);
+        }
+
+        @Override
+        public int intValue() {
+            return this.num.intValue();
+        }
+    }
     }
 
     private static class Math {
