@@ -59,6 +59,24 @@ class DeclarativeVsImperativeStyle {
             return right.intValue();
         }
     }
+
+    private static class Min implements Number {
+
+        private final Number left;
+        private final Number right;
+
+        public Min(Number left, Number right) {
+            this.left = left;
+            this.right = right;
+        }
+
+        @Override
+        public int intValue() {
+            if (left.intValue() > right.intValue()) {
+                return left.intValue();
+            }
+            return right.intValue();
+        }
     }
 
     private static class Math {
