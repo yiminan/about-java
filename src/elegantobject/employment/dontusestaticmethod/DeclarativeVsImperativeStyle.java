@@ -12,6 +12,20 @@ class DeclarativeVsImperativeStyle {
 
         int intValue();
     }
+
+    private static class Integer implements Number {
+
+        private final int num;
+
+        public Integer(int num) {
+            this.num = num;
+        }
+
+        @Override
+        public int intValue() {
+            return this.num;
+        }
+    }
     }
 
     private static class Math {
