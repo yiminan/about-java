@@ -8,6 +8,14 @@ package elegantobject.employment.dontusestaticmethod;
  *
  */
 class DeclarativeVsImperativeStyle {
+
+    public static void main(String[] args) {
+        int max = Math.max(3, 6);
+        System.out.println(max);
+        Number num = new Between(new Integer(1), new Integer(2), new Integer(3));
+        System.out.println(num.intValue());
+    }
+
     private interface Number {
 
         int intValue();
