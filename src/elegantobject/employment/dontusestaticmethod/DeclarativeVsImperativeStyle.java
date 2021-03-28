@@ -9,6 +9,9 @@ package elegantobject.employment.dontusestaticmethod;
  */
 class DeclarativeVsImperativeStyle {
     private interface Number {
+
+        int intValue();
+    }
     }
 
     private static class Math {
