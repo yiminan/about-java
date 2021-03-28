@@ -40,6 +40,25 @@ class DeclarativeVsImperativeStyle {
             return this.num.intValue();
         }
     }
+
+    private static class Max implements Number {
+
+        private final Number left;
+        private final Number right;
+
+        public Max(Number left, Number right) {
+            this.left = left;
+            this.right = right;
+        }
+
+        @Override
+        public int intValue() {
+            if (left.intValue() > right.intValue()) {
+                return left.intValue();
+            }
+            return right.intValue();
+        }
+    }
     }
 
     private static class Math {
