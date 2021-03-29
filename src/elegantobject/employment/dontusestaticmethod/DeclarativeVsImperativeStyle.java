@@ -36,8 +36,16 @@ import java.util.Iterator;
 class DeclarativeVsImperativeStyle {
 
     public static void main(String[] args) {
+        /**
+         * "명령형 프로그래밍"
+         * 정적 메서드 예시
+         */
         int max = Math.max(3, 6);
         System.out.println(max);
+        /**
+         * "선언형 프로그래밍"
+         * 객체 사용 예시
+         */
         Number num = new Between(new Integer(1), new Integer(2), new Integer(3));
         System.out.println(num.intValue());
     /**
