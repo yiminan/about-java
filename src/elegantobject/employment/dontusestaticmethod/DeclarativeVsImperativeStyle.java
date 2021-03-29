@@ -48,6 +48,14 @@ class DeclarativeVsImperativeStyle {
          */
         Number num = new Between(new Integer(1), new Integer(2), new Integer(3));
         System.out.println(num.intValue());
+        /**
+         * 아래와 같은 오픈 소스 정적 메서드를 사용하는 경우, 래핑해주는 선언형 클래스를 만들어 사용해야한다.
+         * Collections.singletonList(FileUtils.readLines(this.file)).iterator()
+         */
+        Iterable<String> lines = new FileLines(new File("README.md"));
+        System.out.println(lines.iterator());
+    }
+
     /**
      * Apache Commons의 FileUtils 처럼 오픈 소스로 제공하는 정적 메서드 클래스를 래핑하여 사용하는 선언형 객체 예시
      */
