@@ -1,5 +1,9 @@
 package elegantobject.employment.dontusestaticmethod;
 
+import java.io.File;
+import java.util.Collections;
+import java.util.Iterator;
+
 /**
  * "선언형 스타일 VS 명령형 스타일 (declarative vs. imperative style)"
  * 명령형 프로그래밍(imperative programming)에서는 '프로그램의 상태를 변경하는 문장(statement)을 사용해서 계산 방식을 차례대로 서술'합니다.
@@ -36,6 +40,29 @@ class DeclarativeVsImperativeStyle {
         System.out.println(max);
         Number num = new Between(new Integer(1), new Integer(2), new Integer(3));
         System.out.println(num.intValue());
+    /**
+     * Apache Commons의 FileUtils 처럼 오픈 소스로 제공하는 정적 메서드 클래스를 래핑하여 사용하는 선언형 객체 예시
+     */
+    private static class FileLines implements Iterable<String> {
+        private final File file;
+
+        public FileLines(File file) {
+            this.file = file;
+        }
+
+        @Override
+        public Iterator<String> iterator() {
+            return Collections.singletonList(FileUtils.readLines(this.file)).iterator();
+        }
+
+        /**
+         * 예시 제공을 위한 Apache Commons의 FileUtils를 Fake Object로 만들기 위한 클래스
+         */
+        private static class FileUtils {
+            public static String readLines(File file) {
+                return "";// 구현 코드는 예시로만 제공한다.
+            }
+        }
     }
 
     private interface Number {
