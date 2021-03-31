@@ -7,4 +7,24 @@ package elegantobject.employment.dontusestaticmethod;
  * 유틸리티 클래스는 어떤 것의 팩토리가 아니기 때문에 진짜 클래스라고 부를 수 없습니다.
  */
 public class WhatIsUtilityClass {
+
+    private static class Math {
+        private Math() {
+            throw new AssertionError();// 또는 한 줄 공백이 가능합니다.
+        }
+
+        public static int max(int a, int b) {
+            if (a < b) {
+                return b;
+            }
+            return a;
+        }
+
+        public static int min(int a, int b) {
+            if (a < b) {
+                return a;
+            }
+            return b;
+        }
+    }
 }
