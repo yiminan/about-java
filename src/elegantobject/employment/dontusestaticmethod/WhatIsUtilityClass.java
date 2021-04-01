@@ -9,7 +9,7 @@ package elegantobject.employment.dontusestaticmethod;
  * 유틸리티 클래스는 절차적인 프로그래머들이 OOP에서 거둔 승리의 상징입니다.
  * 유틸리티 클래스는 나쁜 요소들을 모아 놓은 안티 패턴 집합체입니다.
  */
-public class WhatIsUtilityClass {
+class WhatIsUtilityClass {
 
     public static void main(String[] args) {
         System.out.println(Math.max(1, 2));// 2
