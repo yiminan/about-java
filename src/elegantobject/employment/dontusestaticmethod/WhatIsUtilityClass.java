@@ -11,6 +11,11 @@ package elegantobject.employment.dontusestaticmethod;
  */
 public class WhatIsUtilityClass {
 
+    public static void main(String[] args) {
+        System.out.println(Math.max(1, 2));// 2
+        System.out.println(Math.min(1, 2));// 1
+    }
+
     private static class Math {
         private Math() {
             throw new AssertionError();// 또는 한 줄 공백이 가능합니다.
