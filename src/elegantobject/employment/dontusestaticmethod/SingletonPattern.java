@@ -70,4 +70,19 @@ class SingletonPattern {
             this.name = name;
         }
     }
+
+    private static class UtilityUser {
+        private static String name;
+
+        private UtilityUser() {
+        }
+
+        public static String getName() {
+            return UtilityUser.name;
+        }
+
+        public static void setName(String name) {
+            UtilityUser.name = name;
+        }
+    }
 }
