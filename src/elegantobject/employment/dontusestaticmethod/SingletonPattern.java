@@ -2,26 +2,20 @@ package elegantobject.employment.dontusestaticmethod;
 
 class SingletonPattern {
     /**
-     * SingletonMath 클래스는 싱글톤의 대표적인 예입니다.
-     * SingletonMath 클래스의 인스턴스는 오직 하나만 존재할 수 있고, 유일한 인스턴스의 이름은 INSTANCE입니다.
-     * 싱글톤 클래스는 객체 인스턴스화 시킬 수 없습니다.
-     * 인스턴스화된 객체는 getInstance를 호출하고 반환 받아서 사용 가능합니다.
+     * 미리 인스턴스를 생성해두고 사용하는 싱글톤 클래스 예시
      */
-    private static class SingletonMath {
+    private static class EagerSingletonMath {
         // 단, 하나의 인스턴스만 생성해둡니다.
-        private static SingletonMath INSTANCE = new SingletonMath();
+        private static EagerSingletonMath SINGLE_INSTANCE = new EagerSingletonMath();
+        private int result;
 
         // Math의 인스턴스를 생성하지 못하게 private생성자로 막아둡니다.
-        private SingletonMath() {
+        private EagerSingletonMath() {
         }
 
         // 이미 생성된 인스턴스를 반환 받아 사용할 수 있습니다.
-        public static SingletonMath getInstance() {
-            return SingletonMath.INSTANCE;
-        }
-
-        public static void setInstance(SingletonMath instance) {
-            INSTANCE = instance;
+        public static EagerSingletonMath getInstance() {
+            return EagerSingletonMath.SINGLE_INSTANCE;
         }
 
         public int max(int a, int b) {
@@ -29,6 +23,52 @@ class SingletonPattern {
                 return b;
             }
             return a;
+        }
+
+        public int getResult() {
+            return result;
+        }
+
+        public void setResult(int result) {
+            this.result = result;
+        }
+    }
+
+    /**
+     * 인스턴스를 나중에 필요한 시점에 생성하고 사용하는 싱글톤 클래스 예시
+     */
+    private static class LazySingletonMath {
+        // 단, 하나의 인스턴스만 생성해둡니다.
+        private static LazySingletonMath SINGLE_INSTANCE = null;
+        private int result;
+
+        // Math의 인스턴스를 생성하지 못하게 private생성자로 막아둡니다.
+        private LazySingletonMath() {
+        }
+
+        // 이미 생성된 인스턴스를 반환 받아 사용할 수 있습니다.
+        public static LazySingletonMath getInstance() {
+            if (SINGLE_INSTANCE == null) {
+                synchronized (LazySingletonMath.class) {
+                    SINGLE_INSTANCE = new LazySingletonMath();
+                }
+            }
+            return SINGLE_INSTANCE;
+        }
+
+        public int max(int a, int b) {
+            if (a < b) {
+                return b;
+            }
+            return a;
+        }
+
+        public int getResult() {
+            return result;
+        }
+
+        public void setResult(int result) {
+            this.result = result;
         }
     }
 
@@ -44,45 +84,6 @@ class SingletonPattern {
                 return b;
             }
             return a;
-        }
-    }
-
-    private static class SingletonUser {
-        private static SingletonUser INSTANCE = new SingletonUser();
-        private String name;
-
-        private SingletonUser() {
-        }
-
-        public static SingletonUser getInstance() {
-            return SingletonUser.INSTANCE;
-        }
-
-        public static void setInstance(SingletonUser user) {
-            INSTANCE = user;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-    }
-
-    private static class UtilityUser {
-        private static String name;
-
-        private UtilityUser() {
-        }
-
-        public static String getName() {
-            return UtilityUser.name;
-        }
-
-        public static void setName(String name) {
-            UtilityUser.name = name;
         }
     }
 }
