@@ -46,4 +46,28 @@ class SingletonPattern {
             return a;
         }
     }
+
+    private static class SingletonUser {
+        private static SingletonUser INSTANCE = new SingletonUser();
+        private String name;
+
+        private SingletonUser() {
+        }
+
+        public static SingletonUser getInstance() {
+            return SingletonUser.INSTANCE;
+        }
+
+        public static void setInstance(SingletonUser user) {
+            INSTANCE = user;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
 }
