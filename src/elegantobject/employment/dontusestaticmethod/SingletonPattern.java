@@ -1,6 +1,13 @@
 package elegantobject.employment.dontusestaticmethod;
 
 class SingletonPattern {
+
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        System.out.println(EagerSingletonMath.getInstance().max(a, b) == UtilityMath.max(a, b));// true
+    }
+
     /**
      * 미리 인스턴스를 생성해두고 사용하는 싱글톤 클래스 예시
      */
