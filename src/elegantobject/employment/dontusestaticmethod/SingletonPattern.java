@@ -31,4 +31,19 @@ class SingletonPattern {
             return a;
         }
     }
+
+    /**
+     * UtilityMath 클래스는 유틸리티 클래스의 대표적인 예입니다.
+     */
+    private static class UtilityMath {
+        private UtilityMath() {
+        }
+
+        public static int max(int a, int b) {
+            if (a < b) {
+                return b;
+            }
+            return a;
+        }
+    }
 }
