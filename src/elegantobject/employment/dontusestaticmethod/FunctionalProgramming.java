@@ -1,7 +1,17 @@
 package elegantobject.employment.dontusestaticmethod;
 
 class FunctionalProgramming {
-    
+
+    public static void main(String[] args) {
+        Number declarativeMax = new Max(5, 6);
+
+        Optional<Integer> functionalMax = Arrays.asList(5, 6)
+                .stream()
+                .max(Integer::compare);
+
+        System.out.println(declarativeMax.intValue() == functionalMax.get());
+    }
+
     private interface Number {
         int intValue();
     }
