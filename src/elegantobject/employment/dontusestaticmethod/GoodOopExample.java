@@ -1,6 +1,20 @@
 package elegantobject.employment.dontusestaticmethod;
 
 class GoodOopExample {
+    private static class GreaterThan {
+        private final AgeOf ageOf;
+        private final int comparedAge;
+
+        public GreaterThan(AgeOf ageOf, int comparedAge) {
+            this.ageOf = ageOf;
+            this.comparedAge = comparedAge;
+        }
+
+        public boolean right() {
+            return ageOf.age() > comparedAge;
+        }
+    }
+
     private static class AgeOf {
         private final int age;
 
