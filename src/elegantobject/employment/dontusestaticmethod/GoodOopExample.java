@@ -1,5 +1,8 @@
 package elegantobject.employment.dontusestaticmethod;
 
+/**
+ * "절차지향적 코드가 객체 지향이 되는 변화"
+ */
 class GoodOopExample {
     public static void main(String[] args) {
         Client client = new Client(21);
