@@ -1,6 +1,32 @@
 package elegantobject.employment.dontusestaticmethod;
 
 class GoodOopExample {
+    public static void main(String[] args) {
+        Client client = new Client(21);
+        /**
+         * "절차지향 코드"
+         */
+        float rate;
+        if (client.age() > 65) {
+            rate = 2.5F;
+        } else {
+            rate = 3.0F;
+        }
+        /**
+         * "객체지향 코드"
+         */
+        float rate2 = new If(
+                new GreaterThan(new AgeOf(client), 65),
+                2.5F, 3.0F
+        ).result();
+
+        /**
+         * 결과
+         * rate: 3.00 , rate2: 3.00
+         */
+        System.out.println(String.format("rate: %.2f , rate2: %.2f", rate, rate2));
+    }
+
     private static class If {
         private final GreaterThan greaterThan;
         private final float trueValue;
