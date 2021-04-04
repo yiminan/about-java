@@ -1,5 +1,17 @@
 package elegantobject.employment.dontusestaticmethod;
 
+/**
+ * "조합 가능한 데코레이터"
+ * 객체 인스턴스를 선언하는 것만으로 해당 객체에 대해서 알 수 있게 하는 것이 OOP입니다.
+ * 조합 가능한 객체를 데코레이터라고 부릅니다.
+ * 아래 예시 클래스는 조합가능한 각각 데코레이터입니다.
+ *
+ * @see File
+ * @see Directory
+ * @see FileName
+ * <p>
+ * 프로그래머는 데코레이터를 조합하는 일을 제외한 다른 일은 하지 말아야 합니다.
+ */
 class ComposableDecorator {
 
     public static void main(String[] args) {
