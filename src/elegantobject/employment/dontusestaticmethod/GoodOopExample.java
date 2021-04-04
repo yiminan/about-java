@@ -2,6 +2,11 @@ package elegantobject.employment.dontusestaticmethod;
 
 /**
  * "절차지향적 코드가 객체 지향이 되는 변화"
+ * 객체지향 프로그래밍이란 더 작은 객체들을 기반으로 더 큰 객체들을 조합하는 작업입니다.
+ * 정적 메서드를 포함하는 작은 객체들을 조합해서 더 큰 객체를 만들 수가 업습니다.
+ * 정적 메서드는 합성(composition)이라는 아이디어와 대치됩니다.
+ * 그래서 OOP에서 정적 메서드를 사용하면 안됩니다.
+ * 결론적으로, 유지보수성을 위해서는 소프트웨어 어디에서도 static 키워드를 사용하면 안됩니다.
  */
 class GoodOopExample {
     public static void main(String[] args) {
