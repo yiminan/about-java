@@ -19,28 +19,35 @@ import java.util.Collections;
 class DontAllowNullAsParameters {
 
     /**
-     * null을 허용하는 잘못된 예시의 메서드입니다.
+     * Bad
+     * 파라미터로 null을 허용하는 적절하게 분리된 메서드
      */
-    public Iterable<File> find(String mask) {
-        if (mask == null) {
-            /**
-             * findAll()과 같은 기능
-             * 모든 파일을 찾는 경우
-             */
-            return Collections.singleton(new File("")); // 실제 반환값은 모든 파일
-        } else {
-            /**
-             * find(String mask)와 같은 기능
-             * mask를 사용하여 해당하는 파일을 찾는 경우
-             */
-            return Collections.singleton(new File("")); // 실제는 특정 mask 파일
+    private static class NullableParameterMethod {
+        /**
+         * null을 허용하는 잘못된 예시의 메서드입니다.
+         */
+        public Iterable<File> find(String mask) {
+            if (mask == null) {
+                /**
+                 * findAll()과 같은 기능
+                 * 모든 파일을 찾는 경우
+                 */
+                return Collections.singleton(new File("")); // 실제 반환값은 모든 파일
+            } else {
+                /**
+                 * find(String mask)와 같은 기능
+                 * mask를 사용하여 해당하는 파일을 찾는 경우
+                 */
+                return Collections.singleton(new File("")); // 실제는 특정 mask 파일
+            }
         }
     }
 
     /**
-     * null을 허용하지 않는 적절하게 분리된 메서드
+     * Good
+     * 파라미터로 null을 허용하지 않는 적절하게 분리된 메서드
      */
-    private static class ProperNonNullableMethod {
+    private static class NonNullableParameterMethod {
         public Iterable<File> findAll() {
             /**
              * 모든 File을 찾는 로직
