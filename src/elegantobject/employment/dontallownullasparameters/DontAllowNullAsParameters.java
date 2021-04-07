@@ -27,7 +27,22 @@ class DontAllowNullAsParameters {
         }
     }
 
-    public Iterable<File> findAll() {
-        return Collections.singleton(new File("")); // 실제 반환값은 모든 파일
+    /**
+     * null을 허용하지 않는 적절하게 분리된 메서드
+     */
+    private static class ProperNonNullableMethod {
+        public Iterable<File> findAll() {
+            /**
+             * 모든 File을 찾는 로직
+             */
+            return Collections.singleton(new File("")); // 실제 반환값은 모든 파일
+        }
+
+        public Iterable<File> find(String mask) {
+            /**
+             * 특정 File을 찾는 로직
+             */
+            return Collections.singleton(new File("")); // 실제는 특정 mask 파일
+        }
     }
 }
