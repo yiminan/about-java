@@ -18,6 +18,18 @@ import java.util.Collections;
  */
 class DontAllowNullAsParameters {
 
+    public static void main(String[] args) {
+        String mask = "*.txt";
+
+        NullableParameterMethod badCase = new NullableParameterMethod();
+        badCase.find(mask);// 특정 파일을 찾는 경우
+        badCase.find(null);// 모든 파일을 찾는 경우
+
+        NonNullableParameterMethod goodCase = new NonNullableParameterMethod();
+        goodCase.find(mask);// 특정 파일을 찾는 경우
+        goodCase.findAll();// 모든 파일을 찾는 경우
+    }
+
     /**
      * Bad
      * 파라미터로 null을 허용하는 적절하게 분리된 메서드
