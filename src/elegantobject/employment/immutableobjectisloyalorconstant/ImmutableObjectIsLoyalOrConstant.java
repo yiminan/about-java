@@ -37,10 +37,19 @@ import java.util.*;
 class ImmutableObjectIsLoyalOrConstant {
 
     public static void main(String[] args) {
+        /**
+         * 불변 객체의 특정 케이스인 "상수 객체" 예시
+         */
         ConstantList<Integer> constantList = new ConstantList<>();
         ConstantList<Integer> copyConstantList = constantList.with(1);
         System.out.println(constantList);
         System.out.println(copyConstantList);
+
+        /**
+         * "불변 객체" 예시
+         */
+        ImmutableList<Integer> immutableList = new ImmutableList<>();
+        System.out.println(immutableList);
     }
 
     /**
