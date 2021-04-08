@@ -1,6 +1,10 @@
 package elegantobject.employment.immutableobjectisloyalorconstant;
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * "충성스러우면서 불변 객체이거나, 아니면 상수 객체이어야 합니다"
@@ -52,6 +56,27 @@ class ImmutableObjectIsLoyalOrConstant {
             // 웹 페이지의 컨텐츠를 읽은 후,
             // 읽혀진 컨텐츠를 UTF-8 문자열로 반환한다.
             return new String("");
+        }
+    }
+
+    private static class ConstantList<T> {
+        private final List<T> list;
+
+        ConstantList() {
+            this(new ArrayList<T>());
+        }
+
+        private ConstantList(List<T> list) {
+            this.list = list;
+        }
+
+        ConstantList<T> with(T value) {
+            list.add(value);
+            return new ConstantList<T>(new ArrayList<>(list));
+        }
+
+        public List<T> list() {
+            return list;
         }
     }
 }
