@@ -84,6 +84,16 @@ class ImmutableObjectIsLoyalOrConstant {
 
         public List<T> list() {
             return list;
+
+    private static class ImmutableList<T> {
+        private final List<T> items = new LinkedList<T>();
+
+        void add(T value) {
+            this.items.add(value);
+        }
+
+        public List<T> items() {
+            return Collections.unmodifiableList(items);
         }
     }
 }
