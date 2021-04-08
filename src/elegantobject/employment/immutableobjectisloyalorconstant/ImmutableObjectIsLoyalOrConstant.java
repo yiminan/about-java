@@ -1,10 +1,7 @@
 package elegantobject.employment.immutableobjectisloyalorconstant;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * "충성스러우면서 불변 객체이거나, 아니면 상수 객체이어야 합니다"
@@ -83,7 +80,9 @@ class ImmutableObjectIsLoyalOrConstant {
         }
 
         public List<T> list() {
-            return list;
+            return Collections.unmodifiableList(list);
+        }
+    }
 
     private static class ImmutableList<T> {
         private final List<T> items = new LinkedList<T>();
