@@ -39,6 +39,13 @@ import java.util.List;
  */
 class ImmutableObjectIsLoyalOrConstant {
 
+    public static void main(String[] args) {
+        ConstantList<Integer> constantList = new ConstantList<>();
+        ConstantList<Integer> copyConstantList = constantList.with(1);
+        System.out.println(constantList);
+        System.out.println(copyConstantList);
+    }
+
     /**
      * content로 내용물이 바뀔 수 있지만,
      * WebPage는 불변 객체입니다.
