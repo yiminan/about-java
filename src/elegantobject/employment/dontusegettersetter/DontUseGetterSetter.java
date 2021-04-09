@@ -27,4 +27,27 @@ package elegantobject.employment.dontusegettersetter;
  * 데이터를 찾아서 그대로 전달해주는 뜻의 getter를 절대 사용하면 안됩니다.
  */
 class DontUseGetterSetter {
+
+    /**
+     * getter와 setter를 사용한 단순 자료 구조(data structure)
+     */
+    private static class CashForDataStructure {
+        private int dollars;
+
+        /**
+         * "dollars를 찾아서 가져옵니다"라는 뜻의 메서드입니다.
+         * 사용하면 안됩니다.
+         */
+        public int getDollars() {
+            return dollars;
+        }
+
+        /**
+         * "dollars를 찾아서 셋팅합니다"라는 뜻의 메서드입니다.
+         * 사용하면 안됩니다.
+         */
+        public void setDollars(int dollars) {
+            this.dollars = dollars;
+        }
+    }
 }
