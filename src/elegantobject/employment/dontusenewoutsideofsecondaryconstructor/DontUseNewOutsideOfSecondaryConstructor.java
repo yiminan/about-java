@@ -1,0 +1,4 @@
+package elegantobject.employment.dontusenewoutsideofsecondaryconstructor;
+
+class DontUseNewOutsideOfSecondaryConstructor {
+}
