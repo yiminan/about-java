@@ -50,4 +50,23 @@ class DontUseGetterSetter {
             this.dollars = dollars;
         }
     }
+
+    /**
+     * 불변 객체
+     */
+    private static class CashForOop {
+        private final int value;
+
+        public CashForOop(int value) {
+            this.value = value;
+        }
+
+        /**
+         * "객체에서 dollars를 만들어서 제공합니다"
+         * 내부 데이터를 가져오기보다는 객체의 행동을 존중합니다.
+         */
+        public int dollars() {
+            return value;
+        }
+    }
 }
