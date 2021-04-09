@@ -28,6 +28,17 @@ package elegantobject.employment.dontusegettersetter;
  */
 class DontUseGetterSetter {
 
+    public static void main(String[] args) {
+        int dollars = 10;
+
+        CashForDataStructure cashForDataStructure = new CashForDataStructure();
+        cashForDataStructure.setDollars(dollars);
+
+        CashForOop cashForOop = new CashForOop(dollars);
+
+        System.out.println(cashForDataStructure.getDollars() == cashForOop.dollars());//true
+    }
+
     /**
      * getter와 setter를 사용한 단순 자료 구조(data structure)
      */
