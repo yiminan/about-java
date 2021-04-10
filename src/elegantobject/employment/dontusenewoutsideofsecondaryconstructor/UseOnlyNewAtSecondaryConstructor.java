@@ -1,4 +1,5 @@
 package elegantobject.employment.dontusenewoutsideofsecondaryconstructor;
 
-class DontUseNewOutsideOfSecondaryConstructor {
+ */
+class UseOnlyNewAtSecondaryConstructor {
 }
