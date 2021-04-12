@@ -3,6 +3,10 @@ package elegantobject.employment.dontusenewoutsideofsecondaryconstructor;
  */
 class UseOnlyNewAtSecondaryConstructor {
 
+    /**
+     * 내부에 new로 객체를 하드코딩하여 의존성이 문제가 되는 Cash
+     * 의존성 제어의 주체가 HardCodingCash 객체가 됩니다.
+     */
     private static class HardCodingCash {
         private final int dollars;
 
@@ -14,7 +18,7 @@ class UseOnlyNewAtSecondaryConstructor {
             /**
              * 이 부분에서 환율을 제공하는 NYSE 객체를 하드코딩으로 사용합니다.
              * 만약 사용되는 환율 서버가 바뀌거나 객체가 바뀌는 경우에는 내부 코드가 변경되어야합니다.
-             * 결국 문제가 되는 부분입니다.
+             * 근본적인 문제는 new 연산자를 사용하는 것이고, 결국 문제가 되는 부분입니다.
              */
             return new NYSE().rate("USD", "EUR") * dollars;
         }
