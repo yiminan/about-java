@@ -1,5 +1,12 @@
 package elegantobject.employment.dontusenewoutsideofsecondaryconstructor;
 
+/**
+ * "객체 내에서 new는 부 생성자에서만 사용해야합니다"
+ * 객체 내부에서 사용하고 있는 하드코딩된 코드는 의존성 문제가 발생합니다.
+ * 객체를 사용하는 입장에서는 객체 내부 코드에 관심이 없습니다. 필요한 것은 객체의 메서드 호출하고 얻는 결과입니다.
+ * 정리)
+ * - 내부에서 변경될 수 있는 객체를 직접 new를 통해서 생성하지 말고, 무조건 부 생성자를 통해서만 객체를 주입해서 사용합니다.
+ * 이 규칙이 DI(Dependency Injection)와 IoC(Inversion of Control)에 대해서 알아야할 전부입니다.
  */
 class UseOnlyNewAtSecondaryConstructor {
 
