@@ -20,4 +20,23 @@ class DontUseIntrospectionAndCasting {
             return size;
         }
     }
+
+    /**
+     * 전달되는 인자는 객체 타입별로 메서드 오버로딩(method overloading)으로 분리된 메서드를 생성해야합니다.
+     * 각 메서드는 인자별로 객체의 행동을 차별하지 않고, 본연의 목적을 달성할 수 있습니다.
+     * 크게 다른 것 같지만, 오버로딩을 사용했기 때문에 Java는 타입을 자동으로 찾아서 해당하는 메서드를 실행합니다.
+     */
+    private static class GoodCase {
+        public <T> int size(Collection<T> items) {
+            return items.size();
+        }
+
+        public <T> int size(Iterable<T> items) {
+            int size = 0;
+            for (T item : items) {
+                ++size;
+            }
+            return size;
+        }
+    }
 }
