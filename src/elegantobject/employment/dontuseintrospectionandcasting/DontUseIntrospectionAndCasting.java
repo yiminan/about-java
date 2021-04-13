@@ -1,5 +1,22 @@
 package elegantobject.employment.dontuseintrospectionandcasting;
 
+import java.util.Collection;
+
+/**
+ * "인트로스펙션과 캐스팅을 사용하지 않습니다"
+ * 예를 들면, Java instanceOf 연산자와 Class.cast() 메서드를 통해서 런타임에 인트로스펙션하면 안됩니다.
+ * 타입 인트로스펙션은 리플렉션(reflection)이라는 포괄적인 용어의 기법 중 하나입니다.
+ * 리플렉션은 메서드, 명령어, 구문, 클래스, 객체, 타입 등을 쉽게 변경할 수 있습니다.
+ * 매우 강력한 기법이지만 OOP에서는 사용해서는 안되는 유지보수에 안좋은 너저분한 기법입니다.
+ * 타입 인트로스펙션은 타입에 따라 객체를 차별하기 때문에 OOP의 기본 사상을 훼손시킵니다.
+ * 객체는 호출한 메서드의 빌더나 조정자에 따라서 정해진 역할을 해야합니다.
+ * 하지만 타입 인트로스펙션을 사용하게 되면 입력 인자에 따라서 객체는 전혀 다른 행동을 할 수 있습니다.
+ * 객체는 전달되는 타입에 대한 차별없이 본인이 맡은 임무에 충실해야합니다.
+ * 여기에서는 코드 안에서 타입별 차별을 가지지 않게 메서드 오버로딩(method overloading)을 사용합니다.
+ * 결론)
+ * Java의 'instanceof 연산자'나 '클래스 캐스팅'을 사용하는 것은 안티패턴이기 때문에 사용해서는 안됩니다.
+ * Java나 다른 OOP 언어에서는 리플렉션 기능을 제공하고 있지만, 소프트웨어에 도움이 되지 않는 기능입니다.
+ */
 class DontUseIntrospectionAndCasting {
 
     private static class WrongCase {
