@@ -9,4 +9,20 @@ package elegantobject.retirement.neverreturnnull;
  * 객체가 만든 반환 값을 의심하고 결과에 대한 확인 코드가 들어간다면 OOP를 위반하는 일입니다.
  */
 class NeverReturnNull {
+
+    private static class Data {
+        private String title;
+
+        /**
+         * null을 반환하는 잘못된 메서드 형태입니다.
+         * null이 반환되기 시작하면 이후에 title을 가지고 호출될 메서드가 NPE을 발생할 여지가 생깁니다.
+         * 결국 이 메서드가 반환하는 객체 String은 신뢰할 수 없습니다.
+         */
+        public String title() {
+            if(title == null || title.isBlank()) {
+                return null;
+            }
+            return title;
+        }
+    }
 }
