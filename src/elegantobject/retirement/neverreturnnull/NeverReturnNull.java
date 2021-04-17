@@ -20,6 +20,10 @@ class NeverReturnNull {
     private static class Data {
         private String title;
 
+        public Data(String title) {
+            this.title = title;
+        }
+
         /**
          * null을 반환하는 잘못된 메서드 형태입니다.
          * null이 반환되기 시작하면 이후에 title을 가지고 호출될 메서드가 NPE을 발생할 여지가 생깁니다.
