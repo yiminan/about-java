@@ -1,5 +1,8 @@
 package elegantobject.retirement.neverreturnnull;
 
+import java.io.File;
+import java.io.IOException;
+
 /**
  * "절대 null을 반환하지 마세요"
  * 메서드의 파라미터에 null을 전달하는 것은 매우 안좋은 방법입니다.
@@ -34,6 +37,23 @@ class NeverReturnNull {
                 return null;
             }
             return title;
+        }
+
+        /**
+         * null을 반환하는 대신 예외로 처리하는 것에 대한 올바른 예시이다.
+         * '빠르게 실패하기 원칙(fail fast principle)'을 적용하지 못한 정책이 null을 반환하는 것이었습니다.
+         * 결론적으로 null을 반환하는 것은 잘못된 사용 형태입니다.
+         * 차라리 빠르게 실패하는 것이 이후에 치루어야할 비용을 줄일 수 있습니다.
+         */
+        public void list(File dir) throws IOException {
+            File[] files = dir.listFiles();
+            if (files == null) {
+                // JDK는 return null; 구현한다. 하지만 잘못된 사용이다.
+                throw new IOException("Directory is absent.");
+            }
+            for (File file : files) {
+                System.out.println(file.getName());
+            }
         }
     }
 }
