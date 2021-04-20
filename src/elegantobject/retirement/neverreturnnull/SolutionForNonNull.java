@@ -1,5 +1,9 @@
 package elegantobject.retirement.neverreturnnull;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 /**
  * "null의 대안"
  * 원하는 객체가 존재하지 않을 때, null을 반환하지않고 대안을 찾아야합니다.
@@ -58,9 +62,9 @@ class SolutionForNonNull {
 
     private static class User {
         private final String name;
-        private final String age;
+        private final int age;
 
-        public User(String name, String age) {
+        public User(String name, int age) {
             this.name = name;
             this.age = age;
         }
@@ -69,7 +73,7 @@ class SolutionForNonNull {
             return name;
         }
 
-        public String getAge() {
+        public int getAge() {
             return age;
         }
     }
