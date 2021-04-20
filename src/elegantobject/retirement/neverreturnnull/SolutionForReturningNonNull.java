@@ -14,7 +14,7 @@ import java.util.Optional;
  * 무조건 어떤 방법이던 null만 반환하지 않으면 그래도 잘 사용한 방법입니다.
  * 절대 null을 반환하면 안됩니다.
  */
-class SolutionForNonNull {
+class SolutionForReturningNonNull {
     /**
      * 1. 리스트에 넣어서 반환 // 추천
      */
