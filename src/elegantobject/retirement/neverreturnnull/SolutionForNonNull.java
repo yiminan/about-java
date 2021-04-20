@@ -7,7 +7,12 @@ import java.util.Optional;
 /**
  * "null의 대안"
  * 원하는 객체가 존재하지 않을 때, null을 반환하지않고 대안을 찾아야합니다.
- *
+ * 솔루션은 다음과 같습니다.
+ * 1. 리스트에 넣어서 반환 // 추천
+ * 2. Optional에 담아서 반환 // 비추천
+ * 3. 널 객체(null object) 디자인 패턴 사용 // OOP
+ * 무조건 어떤 방법이던 null만 반환하지 않으면 그래도 잘 사용한 방법입니다.
+ * 절대 null을 반환하면 안됩니다.
  */
 class SolutionForNonNull {
     /**
