@@ -6,6 +6,18 @@ package elegantobject.retirement.neverreturnnull;
  *
  */
 class SolutionForNonNull {
+    /**
+     * 1. 리스트에 넣어서 반환 // 추천
+     */
+    public List<User> users(String name) {
+        if (/*데이터베이스에서 User를 발견하지 못했다면*/false) {
+            return Collections.emptyList();
+        }
+        return Collections.singletonList(
+                /*데이터베이스에서 발견한 User 반환*/
+                new User("name", 20)
+        );
+    }
 
     private static class User {
         private final String name;
