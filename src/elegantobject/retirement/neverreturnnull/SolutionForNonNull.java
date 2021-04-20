@@ -19,6 +19,17 @@ class SolutionForNonNull {
         );
     }
 
+    /**
+     * 2. Optional에 담아서 반환 // 비추천
+     * 반환하는 내용물이 의미적으로 Optional이던 User이던 불분명하기 때문에 비추천입니다.
+     */
+    public Optional<User> user(String name) {
+        return Optional.ofNullable(
+                /*데이터베이스에서 조회한 User 반환한다. 없을 경우를 대비해서 ofNullable 사용*/
+                new User("name", 20)
+        );
+    }
+
     private static class User {
         private final String name;
         private final String age;
