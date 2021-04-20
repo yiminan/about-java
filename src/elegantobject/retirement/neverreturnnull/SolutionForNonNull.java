@@ -30,6 +30,32 @@ class SolutionForNonNull {
         );
     }
 
+    /**
+     * 3. 널 객체(null object) 디자인 패턴 사용 // OOP
+     * 제한적으로 User의 인터페이스를 만들고, 객체를 만들어 사용해야하기 때문에 사용하기 힘듭니다.
+     */
+//    private static class NullUser implements User {
+//        private final String name;
+//        private final int age;
+//
+//        public NullUser(String name, int age) {
+//            this.name = name;
+//            this.age = age;
+//        }
+//
+//        @Override
+//        public String name() {
+//            return this.name;
+//        }
+//
+//        @Override
+//        public void raise(Cash salary) {
+//            throw new IllegalStateException(
+//                "NullUser이라서 메서드 호출이 불가합니다."
+//            );
+//        }
+//    }
+
     private static class User {
         private final String name;
         private final String age;
