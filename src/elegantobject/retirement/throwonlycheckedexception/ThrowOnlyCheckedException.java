@@ -12,6 +12,12 @@ import java.io.IOException;
  */
 class ThrowOnlyCheckedException {
 
+    /**
+     * 체크된 예외를 사용해서 구현된 메서드
+     * 체크된 예외를 사용한 경우)
+     * - 메서드 시그니처의 마지막에 throws 'unchecked exception'을 넣습니다.
+     * - try ~ catch 문으로 처리하지 않으면, 메서드를 호출한 상위 레벨로 예외가 전파(escalating)됩니다.
+     */
     public byte[] content(File file) throws IOException {
         byte[] array = new byte[1000];
         new FileInputStream(file).read(array);
