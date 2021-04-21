@@ -23,4 +23,17 @@ class ThrowOnlyCheckedException {
         new FileInputStream(file).read(array);
         return array;
     }
+
+    /**
+     * 체크된 예외와 언체크 예외로 구현된 메서드
+     * - 언체크 예외는 메서드 시그니처 옆에 예외를 선언하지 않습니다.
+     */
+    public int length(File file) throws IOException {
+        if (!file.exists()) {
+            throw new IllegalArgumentException(
+                    "File doesn't exist."
+            );
+        }
+        return content(file).length;
+    }
 }
