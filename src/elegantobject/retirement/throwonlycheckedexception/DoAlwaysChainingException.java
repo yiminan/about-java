@@ -1,4 +1,4 @@
-package elegantobject.retirement.doalwayschainingexception;
+package elegantobject.retirement.throwonlycheckedexception;
 
 import java.io.File;
 import java.io.FileInputStream;
