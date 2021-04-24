@@ -1,6 +1,17 @@
 package elegantobject.retirement.throwonlycheckedexception;
 
 import java.io.IOException;
+
+/**
+ * "관점-지향 프로그래밍을 사용하세요"<p>
+ * <p>
+ * 가끔은 예외가 발생한 코드를 다시 시도해야하는 경우도 있습니다.<p>
+ * 코드를 유형별로 분리하면,<p>
+ * 1) 핵심 관심사 // 비즈니스 로직<p>
+ * 2) 횡단 관심사 // 비즈니스를 돕는 로직<p>
+ * 로 나눌 수 있습니다.<p>
+ * 횡단 관심사는 트랜잭션 관리처럼 매번 반복되고, 분리가 가능한 부분을 이야기합니다.<p>
+ */
 class UseAop {
 
     /**
@@ -17,11 +28,11 @@ class UseAop {
      */
     public String content() throws IOException {
         int attempt = 0;
-        while(true) {
+        while (true) {
             try {
                 return http();
             } catch (IOException ex) {
-                if(attempt >= 2) {
+                if (attempt >= 2) {
                     throw ex;
                 }
             }
