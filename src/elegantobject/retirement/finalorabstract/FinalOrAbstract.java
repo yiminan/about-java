@@ -25,4 +25,16 @@ class FinalOrAbstract {
             }
         }
     }
+    private static class EncryptedDocument extends Document {
+
+        public EncryptedDocument(File file) {
+            super(file);
+        }
+
+        @Override
+        public byte[] content() throws Exception {
+            // 로직 재정의가 가능하다.
+            return super.content();
+        }
+    }
 }
