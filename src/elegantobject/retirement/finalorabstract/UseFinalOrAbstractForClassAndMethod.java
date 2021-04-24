@@ -15,7 +15,7 @@ import java.io.IOException;
  * 결론)<p>
  * 'final or abstract를 이용해서 클래스나 메서드를 생성해야합니다'<p>
  */
-class FinalOrAbstract {
+class UseFinalOrAbstractForClassAndMethod {
 
     private static class Document {
         private final File file;
