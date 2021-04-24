@@ -1,5 +1,20 @@
 package elegantobject.retirement.finalorabstract;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+/**
+ * "final 또는 abstract를 사용해서 클래스를 생성해야 합니다"<p>
+ * <p>
+ * 캡슐화가 상속보다 더 좋은 대안이라고 이야기합니다. 물론 맞는 이야기입니다.<p>
+ * 먼저 상속이 안좋은 이유와 상속으로 인한 문제점부터 살펴봐야합니다.<p>
+ * 상속 그 자체가 문제가 있는 건 아닙니다. 상속을 올바르게 사용하지 못해서 문제가 생기는 것입니다.<p>
+ * 애초에 상속의 문제점은 가상 메서드(virtual method)입니다.<p>
+ * <p>
+ * 결론)<p>
+ * 'final or abstract를 이용해서 클래스나 메서드를 생성해야합니다'<p>
+ */
 class FinalOrAbstract {
 
     private static class Document {
