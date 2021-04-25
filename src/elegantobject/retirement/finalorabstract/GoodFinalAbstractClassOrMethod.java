@@ -61,4 +61,23 @@ class GoodFinalAbstractClassOrMethod {
             }
         }
     }
+
+    private static final class EncryptedDocument implements DocumentWithInterface {
+        private final DocumentWithInterface plain;
+
+        public EncryptedDocument(DocumentWithInterface plain) {
+            this.plain = plain;
+        }
+
+        @Override
+        public int length() {
+            return plain.length();
+        }
+
+        @Override
+        public byte[] content() throws Exception {
+            byte[] raw = this.plain.content();
+            return raw;
+        }
+    }
 }
