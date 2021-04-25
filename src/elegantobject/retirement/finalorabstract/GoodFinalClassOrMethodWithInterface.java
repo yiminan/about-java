@@ -13,7 +13,7 @@ import java.io.IOException;
  * 하지만 문제가 있습니다. final class는 상속을 전혀 사용할 수 없는 것입니다.<p>
  * 그래서 상속하지 못하는 문제를 해결하기 위해서 interface를 사용합니다.<p>
  */
-class GoodFinalAbstractClassOrMethod {
+class GoodFinalClassOrMethodWithInterface {
 
     /**
      * 상속할 수 없는 블랙박스인 final class 예시
