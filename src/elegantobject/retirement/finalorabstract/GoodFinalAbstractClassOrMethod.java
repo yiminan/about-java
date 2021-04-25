@@ -29,4 +29,10 @@ class GoodFinalAbstractClassOrMethod {
             }
         }
     }
+
+    private interface DocumentWithInterface {
+        int length();
+
+        byte[] content() throws Exception;
+    }
 }
