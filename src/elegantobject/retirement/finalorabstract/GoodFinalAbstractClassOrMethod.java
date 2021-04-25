@@ -77,7 +77,7 @@ class GoodFinalAbstractClassOrMethod {
         @Override
         public byte[] content() throws Exception {
             byte[] raw = this.plain.content();
-            return raw;
+            return raw;// Content.decrypt(raw); 이 지점에서 복호화된 content를 반환한다.
         }
     }
 }
