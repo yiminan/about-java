@@ -12,6 +12,8 @@ import java.io.IOException;
  * 이 과정에서 상속 과정에서 상속받은 자식 클래스에서 부모 클래스의 소스를 수정할 여지 자체가 없어져버린 것입니다.<p>
  * 하지만 문제가 있습니다. final class는 상속을 전혀 사용할 수 없는 것입니다.<p>
  * 그래서 상속하지 못하는 문제를 해결하기 위해서 interface를 사용합니다.<p>
+ * 결론)<p>
+ * interface와 final lass만 사용하게 되기 때문에 캡슐화만 이용한 class를 구현 가능합니다.
  */
 class GoodFinalClassOrMethodWithInterface {
 
