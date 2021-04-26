@@ -1,6 +1,8 @@
 package elegantobject.birth.dontuseer;
 
 /**
+ * "클래스의 이름으로 -er로 끝나는 이름을 사용하면 안됩니다"<p>
+ * <p>
  * 클래스는 객체의 팩토리입니다.
  * new 키워드도 static method
  * 클래스의 이름은 무엇을 하는지(what he does)보다 무엇인지(what he is)로 객체를 만들어야 합니다.
