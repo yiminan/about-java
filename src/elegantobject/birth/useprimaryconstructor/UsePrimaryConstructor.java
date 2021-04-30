@@ -38,7 +38,14 @@ class UsePrimaryConstructor {
 
         // 주 생성자 - 부 생성자에서 사용되어 재사용성 UP
         Cash(int dlr) {
+            validate(dlr);
             this.dollars = dlr;
+        }
+
+        private void validate(int dlr) {
+            if (dlr > 0) {
+                throw new IllegalArgumentException(String.format("invalid dollar %d", dlr));
+            }
         }
     }
 }
