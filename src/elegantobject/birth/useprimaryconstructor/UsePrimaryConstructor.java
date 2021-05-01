@@ -14,6 +14,8 @@ package elegantobject.birth.useprimaryconstructor;
  * <p>
  * 결론)<p>
  * 주 생성자(primary constructor)를 사용하고, 주 생성자를 통해서만 내부 프로퍼티를 초기화해야합니다. 그렇게 부 생성자를 사용하게 됩니다.<p>
+ *
+ * @see <a href="https://velog.io/@wannte/%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1%EC%8B%9C-%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC">객체 생성시 유효성 검사에 관하여</a>
  */
 class UsePrimaryConstructor {
 
