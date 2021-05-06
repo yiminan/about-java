@@ -29,9 +29,9 @@ class MakeMethodNameCarefully {
     }
 
     /**
-     * Builder Method
-     * 반환 타입 : void가 될 수 없다
-     * 이름 : 명사 (명사 or 형용사 + 명사)
+     * Builder Method<p>
+     * 반환 타입 : void가 될 수 없다<p>
+     * 이름 : 명사 (명사 or 형용사 + 명사)<p>
      */
     private interface BuilderMethod {
         int pow(int base, int power);
@@ -47,9 +47,9 @@ class MakeMethodNameCarefully {
     }
 
     /**
-     * Manipulator Method
-     * 반환 타입 : void
-     * 이름 : 동사 (동사 or 부사 + 동사)
+     * Manipulator Method<p>
+     * 반환 타입 : void<p>
+     * 이름 : 동사 (동사 or 부사 + 동사)<p>
      */
     private interface ManipulatorMethod {
         void save(Employee employee);
@@ -62,8 +62,8 @@ class MakeMethodNameCarefully {
     }
 
     /**
-     * Builder & Manipulator Method
-     * 잘못된 빌더 + 조정자 역할 메서드
+     * Builder & Manipulator Method<p>
+     * 잘못된 빌더 + 조정자 역할 메서드<p>
      */
     private interface WrongBuilderManipulatorMethod {
         int save(Employee employee);
@@ -74,8 +74,8 @@ class MakeMethodNameCarefully {
     }
 
     /**
-     * Separated class for Builder & Manipulator Method
-     * 잘못된 빌더 + 조정자 역할 메서드를 분리한 클래스
+     * Separated class for Builder & Manipulator Method<p>
+     * 잘못된 빌더 + 조정자 역할 메서드를 분리한 클래스<p>
      */
     private static class PutOperation {
         private String content;
