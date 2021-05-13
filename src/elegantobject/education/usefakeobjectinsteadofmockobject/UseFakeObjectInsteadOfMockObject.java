@@ -71,6 +71,9 @@ class UseFakeObjectInsteadOfMockObject {
 
         float rate(String origin, String target);
 
+        /**
+         * 인터페이스를 구현한 Fake 객체
+         */
         final class Fake implements Exchange {
             @Override
             public float rate(String target) {
