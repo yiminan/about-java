@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * "null의 대안"
- * 원하는 객체가 존재하지 않을 때, null을 반환하지않고 대안을 찾아야합니다.
- * 솔루션은 다음과 같습니다.
- * 1. 리스트에 넣어서 반환 // 추천
- * 2. Optional에 담아서 반환 // 비추천
- * 3. 널 객체(null object) 디자인 패턴 사용 // OOP
- * 무조건 어떤 방법이던 null만 반환하지 않으면 그래도 잘 사용한 방법입니다.
- * 절대 null을 반환하면 안됩니다.
+ * "null의 대안"<p>
+ * <p>
+ * 원하는 객체가 존재하지 않을 때, null을 반환하지않고 대안을 찾아야합니다.<p>
+ * 솔루션은 다음과 같습니다.<p>
+ * 1. 리스트에 넣어서 반환 // 추천<p>
+ * 2. Optional에 담아서 반환 // 비추천<p>
+ * 3. 널 객체(null object) 디자인 패턴 사용 // OOP<p>
+ * 무조건 어떤 방법이던 null만 반환하지 않으면 그래도 잘 사용한 방법입니다.<p>
+ * 절대 null을 반환하면 안됩니다.<p>
  */
 class SolutionForReturningNonNull {
     /**
@@ -29,8 +30,8 @@ class SolutionForReturningNonNull {
     }
 
     /**
-     * 2. Optional에 담아서 반환 // 비추천
-     * 반환하는 내용물이 의미적으로 Optional이던 User이던 불분명하기 때문에 비추천입니다.
+     * 2. Optional에 담아서 반환 // 비추천<p>
+     * 반환하는 내용물이 의미적으로 Optional이던 User이던 불분명하기 때문에 비추천입니다.<p>
      */
     public Optional<User> user(String name) {
         return Optional.ofNullable(
@@ -40,8 +41,8 @@ class SolutionForReturningNonNull {
     }
 
     /**
-     * 3. 널 객체(null object) 디자인 패턴 사용 // OOP
-     * 제한적으로 User의 인터페이스를 만들고, 객체를 만들어 사용해야하기 때문에 사용하기 힘듭니다.
+     * 3. 널 객체(null object) 디자인 패턴 사용 // OOP<p>
+     * 제한적으로 User의 인터페이스를 만들고, 객체를 만들어 사용해야하기 때문에 사용하기 힘듭니다.<p>
      */
 //    private static class NullUser implements User {
 //        private final String name;
