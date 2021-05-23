@@ -54,6 +54,11 @@ class DontInputCodeInConstructor {
         private final int dollars;
 
         // 값이 바로 변환되어 셋팅되는 생성자
+
+        /**
+         * "주 생성자"
+         * 주 생성자 내에서 dollar를 연산을 통해서 셋팅하는 것은 잘못된 방법
+         */
         public InvalidCash(String dollars) {
             this.dollars = Integer.parseInt(dollars);
         }
