@@ -67,13 +67,19 @@ class DontInputCodeInConstructor {
 
         private final Number dollars;
 
-        // 생성자는 값을 셋팅만 하고, 필요한 시점에 변환해서 가져와서 사용한다.
-        // 부 생성자
+        /**
+         * "부 생성자"
+         * - 주 생성자를 이용한다.
+         * - 연산은 없고, 객체에 선언하는 형식으로만 한다.
+         * - 필요한 시점에 객체 안에서 연산 과정을 진행한다.
+         */
         public ValidCash(String dollars) {
             this(new StringAsInteger(dollars));
         }
 
-        // 주 생성자
+        /**
+         * "주 생성자"
+         */
         public ValidCash(Number dollars) {
             this.dollars = dollars;
         }
@@ -87,13 +93,19 @@ class DontInputCodeInConstructor {
 
         private final Number dollars;
 
-        // 생성자는 값을 셋팅만 하고, 필요한 시점에 변환해서 가져와서 사용한다.
-        // 부 생성자
+        /**
+         * "부 생성자"
+         * - 주 생성자를 이용한다.
+         * - 연산은 없고, 객체에 선언하는 형식으로만 한다.
+         * - 필요한 시점에 객체 안에서 연산 과정을 진행한다.
+         */
         public CachedValidCash(String dollars) {
             this(new CachedNumber(new StringAsInteger(dollars)));
         }
 
-        // 주 생성자
+        /**
+         * "주 생성자"
+         */
         public CachedValidCash(Number dollars) {
             this.dollars = dollars;
         }
