@@ -36,6 +36,9 @@ class DontUseEr {
         cash.usd();// $ 10
     }
 
+    /**
+     * 잘못된 사용 예시
+     */
     private static class CashFormatter {
         private final int dollars;
 
@@ -48,6 +51,9 @@ class DontUseEr {
         }
     }
 
+    /**
+     * 좋은 사용 예시
+     */
     private static class Cash {
         private final int dollars;
 
