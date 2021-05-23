@@ -140,6 +140,11 @@ class DontInputCodeInConstructor {
     private static class CachedNumber implements Number {
 
         private final Number origin;
+        /**
+         * "List를 자료형으로 사용한 이유?"
+         * - Integer와 같은 단일 자료형을 사용하면 불변 객체이기 때문에 객체 내용을 초기화를 해야한다.
+         * - List는 자료형을 사이즈만 초기화하고 내용은 초기화 하지 않아도 된다.
+         */
         private final List<Integer> cached = new ArrayList<>(1);
 
         public CachedNumber(Number number) {
