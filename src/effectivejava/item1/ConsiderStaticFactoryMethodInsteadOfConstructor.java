@@ -18,7 +18,8 @@ package effectivejava.item1;
  * - 대표적인 예로, {@link java.util.Collections Collections Class}가 있습니다.<p>
  * - Collections Class는 정적 팩토리 메서드를 통해서 원하는 인스턴스를 얻게 되어있습니다.<p>
  * - 하나의 클래스에서 하위 여러 객체를 반환 받을 수 있기 때문에 수 많은 클래스를 생성하지 않아도 됩니다.<p>
- * 4.
+ * 4. 입력 매개변수에 따라 매번 다른 클래스의 객체를 반환할 수 있습니다.<p>
+ * -
  */
 class ConsiderStaticFactoryMethodInsteadOfConstructor {
 }
