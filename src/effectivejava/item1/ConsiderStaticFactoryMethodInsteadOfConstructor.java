@@ -14,6 +14,11 @@ package effectivejava.item1;
  * - ex) Boolean.valueOf(boolean)<p>
  * - 인스턴스를 살아있게 할지 통제가 가능합니다. 1) singleton object 2) non-instantiable object 3) immutable object를 선택 가능<p>
  * 3. 반환 타입의 하위 타입 객체를 반환할 수 있는 능력이 있습니다.<p>
+ * - 인터페이스를 구현하는 여러 객체가 있다고 가정하면, 필요한 경우에 따라서 다른 객체 반환이 가능합니다.<p>
+ * - 대표적인 예로, {@link java.util.Collections Collections Class}가 있습니다.<p>
+ * - Collections Class는 정적 팩토리 메서드를 통해서 원하는 인스턴스를 얻게 되어있습니다.<p>
+ * - 하나의 클래스에서 하위 여러 객체를 반환 받을 수 있기 때문에 수 많은 클래스를 생성하지 않아도 됩니다.<p>
+ * 4.
  */
 class ConsiderStaticFactoryMethodInsteadOfConstructor {
 }
