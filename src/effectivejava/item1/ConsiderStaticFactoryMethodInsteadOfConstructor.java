@@ -28,6 +28,8 @@ package effectivejava.item1;
  * - 클라이언트는 정적 팩토리 메서드를 사용만하면 되지, 무엇이 반환되는지는 신경 안써도 된다.<p>
  * <p>
  * 5. 정적 팩토리 메서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지 않아도 됩니다.<p>
+ * - 객체 생성 시점에 new 키워드를 사용한다면 객체의 인스턴스가 반환됩니다. 하지만 정적 팩토리 메서드는 작성 시점에는 반환할 객체의 클래스가 없어도 됩니다.<p>
+ * - 즉, JDBC라고 봤을 때, Connection과 관련된 객체를 생성한다면, Vendor별로 다른 생성 객체를 제공할 수 있습니다. 유연하게 반환할 수 있습니다.<p>
  * -
  */
 class ConsiderStaticFactoryMethodInsteadOfConstructor {
