@@ -1,4 +1,4 @@
-package elegantobject.retirement.throwonlycheckedexception;
+package elegantobject.step4_retirement.throwonlycheckedexception;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package elegantobject.retirement.throwonlycheckedexception;
+package elegantobject.step4_retirement.throwonlycheckedexception;
 
 /**
  * "예외 후 복구는 단 한 번만 해야합니다"<p>

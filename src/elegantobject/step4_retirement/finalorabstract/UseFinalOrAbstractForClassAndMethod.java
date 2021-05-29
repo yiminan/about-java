@@ -1,4 +1,4 @@
-package elegantobject.retirement.finalorabstract;
+package elegantobject.step4_retirement.finalorabstract;
 
 import java.io.File;
 import java.io.FileInputStream;

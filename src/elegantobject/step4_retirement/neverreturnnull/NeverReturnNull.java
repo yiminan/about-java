@@ -1,4 +1,4 @@
-package elegantobject.retirement.neverreturnnull;
+package elegantobject.step4_retirement.neverreturnnull;
 
 import java.io.File;
 import java.io.IOException;
