@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makemethodnamecarefully;
+package elegantobject.step2_education.step2_4_makemethodnamecarefully;
 
 import java.io.IOException;
 import java.io.InputStream;

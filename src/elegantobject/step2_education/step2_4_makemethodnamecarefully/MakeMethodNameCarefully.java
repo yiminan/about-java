@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makemethodnamecarefully;
+package elegantobject.step2_education.step2_4_makemethodnamecarefully;
 
 /**
  * "메서드는 빌더(Builder)와 조정자(Manipulator)에 따라 적합한 이름을 지어야합니다"<p>

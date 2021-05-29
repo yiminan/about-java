@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makemethodnamecarefully;
+package elegantobject.step2_education.step2_4_makemethodnamecarefully;
 
 /**
  * "Boolean 값을 결과로 반환하는 메서드"<p>
