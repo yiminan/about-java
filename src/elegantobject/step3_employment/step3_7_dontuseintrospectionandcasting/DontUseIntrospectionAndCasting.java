@@ -1,4 +1,4 @@
-package elegantobject.step3_employment.dontuseintrospectionandcasting;
+package elegantobject.step3_employment.step3_7_dontuseintrospectionandcasting;
 
 import java.util.Collection;
 
