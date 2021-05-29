@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makeaimmutableobject;
+package elegantobject.step2_education.step2_6_makeaimmutableobject;
 
 /**
  * "불변객체를 사용하여 시간적 결합(Temporal Coupling)을 제거합니다"<p>

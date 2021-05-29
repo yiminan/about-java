@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makeaimmutableobject;
+package elegantobject.step2_education.step2_6_makeaimmutableobject;
 
 /**
  * "불변 객체 사용하여 가변 객체의 사이드 이펙트를 제거한다"<p>

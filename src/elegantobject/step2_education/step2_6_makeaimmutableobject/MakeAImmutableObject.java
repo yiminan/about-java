@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makeaimmutableobject;
+package elegantobject.step2_education.step2_6_makeaimmutableobject;
 
 /**
  * "불변 객체(Immutable Object)로 만들어야합니다"<p>

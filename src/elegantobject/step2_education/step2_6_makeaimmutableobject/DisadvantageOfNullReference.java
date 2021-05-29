@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makeaimmutableobject;
+package elegantobject.step2_education.step2_6_makeaimmutableobject;
 
 /**
  * "객체에서 NULL 참조를 없애기"<p>
