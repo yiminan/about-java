@@ -1,4 +1,4 @@
-package elegantobject.education.makemethodnamecarefully;
+package elegantobject.step2_education.makemethodnamecarefully;
 
 import java.io.File;
 import java.io.InputStream;

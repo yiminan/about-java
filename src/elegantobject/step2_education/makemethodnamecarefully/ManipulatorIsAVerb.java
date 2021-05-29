@@ -1,4 +1,4 @@
-package elegantobject.education.makemethodnamecarefully;
+package elegantobject.step2_education.makemethodnamecarefully;
 
 /**
  * "조정자(Manipulator)는 동사다"<p>

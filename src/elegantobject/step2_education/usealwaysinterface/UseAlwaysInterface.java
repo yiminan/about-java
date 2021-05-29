@@ -1,4 +1,4 @@
-package elegantobject.education.usealwaysinterface;
+package elegantobject.step2_education.usealwaysinterface;
 
 /**
  * "인터페이스를 사용해서 결합도를 낮춰야합니다"<p>

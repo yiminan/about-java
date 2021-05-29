@@ -1,4 +1,4 @@
-package elegantobject.education.makeaimmutableobject;
+package elegantobject.step2_education.makeaimmutableobject;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;

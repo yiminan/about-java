@@ -1,4 +1,4 @@
-package elegantobject.education.minimalizecapsulation;
+package elegantobject.step2_education.minimalizecapsulation;
 
 import java.util.Objects;
 

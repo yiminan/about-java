@@ -1,4 +1,4 @@
-package elegantobject.education.makeaimmutableobject;
+package elegantobject.step2_education.makeaimmutableobject;
 
 /**
  * "불변 객체로 원자성 보장할 수 있습니다"<p>
