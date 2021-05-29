@@ -1,4 +1,4 @@
-package elegantobject.step3_employment.dontusegettersetter;
+package elegantobject.step3_employment.step3_5_dontusegettersetter;
 
 /**
  * "getter와 setter를 안티패턴이고, 사용하면 안됩니다"
