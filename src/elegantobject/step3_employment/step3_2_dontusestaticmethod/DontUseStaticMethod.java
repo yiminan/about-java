@@ -1,4 +1,4 @@
-package elegantobject.step3_employment.dontusestaticmethod;
+package elegantobject.step3_employment.step3_2_dontusestaticmethod;
 
 /**
  * "정적 메서드(static method)를 사용하지 않습니다"<p>

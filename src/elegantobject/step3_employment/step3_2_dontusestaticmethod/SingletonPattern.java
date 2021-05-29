@@ -1,4 +1,4 @@
-package elegantobject.step3_employment.dontusestaticmethod;
+package elegantobject.step3_employment.step3_2_dontusestaticmethod;
 
 /**
  * "싱글톤(Singleton) 패턴"<p>

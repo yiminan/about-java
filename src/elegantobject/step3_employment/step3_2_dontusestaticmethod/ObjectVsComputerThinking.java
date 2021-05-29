@@ -1,4 +1,4 @@
-package elegantobject.step3_employment.dontusestaticmethod;
+package elegantobject.step3_employment.step3_2_dontusestaticmethod;
 
 /**
  * "객체 대 컴퓨터 사고(object vs computer thinking)<p>
