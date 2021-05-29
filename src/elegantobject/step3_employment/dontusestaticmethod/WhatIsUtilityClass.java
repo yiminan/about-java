@@ -1,4 +1,4 @@
-package elegantobject.employment.dontusestaticmethod;
+package elegantobject.step3_employment.dontusestaticmethod;
 
 /**
  * "유틸리티 클래스(Utility classes)란?"<p>

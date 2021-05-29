@@ -1,4 +1,4 @@
-package elegantobject.employment.dontusestaticmethod;
+package elegantobject.step3_employment.dontusestaticmethod;
 
 /**
  * "조합 가능한 데코레이터"<p>

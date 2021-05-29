@@ -1,4 +1,4 @@
-package elegantobject.employment.dontusestaticmethod;
+package elegantobject.step3_employment.dontusestaticmethod;
 
 import java.io.File;
 import java.util.Collections;

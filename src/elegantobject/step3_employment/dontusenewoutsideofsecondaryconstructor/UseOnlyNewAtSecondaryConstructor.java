@@ -1,4 +1,4 @@
-package elegantobject.employment.dontusenewoutsideofsecondaryconstructor;
+package elegantobject.step3_employment.dontusenewoutsideofsecondaryconstructor;
 
 /**
  * "객체 내에서 new는 부 생성자에서만 사용해야합니다"

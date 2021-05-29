@@ -1,4 +1,4 @@
-package elegantobject.employment.dontusestaticmethod;
+package elegantobject.step3_employment.dontusestaticmethod;
 
 /**
  * "절차지향적 코드가 객체 지향이 되는 변화"<p>

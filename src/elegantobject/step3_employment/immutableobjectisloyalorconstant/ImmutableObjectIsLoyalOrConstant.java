@@ -1,4 +1,4 @@
-package elegantobject.employment.immutableobjectisloyalorconstant;
+package elegantobject.step3_employment.immutableobjectisloyalorconstant;
 
 import java.net.URI;
 import java.util.*;
