@@ -1,4 +1,4 @@
-package elegantobject.step2_education.useshortinterfaceusingbysmartclass;
+package elegantobject.step2_education.step2_9_useshortinterfaceusingbysmartclass;
 
 /**
  * "짧은 인터페이스를 유지하고, 스마트 클래스를 만들어서 사용해야합니다"<p>
