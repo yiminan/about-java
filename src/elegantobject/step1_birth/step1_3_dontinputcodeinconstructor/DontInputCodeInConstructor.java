@@ -1,4 +1,4 @@
-package elegantobject.birth.step1_3_dontinputcodeinconstructor;
+package elegantobject.step1_birth.step1_3_dontinputcodeinconstructor;
 
 import java.util.ArrayList;
 import java.util.List;

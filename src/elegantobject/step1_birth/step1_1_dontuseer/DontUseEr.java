@@ -1,4 +1,4 @@
-package elegantobject.birth.step1_1_dontuseer;
+package elegantobject.step1_birth.step1_1_dontuseer;
 
 /**
  * "클래스의 이름으로 -er로 끝나는 이름을 사용하면 안됩니다"<p>
