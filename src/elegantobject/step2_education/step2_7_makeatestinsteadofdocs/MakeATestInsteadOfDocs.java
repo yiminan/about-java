@@ -1,4 +1,4 @@
-package elegantobject.step2_education.makeatestinsteadofdocs;
+package elegantobject.step2_education.step2_7_makeatestinsteadofdocs;
 
 import org.junit.Test;
 
