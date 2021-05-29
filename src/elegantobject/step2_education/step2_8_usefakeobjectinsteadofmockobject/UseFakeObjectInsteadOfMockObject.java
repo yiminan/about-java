@@ -1,4 +1,4 @@
-package elegantobject.step2_education.usefakeobjectinsteadofmockobject;
+package elegantobject.step2_education.step2_8_usefakeobjectinsteadofmockobject;
 
 import org.junit.Assert;
 
