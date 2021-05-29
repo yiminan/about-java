@@ -36,6 +36,8 @@ package effectivejava.item1;
  * - 유틸리티 클래스들은 상속할 수 없는 정적 팩토리 메서드만 가지고 있으니 상속이 가능해도 할 수 있는게 없습니다.<p>
  * - 정적 팩토리 메서드를 사용하면서, 상속을 사용하지 않고 컴포지션을 사용하고, 불변 타입을 만들려면 이 제약을 사용해야한다는 점에서 장점이 될 수 도 있습니다.<p>
  * <p>
+ * 2. 정적 팩토리 메서드는 프로그래머가 찾기 어렵습니다.<p>
+ * 
  */
 class ConsiderStaticFactoryMethodInsteadOfConstructor {
 }
