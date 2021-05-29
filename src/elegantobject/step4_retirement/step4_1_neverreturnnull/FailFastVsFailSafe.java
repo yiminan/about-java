@@ -1,4 +1,4 @@
-package elegantobject.step4_retirement.neverreturnnull;
+package elegantobject.step4_retirement.step4_1_neverreturnnull;
 
 /**
  * "빠르게 실패하기(Fail Fast) vs. 안전하게 실패하기(Fail Safe)"<p>
