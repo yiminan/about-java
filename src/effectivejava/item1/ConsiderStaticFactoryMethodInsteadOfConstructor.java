@@ -71,7 +71,7 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
          * "valueOf"
          * - "from", "of"에서 조금 더 자세하게 네이밍한 정적 팩토리 메서드
          */
-        BigInteger.valueOf(Integer.MAX_VALUE);
+        BigInteger maxIntValue = BigInteger.valueOf(Integer.MAX_VALUE);
         /**
          * "instance" or "getInstance"
          */
