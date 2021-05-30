@@ -78,7 +78,7 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
         StackWalker stackWalker = StackWalker.getInstance();
         /**
          * "create" or "newInstance"
-         * -
+         * - "instance" or "getInstance"와 같다. 차이점은 매번 새로운 인스턴스를 생성합니다.
          */
         List<String> strings = (List<String>) Array.newInstance(String.class, 10);
         /**
