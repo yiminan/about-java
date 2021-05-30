@@ -98,8 +98,10 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
         BufferedReader bufferedReader = Files.newBufferedReader(Path.of("/home/test.txt"));
         /**
          * "type"
+         * - "get[Type]", "new[Type]"의 간결화된 버전입니다.
+         * - get, new만 네이밍에서 제거되었습니다.
          */
-        Collections.unmodifiableList(Arrays.asList(Type.VIP, Type.GENERAL));
+        List<Integer> integers = Collections.unmodifiableList(Arrays.asList(1, 2));
     }
 
     private enum Type {VIP, GENERAL}
