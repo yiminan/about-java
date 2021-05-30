@@ -56,35 +56,40 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
 
     public static void main(String[] args) throws IOException {
         /**
-         * from
+         * "from"
+         * - from이 호출되는 클래스 타입을 반환하는 정적 팩토리 메서드
+         * - 1개 파라미터를 전달받는 경우
          */
-        Date.from(Instant.now());
+        Date nowDate = Date.from(Instant.now());
         /**
-         * of
+         * "of"
+         * - from이 호출되는 클래스 타입을 반환하는 정적 팩토리 메서드
+         * - 2개이상 파라미터를 전달받는 경우
          */
         EnumSet.of(Type.VIP, Type.GENERAL);
         /**
-         * valueOf
+         * "valueOf"
+         * -
          */
         BigInteger.valueOf(Integer.MAX_VALUE);
         /**
-         * instance or getInstance
+         * "instance" or "getInstance"
          */
         StackWalker.getInstance();
         /**
-         * create or newInstance
+         * "create" or "newInstance"
          */
         Array.newInstance(String.class, 10);
         /**
-         * getType
+         * "getType"
          */
         Files.getFileStore(Path.of("/home/test.txt"));
         /**
-         * newType
+         * "newType"
          */
         Files.newBufferedReader(Path.of("/home/test.txt"));
         /**
-         * type
+         * "type"
          */
         Collections.unmodifiableList(Arrays.asList(Type.VIP, Type.GENERAL));
     }
