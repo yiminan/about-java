@@ -60,28 +60,33 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
          * - 1개 파라미터를 전달받는 경우
          */
         Date nowDate = Date.from(Instant.now());
+
         /**
          * "of"
          * - from이 호출되는 클래스 타입을 반환하는 정적 팩토리 메서드
          * - 2개이상 파라미터를 전달받는 경우
          */
         EnumSet types = EnumSet.of(Type.VIP, Type.GENERAL);
+
         /**
          * "valueOf"
          * - "from", "of"에서 조금 더 자세하게 네이밍한 정적 팩토리 메서드
          */
         BigInteger maxIntValue = BigInteger.valueOf(Integer.MAX_VALUE);
+
         /**
          * "instance" or "getInstance"
          * - 매개변수를 받는다면, 매개변수로 명시한 인스턴스를 반환하지만, 같은 인스턴스를 보장하진 않는다.
          * - 같은 인스턴스를 보장하지 않는 이유는 이미 생성된 인스턴스를 싱글턴 패턴과 같이 재사용할 수 있다.
          */
         StackWalker stackWalker = StackWalker.getInstance();
+
         /**
          * "create" or "newInstance"
          * - "instance" or "getInstance"와 같다. 차이점은 매번 새로운 인스턴스를 생성합니다.
          */
         List<String> strings = (List<String>) Array.newInstance(String.class, 10);
+
         /**
          * "get[Type]"
          * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
@@ -89,6 +94,7 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
          * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
          */
         FileStore testFile = Files.getFileStore(Path.of("/home/test.txt"));
+
         /**
          * "new[Type]"
          * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
@@ -96,6 +102,7 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
          * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
          */
         BufferedReader bufferedReader = Files.newBufferedReader(Path.of("/home/test.txt"));
+
         /**
          * "type"
          * - "get[Type]", "new[Type]"의 간결화된 버전입니다.
