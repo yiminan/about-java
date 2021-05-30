@@ -1,5 +1,16 @@
 package effectivejava.item1;
 
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.Instant;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
+import java.util.EnumSet;
+
 /**
  * "생성자 대신 정적 팩터리 메서드를 고려하라"<p>
  * <p>
@@ -42,4 +53,41 @@ package effectivejava.item1;
  * - API Docs를 이용해서 정적 팩토리 메서드에 대한 내용을 잘 정리해야합니다.<p>
  */
 class ConsiderStaticFactoryMethodInsteadOfConstructor {
+
+    public static void main(String[] args) throws IOException {
+        /**
+         * from
+         */
+        Date.from(Instant.now());
+        /**
+         * of
+         */
+        EnumSet.of(Type.VIP, Type.GENERAL);
+        /**
+         * valueOf
+         */
+        BigInteger.valueOf(Integer.MAX_VALUE);
+        /**
+         * instance or getInstance
+         */
+        StackWalker.getInstance();
+        /**
+         * create or newInstance
+         */
+        Array.newInstance(String.class, 10);
+        /**
+         * getType
+         */
+        Files.getFileStore(Path.of("/home/test.txt"));
+        /**
+         * newType
+         */
+        Files.newBufferedReader(Path.of("/home/test.txt"));
+        /**
+         * type
+         */
+        Collections.unmodifiableList(Arrays.asList(Type.VIP, Type.GENERAL));
+    }
+
+    private enum Type {VIP, GENERAL}
 }
