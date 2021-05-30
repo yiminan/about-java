@@ -3,13 +3,11 @@ package effectivejava.item1;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.math.BigInteger;
+import java.nio.file.FileStore;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Instant;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.EnumSet;
+import java.util.*;
 
 /**
  * "생성자 대신 정적 팩터리 메서드를 고려하라"<p>
@@ -80,13 +78,14 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
         StackWalker stackWalker = StackWalker.getInstance();
         /**
          * "create" or "newInstance"
-         *
+         * -
          */
-        Array.newInstance(String.class, 10);
+        List<String> strings = (List<String>) Array.newInstance(String.class, 10);
         /**
          * "getType"
+         * -
          */
-        Files.getFileStore(Path.of("/home/test.txt"));
+        FileStore testFile = Files.getFileStore(Path.of("/home/test.txt"));
         /**
          * "newType"
          */
