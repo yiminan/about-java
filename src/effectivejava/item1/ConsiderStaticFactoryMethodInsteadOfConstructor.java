@@ -80,8 +80,8 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
 
         /**
          * "instance" or "getInstance"
-         * - 매개변수를 받는다면, 매개변수로 명시한 인스턴스를 반환하지만, 같은 인스턴스를 보장하진 않는다.
-         * - 같은 인스턴스를 보장하지 않는 이유는 이미 생성된 인스턴스를 싱글턴 패턴과 같이 재사용할 수 있다.
+         * - 매개변수를 받는다면, 매개변수로 명시한 인스턴스를 반환하지만, 같은 인스턴스를 보장하진 않습니다.
+         * - 같은 인스턴스를 보장하지 않는 이유는 이미 생성된 인스턴스를 싱글턴 패턴과 같이 재사용할 수 있습니다.
          */
         StackWalker stackWalker = StackWalker.getInstance();
 
