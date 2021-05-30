@@ -1,5 +1,6 @@
 package effectivejava.item1;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.math.BigInteger;
@@ -84,14 +85,17 @@ class ConsiderStaticFactoryMethodInsteadOfConstructor {
         /**
          * "get[Type]"
          * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
-         * - "getInstance"와 같습니다. type이 instance가 되는 것입니다.
+         * - "getInstance"와 같습니다.
          * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
          */
         FileStore testFile = Files.getFileStore(Path.of("/home/test.txt"));
         /**
-         * "newType"
+         * "new[Type]"
+         * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
+         * - "newInstance"와 같습니다.
+         * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
          */
-        Files.newBufferedReader(Path.of("/home/test.txt"));
+        BufferedReader bufferedReader = Files.newBufferedReader(Path.of("/home/test.txt"));
         /**
          * "type"
          */
