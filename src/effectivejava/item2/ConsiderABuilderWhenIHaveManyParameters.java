@@ -9,4 +9,29 @@ package effectivejava.item2;
  */
 class ConsiderABuilderWhenIHaveManyParameters {
 
+    private static class TelescopingConstructorPatternForUser {
+        private final String firstName;
+        private final String lastName;
+        private final int age;
+        private final String sex;
+        private final String email;
+
+        public TelescopingConstructorPatternForUser(String firstName, String lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = 0;
+            this.sex = "none";
+            this.email = "";
+        }
+
+        public TelescopingConstructorPatternForUser(String firstName, String lastName, int age, String sex, String email) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.sex = sex;
+            this.email = email;
+        }
+
+        // ...
+    }
 }
