@@ -9,6 +9,9 @@ package effectivejava.item2;
  */
 class ConsiderABuilderWhenIHaveManyParameters {
 
+    /**
+     * 점층적 생성자 패턴을 사용한 User 객체 예시
+     */
     private static class TelescopingConstructorPatternForUser {
         private final String firstName;
         private final String lastName;
