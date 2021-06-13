@@ -12,6 +12,8 @@ package effectivejava.item2;
  * - 매개변수가 없는 생성자로 객체 인스턴스를 만들고, setter를 통해서 내부 field를 설정하는 방식입니다.<p>
  * - 코드의 재사용성은 늘어나지만, setter를 여러개 호출해야하기 때문에 시간적 결합도가 증가합니다.<p>
  * - 불변 객체로 만들 수 없어서, 스레드 세이프하지 않습니다.즉, 런타임 오류에 취약합니다.<p>
+ * 3.빌더 패턴(builder pattern)<p>
+ * -
  */
 class ConsiderABuilderWhenIHaveManyParameters {
 
