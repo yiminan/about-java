@@ -16,7 +16,7 @@ package effectivejava.item2;
 class ConsiderABuilderWhenIHaveManyParameters {
 
     /**
-     * 점층적 생성자 패턴을 사용한 User 객체 예시
+     * 1.점층적 생성자 패턴(telescoping constructor pattern)
      */
     private static class TelescopingConstructorPatternForUser {
         private final String firstName;
@@ -44,6 +44,9 @@ class ConsiderABuilderWhenIHaveManyParameters {
         // ...
     }
 
+    /**
+     * 자바빈즈 패턴(javaBeans pattern)
+     */
     private static class JavaBeansPatternForUser {
         private String firstName;
         private String lastName;
