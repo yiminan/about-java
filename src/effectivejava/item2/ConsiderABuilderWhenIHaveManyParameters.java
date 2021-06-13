@@ -43,4 +43,35 @@ class ConsiderABuilderWhenIHaveManyParameters {
 
         // ...
     }
+
+    private static class JavaBeansPatternForUser {
+        private String firstName;
+        private String lastName;
+        private int age;
+        private String sex;
+        private String email;
+
+        public JavaBeansPatternForUser() {
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+        public void setSex(String sex) {
+            this.sex = sex;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+    }
 }
