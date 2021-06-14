@@ -79,4 +79,49 @@ class ConsiderABuilderWhenIHaveManyParameters {
             this.email = email;
         }
     }
+
+    private static class BuilderPatternForUser {
+        private final String firstName;
+        private final String lastName;
+        private final String email;
+        private final int age;
+        private final String sex;
+
+        public static class Builder {
+            private final String firstName;
+            private final String lastName;
+            private final String email;
+
+            private int age = 0;
+            private String sex = "N";
+
+            public Builder(String firstName, String lastName, String email) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.email = email;
+            }
+
+            public Builder age(int age) {
+                this.age = age;
+                return this;
+            }
+
+            public Builder sex(String sex) {
+                this.sex = sex;
+                return this;
+            }
+
+            public BuilderPatternForUser build(Builder builder) {
+                return new BuilderPatternForUser(builder);
+            }
+        }
+
+        private BuilderPatternForUser(Builder builder) {
+            this.firstName = builder.firstName;
+            this.lastName = builder.lastName;
+            this.email = builder.email;
+            this.age = builder.age;
+            this.sex = builder.sex;
+        }
+    }
 }
