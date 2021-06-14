@@ -47,7 +47,7 @@ class ConsiderABuilderWhenIHaveManyParameters {
     }
 
     /**
-     * 자바빈즈 패턴(javaBeans pattern)
+     * 2.자바빈즈 패턴(javaBeans pattern)
      */
     private static class JavaBeansPatternForUser {
         private String firstName;
@@ -80,6 +80,9 @@ class ConsiderABuilderWhenIHaveManyParameters {
         }
     }
 
+    /**
+     * 3.빌더 패턴(builder pattern)
+     */
     private static class BuilderPatternForUser {
         private final String firstName;
         private final String lastName;
