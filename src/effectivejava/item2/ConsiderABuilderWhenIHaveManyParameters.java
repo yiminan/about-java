@@ -13,7 +13,9 @@ package effectivejava.item2;
  * - 코드의 재사용성은 늘어나지만, setter를 여러개 호출해야하기 때문에 시간적 결합도가 증가합니다.<p>
  * - 불변 객체로 만들 수 없어서, 스레드 세이프하지 않습니다.즉, 런타임 오류에 취약합니다.<p>
  * 3.빌더 패턴(builder pattern)<p>
- * -
+ * - 점층적 생성자 패턴(telescoping constructor pattern) 와 자바빈즈 패턴(javaBeans pattern)의 장점을 취한 패턴<p>
+ * - 필수 매개변수는 점층적 생성자 패턴(telescoping constructor pattern)를 통해서 전달받습니다.<p>
+ * - 선택 매개변수는 Builder를 만들어서 자바빈즈 패턴(javaBeans pattern)처럼 원하는 매개변수를 전달해서 생성자를 셋팅합니다.<p>
  */
 class ConsiderABuilderWhenIHaveManyParameters {
 
