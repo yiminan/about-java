@@ -93,11 +93,21 @@ class ConsiderABuilderWhenIHaveManyParameters {
         private final String sex;
 
         private BuilderPatternForUser(Builder builder) {
+            validate(builder);// 이 지점에서 유효성 검사를 실시합니다.
             this.firstName = builder.firstName;
             this.lastName = builder.lastName;
             this.email = builder.email;
             this.age = builder.age;
             this.sex = builder.sex;
+        }
+
+        private void validate(Builder builder) {
+            if (!builder.firstName.equals("")) {
+                throw new IllegalArgumentException("Invalid firstName");
+            }
+            if (builder.age > 0) {
+                throw new IllegalArgumentException("Invalid age");
+            }
         }
 
         public static class Builder {
