@@ -16,6 +16,8 @@ package effectivejava.item2;
  * - 점층적 생성자 패턴(telescoping constructor pattern) 와 자바빈즈 패턴(javaBeans pattern)의 장점을 취한 패턴<p>
  * - 필수 매개변수는 점층적 생성자 패턴(telescoping constructor pattern)를 통해서 전달받습니다.<p>
  * - 선택 매개변수는 Builder를 만들어서 자바빈즈 패턴(javaBeans pattern)처럼 원하는 매개변수를 전달해서 생성자를 셋팅합니다.<p>
+ * - Builder를 호출해서 메서드를 흐르듯 연결한다는 뜻으로 'fluent API' 또는 'method chaining'이라고 합니다.<p>
+ * - 빌더를 생성하는 주 생성자에는 해당 정보의 유효성을 검사하기 위한 검증문이 들어가야합니다.<p>
  */
 class ConsiderABuilderWhenIHaveManyParameters {
 
