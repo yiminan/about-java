@@ -17,6 +17,9 @@ abstract class Pizza {
 
         abstract Pizza build();
 
+        /**
+         * 하위 클래스는 이 메서드를 재정의(overriding)하여 하위 객체의 "this"를 반환하도록 해야합니다.
+         */
         protected abstract T self();
     }
 
