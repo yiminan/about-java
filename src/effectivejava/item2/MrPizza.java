@@ -15,7 +15,7 @@ class MrPizza extends Pizza {
         }
 
         @Override
-        Pizza build() {
+        public Pizza build() {
             return new MrPizza(this);
         }
 
