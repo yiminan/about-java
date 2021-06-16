@@ -141,4 +141,13 @@ class ConsiderABuilderWhenIHaveManyParameters {
             }
         }
     }
+
+    public static void main(String[] args) {
+        MrPizza mrPizza = new MrPizza.Builder(MrPizza.Size.SMALL)
+                .addTopping(Pizza.Topping.SAUSAGE).addTopping(Pizza.Topping.ONION)
+                .build();
+        DominoPizza dominoPizza = new DominoPizza.Builder()
+                .addTopping(Pizza.Topping.ONION).sauceInside().build();
+
+    }
 }
