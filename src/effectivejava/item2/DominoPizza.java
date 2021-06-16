@@ -12,7 +12,7 @@ class DominoPizza extends Pizza {
         }
 
         @Override
-        public Pizza build() {
+        public DominoPizza build() {
             return new DominoPizza(this);
         }
 
