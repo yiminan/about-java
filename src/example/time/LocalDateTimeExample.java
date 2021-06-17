@@ -1,4 +1,4 @@
-package time.javatime;
+package example.time;
 
 import java.time.Instant;
 import java.time.ZoneId;
