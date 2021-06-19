@@ -6,6 +6,8 @@ package effectivejava.item3;
  * 싱글턴의 예는 '무상태 객체'나 '설계상 유일해야하는 시스템 컴포넌트'에서 사용입니다.<p>
  * 무상태(stateless) 객체 : 내부 필드로 상태값을 가지고 있지 않은 객체<p>
  * 설계상 유일해야하는 시스템 컴포넌트 : 스프링 bean과 같은 시스템에 유일해야하는 컴포넌트<p>
+ * 클래스를 싱글턴으로 만들면 이를 사용하는 클라이언트를 테스트하기 힘들어집니다.<p>
+ * 인터페이스로 구현된 싱글턴이 아닌 경우에는 싱글턴 인스턴스를 테스트에서 mock으로 구현하기 힘듭니다.<p>
  *
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
