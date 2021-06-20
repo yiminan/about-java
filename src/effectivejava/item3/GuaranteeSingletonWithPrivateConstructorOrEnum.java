@@ -14,4 +14,8 @@ package effectivejava.item3;
  * 2)
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
+
+    private static class SingletonByPublicStaticFinalField {
+
+    }
 }
