@@ -10,7 +10,7 @@ package effectivejava.item3;
  * 인터페이스로 구현된 싱글턴이 아닌 경우에는 싱글턴 인스턴스를 테스트에서 mock으로 구현하기 힘듭니다.<p>
  * 싱글턴을 만드는 보통 방식)<p>
  * 공통) 클래스 생성자를 private으로 감추어두고, 내부 field로 publid static 멤버를 하나 마련하여 사용<p>
- * 1) 'public static final' filed를 만들어서 사용하는 방식<p>
+ * 1) 'public static final' field를 만들어서 사용하는 방식<p>
  * 2)
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
