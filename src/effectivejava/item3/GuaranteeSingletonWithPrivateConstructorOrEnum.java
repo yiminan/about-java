@@ -36,7 +36,7 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
      * 2) 'static factory' method를 만들어서 사용하는 방식
      */
     private static class SingletonByStaticFactoryMethod {
-        private static final  SingletonByStaticFactoryMethod INSTANCE = new SingletonByStaticFactoryMethod();
+        private static final SingletonByStaticFactoryMethod INSTANCE = new SingletonByStaticFactoryMethod();
 
         private SingletonByStaticFactoryMethod() {
         }
