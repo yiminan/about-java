@@ -17,6 +17,7 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
     public static void main(String[] args) {
         System.out.println(SingletonByPublicStaticFinalField.INSTANCE);
+        System.out.println(SingletonByStaticFactoryMethod.getINSTANCE());
     }
 
     /**
