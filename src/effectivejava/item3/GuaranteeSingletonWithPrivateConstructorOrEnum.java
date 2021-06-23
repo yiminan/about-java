@@ -27,10 +27,6 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
         private SingletonByPublicStaticFinalField() {
         }
-
-        public static SingletonByPublicStaticFinalField getInstance() {
-            return INSTANCE;
-        }
     }
 
     private static class SingletonByStaticFactoryMethod {
