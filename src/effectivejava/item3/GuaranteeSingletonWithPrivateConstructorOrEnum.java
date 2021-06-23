@@ -16,7 +16,7 @@ package effectivejava.item3;
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
     public static void main(String[] args) {
-        System.out.println(SingletonByPublicStaticFinalField.getInstance());
+        System.out.println(SingletonByPublicStaticFinalField.INSTANCE);
     }
 
     /**
