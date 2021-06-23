@@ -32,4 +32,15 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
             return INSTANCE;
         }
     }
+
+    private static class SingletonByStaticFactoryMethod {
+        private static final  SingletonByStaticFactoryMethod INSTANCE = new SingletonByStaticFactoryMethod();
+
+        private SingletonByStaticFactoryMethod() {
+        }
+
+        public static SingletonByStaticFactoryMethod getINSTANCE() {
+            return INSTANCE;
+        }
+    }
 }
