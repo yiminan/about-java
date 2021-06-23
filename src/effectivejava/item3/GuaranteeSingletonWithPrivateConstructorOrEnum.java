@@ -11,6 +11,8 @@ package effectivejava.item3;
  * 싱글턴을 만드는 보통 방식)<p>
  * 공통) 클래스 생성자를 private으로 감추어두고, 내부 field로 publid static 멤버를 하나 마련하여 사용<p>
  * 1) 'public static final' field를 만들어서 사용하는 방식<p>
+ * - 명확한 public static final field를 참조하기 때문에 싱글턴임이 명확하다.<p>
+ * - 싱글턴 클래스를 간결하게 만들 수 있다.<p>
  * 2) 'static factory' method를 만들어서 사용하는 방식<p>
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
