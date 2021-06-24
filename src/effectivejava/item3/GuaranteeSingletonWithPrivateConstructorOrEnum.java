@@ -14,6 +14,8 @@ package effectivejava.item3;
  * - 명확한 public static final field를 참조하기 때문에 싱글턴임이 명확하다.<p>
  * - 싱글턴 클래스를 간결하게 만들 수 있다.<p>
  * 2) 'static factory' method를 만들어서 사용하는 방식<p>
+ * - 메서드로 싱글턴 인스턴스를 반환하기 때문에 API 코드 변경 없이 싱글턴이 아니게 변경이 가능합니다. 예를 들면, 쓰레드별 인스턴스를 제공이 가능합니다.<p>
+ * - <p>
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
