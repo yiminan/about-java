@@ -15,7 +15,7 @@ package effectivejava.item3;
  * - 싱글턴 클래스를 간결하게 만들 수 있다.<p>
  * 2) 'static factory' method를 만들어서 사용하는 방식<p>
  * - 메서드로 싱글턴 인스턴스를 반환하기 때문에 API 코드 변경 없이 싱글턴이 아니게 변경이 가능합니다. 예를 들면, 쓰레드별 인스턴스를 제공이 가능합니다.<p>
- * - <p>
+ * - 정적 팩터리를 제네릭 싱글턴 팩터리로 만들 수 있습니다.<p>
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
