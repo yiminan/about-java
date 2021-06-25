@@ -16,7 +16,7 @@ package effectivejava.item3;
  * 2) 'static factory' method를 만들어서 사용하는 방식<p>
  * - 메서드로 싱글턴 인스턴스를 반환하기 때문에 API 코드 변경 없이 싱글턴이 아니게 변경이 가능합니다. 예를 들면, 쓰레드별 인스턴스를 제공이 가능합니다.<p>
  * - 정적 팩터리를 제네릭 싱글턴 팩토리로 만들 수 있습니다.<p>
- * - 정적 팩토리의 메서드 참조를 공급자(Supplier)로 사용할 수 있다는 점입니다. ex) User::getInstance -> Supplier{@literal <User>}<p>
+ * - 정적 팩토리의 메서드 참조를 공급자(Supplier)로 사용할 수 있다는 점입니다. ex) User::getInstance -> Supplier&lt;User&gt;<p>
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
