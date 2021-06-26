@@ -5,13 +5,13 @@ import java.io.*;
 class SingletonWithSameInstance {
 
     public static void main(String[] args) {
-        MySingletonWithReadResolve instance = MySingletonWithReadResolve.getINSTANCE();
         TestSerializer testSerializer = new TestSerializer();
-        byte[] serializedData = testSerializer.serialize(instance);
-        MySingletonWithReadResolve result = (MySingletonWithReadResolve) testSerializer.deserialize(serializedData);
 
-        System.out.println("instance == result : " + (instance == result));
-        System.out.println("instance.equals(result) : " + (instance.equals(result)));
+        MySingletonWithReadResolve instanceWithReadResolve = MySingletonWithReadResolve.getINSTANCE();
+        MySingletonWithReadResolve rebuiltInstanceWithReadResolve =
+                (MySingletonWithReadResolve) testSerializer.deserialize(testSerializer.serialize(instanceWithReadResolve));
+        System.out.println("1." + (instanceWithReadResolve == rebuiltInstanceWithReadResolve));// 1.true
+        System.out.println("2." + (instanceWithReadResolve.equals(rebuiltInstanceWithReadResolve)));// 2.true
     }
 
     private static final class MySingletonWithReadResolve implements Serializable {
