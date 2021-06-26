@@ -4,7 +4,17 @@ import java.io.*;
 
 class SingletonWithSameInstance {
 
-    private static final class MySingleton {
+    public static void main(String[] args) {
+        MySingleton instance = MySingleton.getINSTANCE();
+        TestSerializer testSerializer = new TestSerializer();
+        byte[] serializedData = testSerializer.serialize(instance);
+        MySingleton result = (MySingleton) testSerializer.deserialize(serializedData);
+
+        System.out.println("instance == result : " + (instance == result));
+        System.out.println("instance.equals(result) : " + (instance.equals(result)));
+    }
+
+    private static final class MySingleton implements Serializable {
         private static final MySingleton INSTANCE = new MySingleton();
 
         private MySingleton() {
