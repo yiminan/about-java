@@ -2,7 +2,7 @@ package effectivejava.item3;
 
 import java.io.*;
 
-class SingletonWithSameInstance implements Serializable {
+class SingletonWithSameInstance {
 
     private static final class MySingleton {
         private static final MySingleton INSTANCE = new MySingleton();
