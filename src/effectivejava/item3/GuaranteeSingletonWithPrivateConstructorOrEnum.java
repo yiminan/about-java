@@ -22,8 +22,10 @@ package effectivejava.item3;
  * 2.3. 정적 팩토리의 메서드 참조를 공급자(Supplier)로 사용할 수 있다는 점입니다. ex) User::getInstance -> Supplier&lt;User&gt;<p>
  * <p>
  * - 굳이 위에 나열한 장점이 필요없으면 'public static final' field를 사용하는 것이 좋다.<p>
+ * - 싱글턴을 직렬화 해서 사용하려면, Serializable를 구현한다고 선언하는 것으로는 부족합니다.<p>
+ * - 모든 인스턴스 field는 transient로 선언하고, readResolve 메서드를 제공해야합니다.<p>
+ * - 만약 그렇게하지 않으면, 매번 역직렬화시 새로운 인스턴스가 생성되어서 반환됩니다. 즉, 싱글턴 구현이 되지 않는 것입니다.<p>
  * <p>
- *
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
