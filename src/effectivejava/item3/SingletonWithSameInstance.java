@@ -15,6 +15,15 @@ class SingletonWithSameInstance {
                 (MySingletonWithReadResolve) testSerializer.deserialize(testSerializer.serialize(instanceWithReadResolve));
         System.out.println("1." + (instanceWithReadResolve == rebuiltInstanceWithReadResolve));// 1.true
         System.out.println("2." + (instanceWithReadResolve.equals(rebuiltInstanceWithReadResolve)));// 2.true
+
+        /**
+         * {@link Serializable}만 구현되어 싱글턴을 구현하지 못한 예시
+         */
+        MySingletonWithoutReadResolve instanceWithoutReadResolve = MySingletonWithoutReadResolve.getINSTANCE();
+        MySingletonWithoutReadResolve rebuiltInstanceWithoutReadResolve =
+                (MySingletonWithoutReadResolve) testSerializer.deserialize(testSerializer.serialize(instanceWithoutReadResolve));
+        System.out.println("3." + (instanceWithoutReadResolve == rebuiltInstanceWithoutReadResolve));// 3.false
+        System.out.println("4." + (instanceWithoutReadResolve.equals(rebuiltInstanceWithoutReadResolve)));// 3.false
     }
 
     private static final class MySingletonWithReadResolve implements Serializable {
