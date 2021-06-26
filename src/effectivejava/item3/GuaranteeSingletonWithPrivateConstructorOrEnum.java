@@ -55,4 +55,6 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
             return INSTANCE;
         }
     }
+
+
 }
