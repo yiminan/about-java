@@ -1,6 +1,6 @@
 package effectivejava.item3;
 
-import java.io.Serializable;
+import java.io.*;
 
 class SingletonWithSameInstance implements Serializable {
 
@@ -21,6 +21,25 @@ class SingletonWithSameInstance implements Serializable {
             // INSTANCE를 반환으로 싱글턴을 보장한다.
             return INSTANCE;
         }
+    }
 
+    private static final class TestSerializer {
+        public byte[] serialize(Object instance) {
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            try (bos; ObjectOutputStream oos = new ObjectOutputStream(bos)) {
+                oos.writeObject(instance);
+            } catch (Exception e) {
+            }
+            return bos.toByteArray();
+        }
+
+        public Object deserialize(byte[] serializedData) {
+            ByteArrayInputStream bis = new ByteArrayInputStream(serializedData);
+            try (bis; ObjectInputStream ois = new ObjectInputStream(bis)) {
+                return ois.readObject();
+            } catch (Exception e) {
+            }
+            return null;
+        }
     }
 }
