@@ -35,7 +35,7 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
     }
 
     /**
-     * 1) 'public static final' field를 만들어서 사용하는 방식
+     * 1. 'public static final' field를 만들어서 사용하는 방식
      */
     private static class SingletonByPublicStaticFinalField {
         public static final SingletonByPublicStaticFinalField INSTANCE = new SingletonByPublicStaticFinalField();
@@ -45,7 +45,7 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
     }
 
     /**
-     * 2) 'static factory' method를 만들어서 사용하는 방식
+     * 2. 'static factory' method를 만들어서 사용하는 방식
      */
     private static class SingletonByStaticFactoryMethod {
         private static final SingletonByStaticFactoryMethod INSTANCE = new SingletonByStaticFactoryMethod();
