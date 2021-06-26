@@ -58,5 +58,22 @@ class GuaranteeSingletonWithPrivateConstructorOrEnum {
         }
     }
 
+    /**
+     * 3. enum 타입을 사용한 방식
+     */
+    private enum SingletonByEnum {
+        // 1. 'public static final' field를 만들어서 사용하는 방식
+        INSTANCE("Initial class info");
 
+        private String information;
+
+        SingletonByEnum(String information) {
+            this.information = information;
+        }
+
+        // 2. 'static factory' method를 만들어서 사용하는 방식
+        public SingletonByEnum getInstance() {
+            return INSTANCE;
+        }
+    }
 }
