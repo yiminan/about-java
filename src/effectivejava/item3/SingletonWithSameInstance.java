@@ -2,6 +2,11 @@ package effectivejava.item3;
 
 import java.io.*;
 
+/**
+ * 싱글턴 클래스의 객체를 직렬화 후, 역직렬화 했을 때 싱글턴이 사용되는지 여부 확인 예시<p>
+ *
+ * @see <a href=https://madplay.github.io/post/what-is-readresolve-method-and-writereplace-method>자바 직렬화: readResolve</a>
+ */
 class SingletonWithSameInstance {
 
     public static void main(String[] args) {
