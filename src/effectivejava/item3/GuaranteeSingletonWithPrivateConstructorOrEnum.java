@@ -2,6 +2,7 @@ package effectivejava.item3;
 
 /**
  * "private 생성자나 Enum 타입으로 싱글턴임을 보증해야합니다"<p>
+ * <p>
  * 싱글턴(singleton)이란 인스턴스를 오직 하나만 생성할 수 있는 클래스를 말한다.<p>
  * 싱글턴의 예는 '무상태 객체'나 '설계상 유일해야하는 시스템 컴포넌트'에서 사용입니다.<p>
  * 무상태(stateless) 객체 : 내부 필드로 상태값을 가지고 있지 않은 객체<p>
@@ -26,6 +27,13 @@ package effectivejava.item3;
  * - 모든 인스턴스 field는 transient로 선언하고, readResolve 메서드를 제공해야합니다.<p>
  * - 만약 그렇게하지 않으면, 매번 역직렬화시 새로운 인스턴스가 생성되어서 반환됩니다. 즉, 싱글턴 구현이 되지 않는 것입니다.<p>
  * <p>
+ * 3. enum 타입을 사용한 방식<p>
+ * - '1. 'public static final' field를 만들어서 사용하는 방식' 과 비슷하지만, 더 간결하고, 추가 노력 없이 직렬화가 가능합니다.<p>
+ * - 아주 복잡한 직렬화나 리플렉션 공격에도 제 2의 인스턴스를 방지합니다.<p>
+ * - 원소가 하나뿐인 열거 타입이 싱글턴을 만드는 것이 가장 좋은 방법입니다.<p>
+ * - class 싱글톤은 멀티 스레드 환경에서 2개 이상 인스턴스가 발생할 수 있지만, enum은 애초에 불가능하고, serialization / thread-safe을 보장합니다.<p>
+ * - 단, 만들려는 싱글턴이 Enum 외의 클래스를 상속해야 한다면 이 방법은 사용할 수 없습니다. Enum은 애초에 클래스를 상속하지 못하기 때문입니다.<p>
+ * - @see <a href='https://getter-setter.com/2019/07/31/class-%EC%8B%B1%EA%B8%80%ED%86%A4-vs-enum-%EC%8B%B1%EA%B8%80%ED%86%A4/'>예시</a><p>
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
