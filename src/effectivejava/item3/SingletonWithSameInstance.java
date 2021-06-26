@@ -33,6 +33,17 @@ class SingletonWithSameInstance {
         }
     }
 
+    private static final class MySingletonWithoutReadResolve implements Serializable {
+        private static final MySingletonWithoutReadResolve INSTANCE = new MySingletonWithoutReadResolve();
+
+        private MySingletonWithoutReadResolve() {
+        }
+
+        public static MySingletonWithoutReadResolve getINSTANCE() {
+            return INSTANCE;
+        }
+    }
+
     private static final class TestSerializer {
         public byte[] serialize(Object instance) {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
