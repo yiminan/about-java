@@ -7,6 +7,9 @@ class SingletonWithSameInstance {
     public static void main(String[] args) {
         TestSerializer testSerializer = new TestSerializer();
 
+        /**
+         * {@link Serializable}과 Method "readResolve"를 구현하여 싱글턴을 구현한 예시
+         */
         MySingletonWithReadResolve instanceWithReadResolve = MySingletonWithReadResolve.getINSTANCE();
         MySingletonWithReadResolve rebuiltInstanceWithReadResolve =
                 (MySingletonWithReadResolve) testSerializer.deserialize(testSerializer.serialize(instanceWithReadResolve));
