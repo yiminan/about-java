@@ -1,5 +1,9 @@
 package effectivejava.item4;
 
+/**
+ * "클래스 인스턴스화를 막으려면 private 생성자를 사용해야합니다."<p>
+ * <p>
+ */
 class UsePrivateConstructorToBlockInstantiation {
 
     public static void main(String[] args) {
