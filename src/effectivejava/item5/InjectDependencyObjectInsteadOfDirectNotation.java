@@ -15,11 +15,23 @@ class InjectDependencyObjectInsteadOfDirectNotation {
         public SpellChecker(Lexicon dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
         }
+
+        public String foundIndex(String spell) {
+            return dictionary.foundIndex(spell);
+        }
     }
 
     private interface Lexicon {
+        String foundIndex(String spell);
     }
 
     private static class OxfordDictionary implements Lexicon {
+        @Override
+        public String foundIndex(String spell) {
+            /**
+             * spell을 이용해서 index 찾기
+             */
+            return "index";
+        }
     }
 }
