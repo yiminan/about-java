@@ -8,6 +8,11 @@ import java.util.Objects;
  */
 class InjectDependencyObjectInsteadOfDirectNotation {
 
+    public static void main(String[] args) {
+        SpellChecker spellChecker = new SpellChecker(new OxfordDictionary());
+        spellChecker.foundIndex("apple");
+    }
+
     private static class SpellChecker {
 
         private final Lexicon dictionary;
