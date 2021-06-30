@@ -16,4 +16,10 @@ class InjectDependencyObjectInsteadOfDirectNotation {
             this.dictionary = Objects.requireNonNull(dictionary);
         }
     }
+
+    private interface Lexicon {
+    }
+
+    private static class OxfordDictionary implements Lexicon {
+    }
 }
