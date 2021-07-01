@@ -42,4 +42,14 @@ class InjectDependencyObjectInsteadOfDirectNotation {
             return "index";
         }
     }
+
+    /**
+     * 정적 유틸리티를 잘못 사용한 예 - 유연하지 않고 테스트하기 어렵다.
+     */
+    private static class SpellChecker2 {
+        private static final Lexicon dictionary = new OxfordDictionary();
+
+        private SpellChecker2() {
+        }
+    }
 }
