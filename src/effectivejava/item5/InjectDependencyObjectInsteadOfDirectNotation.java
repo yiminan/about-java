@@ -13,6 +13,9 @@ class InjectDependencyObjectInsteadOfDirectNotation {
         spellChecker.foundIndex("apple");
     }
 
+    /**
+     * 의존 객체 주입을 사용한 올바른 예시
+     */
     private static class SpellChecker {
 
         private final Lexicon dictionary;
