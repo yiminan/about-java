@@ -10,6 +10,10 @@ class AvoidUnnecessaryObjectCreation {
     public static void main(String[] args) {
         exampleString();
 
+        exampleBoolean();
+    }
+
+    private static void exampleBoolean() {
         Boolean b1 = Boolean.valueOf("true");
         Boolean b2 = Boolean.valueOf("true");
         Boolean b3 = new Boolean("false");
