@@ -8,12 +8,7 @@ package effectivejava.item6;
 class AvoidUnnecessaryObjectCreation {
 
     public static void main(String[] args) {
-        String s1 = new String("example");
-        String s2 = new String("example");
-        String s3 = "example";
-        String s4 = "example";
-        System.out.println(s1 == s2);// false
-        System.out.println(s3 == s4);// true
+        exampleString();
 
         Boolean b1 = Boolean.valueOf("true");
         Boolean b2 = Boolean.valueOf("true");
@@ -21,5 +16,14 @@ class AvoidUnnecessaryObjectCreation {
         Boolean b4 = new Boolean("false");
         System.out.println(b1 == b2);
         System.out.println(b3 == b4);
+    }
+
+    private static void exampleString() {
+        String s1 = new String("example");
+        String s2 = new String("example");
+        String s3 = "example";
+        String s4 = "example";
+        System.out.println(s1 == s2);// false
+        System.out.println(s3 == s4);// true
     }
 }
