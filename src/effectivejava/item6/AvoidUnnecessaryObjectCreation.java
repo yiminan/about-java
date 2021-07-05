@@ -8,8 +8,13 @@ package effectivejava.item6;
 class AvoidUnnecessaryObjectCreation {
 
     public static void main(String[] args) {
+        /**
+         * 예시) {@link String}을 생성자와 상수풀에 선언해서 사용하는 방식 차이
+         */
         exampleString();
-
+        /**
+         * 예시) {@link Boolean}을 생성자와 상수풀에 선언해서 사용하는 방식 차이
+         */
         exampleBoolean();
     }
 
