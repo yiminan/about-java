@@ -23,8 +23,8 @@ class AvoidUnnecessaryObjectCreation {
         String s2 = new String("example");
         String s3 = "example";
         String s4 = "example";
-        System.out.println(s1 == s2);// false
-        System.out.println(s3 == s4);// true
+        System.out.println(String.format("String 생성자 생성 %b", s1 == s2));// false
+        System.out.println(String.format("String 상수풀 생성 %b", s3 == s4));// true
     }
 
     private static void exampleBoolean() {
@@ -32,7 +32,7 @@ class AvoidUnnecessaryObjectCreation {
         Boolean b2 = Boolean.valueOf("true");
         Boolean b3 = new Boolean("false");
         Boolean b4 = new Boolean("false");
-        System.out.println(b1 == b2);
-        System.out.println(b3 == b4);
+        System.out.println(String.format("Boolean 생성자 생성 %b", b1 == b2));
+        System.out.println(String.format("Boolean 정적 팩토리 메서드 생성 %b", b3 == b4));
     }
 }
