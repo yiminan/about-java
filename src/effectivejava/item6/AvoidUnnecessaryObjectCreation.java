@@ -3,7 +3,7 @@ package effectivejava.item6;
 /**
  * "불필요한 객체 생성을 피해야합니다"<p>
  * <p>
- *
+ * 똑같은 기능의 객체는 매번 새로 생성하기보다는 재사용하는 편이 나을 때가 많습니다.<p>
  */
 class AvoidUnnecessaryObjectCreation {
 
