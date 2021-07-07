@@ -4,6 +4,10 @@ package effectivejava.item6;
  * "불필요한 객체 생성을 피해야합니다"<p>
  * <p>
  * 똑같은 기능의 객체는 매번 새로 생성하기보다는 재사용하는 편이 나을 때가 많습니다.<p>
+ * 1. {@link String}<p>
+ * - 생성자로 만드는 것과 리터럴로 선언되는 것이 기능적으로 같습니다.<p>
+ * - 다만, Java에서는 리터럴로 새롭게 선언해도 내용이 같으면, String 객체를 재생성하지 않습니다.<p>
+ * - 그래서 리터럴로 사용하는 것이 재사용성을 극대화할 수 있습니다.<p>
  */
 class AvoidUnnecessaryObjectCreation {
 
