@@ -8,6 +8,9 @@ package effectivejava.item6;
  * - 생성자로 만드는 것과 리터럴로 선언되는 것이 기능적으로 같습니다.<p>
  * - 다만, Java에서는 리터럴로 새롭게 선언해도 내용이 같으면, String 객체를 재생성하지 않습니다.<p>
  * - 그래서 리터럴로 사용하는 것이 재사용성을 극대화할 수 있습니다.<p>
+ * 2. {@link Boolean}<p>
+ * - 팩터리 매서드를 만들어서 객체 내부에 미리 생성된 반환 객체를 재사용할 수 있습니다.<p>
+ * - 생성자를 사용하면, 객체를 무제한 재생성합니다. 그래서 Boolean의 경우 생성자가 deprecated 되었습니다.<p>
  */
 class AvoidUnnecessaryObjectCreation {
 
