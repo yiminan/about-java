@@ -42,4 +42,11 @@ class AvoidUnnecessaryObjectCreation {
         System.out.println(String.format("Boolean 생성자 생성 %b", b1 == b2));
         System.out.println(String.format("Boolean 정적 팩토리 메서드 생성 %b", b3 == b4));
     }
+
+    /**
+     * d
+     */
+    private static boolean isRomanNumeral(String s) {
+        return s.matches("^(?=.)M*(C[MD]|D?C{0,3})" + "(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$");
+    }
 }
