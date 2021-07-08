@@ -44,7 +44,7 @@ class AvoidUnnecessaryObjectCreation {
     }
 
     /**
-     * d
+     * 생성 비용이 비싼 객체를 로컬 변수로 사용하는 경우
      */
     private static boolean isRomanNumeral(String s) {
         return s.matches("^(?=.)M*(C[MD]|D?C{0,3})" + "(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$");
