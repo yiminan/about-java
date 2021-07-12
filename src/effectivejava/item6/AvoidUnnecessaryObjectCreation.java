@@ -52,6 +52,10 @@ class AvoidUnnecessaryObjectCreation {
         return s.matches("^(?=.)M*(C[MD]|D?C{0,3})" + "(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$");
     }
 
+    /**
+     * 생성 비용이 비싼 객체를 반복해서 사용하는 경우
+     * 클래스 변수로 캐싱하여 재사용합니다.
+     */
     private static class RomanNumerals {
         private static final Pattern ROMAN = Pattern.compile(
                 "^(?=.)M*(C[MD]|D?C{0,3})" + "(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$"
