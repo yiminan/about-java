@@ -25,6 +25,9 @@ import java.util.EmptyStackException;
  * - 클라이언트가 콜백을 등록만하고 명확하게 해지하지 않으면 콜백은 쌓여갑니다.<p>
  * - 콜백을 약한 참조(weak reference)로 저장하면 가비지 컬렉터가 즉시 수거해갑니다.<p>
  * - 예를 들면, {@link java.util.WeakHashMap}에 키로 저장하면 됩니다.<p>
+ * <p>
+ * 메모리 누수는 겉으로 잘 나타나지 않아서 시스템에 수년간 잠복해있을 수 있습니다.<p>
+ * 발견하는 방법은 (1) 철저한 코드 리뷰 (2) 디버깅 도구 사용 이 있습니다.
  */
 class DeregistrateUnusedObjectReference {
 
