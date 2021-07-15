@@ -30,6 +30,14 @@ class DeregistrateUnusedObjectReference {
             return elements[--size];
         }
 
+        public Object popWithoutMemoryLeak() {
+            if (size == 0)
+                throw new EmptyStackException();
+            Object result = elements[--size];
+            elements[size] = null;// 다 쓴 참조 해제
+            return result;
+        }
+
         private void ensureCapacity() {
             if (elements.length == size)
                 this.elements = Arrays.copyOf(elements, 2 * size + 1);
