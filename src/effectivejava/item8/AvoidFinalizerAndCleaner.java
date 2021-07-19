@@ -6,6 +6,8 @@ import java.lang.ref.Cleaner;
  * "finalizer와 cleaner 사용을 피하라"<p>
  * <p>
  * Java는 두 가지 객체 소멸자를 제공합니다.<p>
+ * 1.Finalizer<p>
+ * 2.Cleaner<p>
  */
 class AvoidFinalizerAndCleaner {
 
