@@ -11,6 +11,9 @@ class AvoidFinalizerAndCleaner {
 
     public static class FinalizerExample {
 
+        /**
+         * 객체 사용 이후에 호출될 지 여부를 보장하지 못한다.
+         */
         @Override
         protected final void finalize() throws Throwable {
             System.out.println("Clean up");
@@ -26,7 +29,7 @@ class AvoidFinalizerAndCleaner {
         public static void main(String[] args) {
             SampleRunner runner = new SampleRunner();
             runner.run();
-            System.gc();
+//            System.gc();
         }
 
         private void run() {
