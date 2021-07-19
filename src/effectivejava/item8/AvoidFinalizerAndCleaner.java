@@ -9,7 +9,7 @@ import java.lang.ref.Cleaner;
  */
 class AvoidFinalizerAndCleaner {
 
-    public class FinalizerExample {
+    public static class FinalizerExample {
 
         @Override
         protected final void finalize() throws Throwable {
@@ -17,17 +17,19 @@ class AvoidFinalizerAndCleaner {
         }
 
         public void hello() {
+            System.out.println("hello()");
         }
     }
 
-    public class SampleRunner {
+    private static class SampleRunner {
 
         public static void main(String[] args) {
             SampleRunner runner = new SampleRunner();
             runner.run();
+            System.gc();
         }
 
-        priavte void run() {
+        private void run() {
             FinalizerExample finalizerExample = new FinalizerExample();
             finalizerExample.hello();
         }
