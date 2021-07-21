@@ -8,8 +8,10 @@ import java.lang.ref.Cleaner;
  * Java는 두 가지 객체 소멸자를 제공합니다.<p>
  * 1.Finalizer<p>
  * - 실행을 예측할 수 없고, 상황에 따라 위험할 수 있어서 일반적으로 불필요합니다.<p>
+ * - finalizer 스레드는 다른 Application 스레드보다 우선순위가 낮아서 즉각 실행될 기회를 보장하지 않습니다.<p>
  * 2.Cleaner<p>
  * - finalizer보다는 덜 위험하지만, 여전히 예측할 수 없고, 느리고, 일반적으로 불필요합니다.<p>
+ * - cleaner는 자신을 수행할 스레드를 제어할 수 있어서 좋지만 여전히 백그라운드에서 수행되고 Garbage Collector의 통제하에 즉각 실행 보장이 없습니다.<p>
  * <p>
  * Java의 finalizer와 cleaner는 C++의 destructor과는 다른 개념입니다.<p>
  * C++의 destructor는 비메모리자원을 회수하는 용도로 쓰입니다.<p>
