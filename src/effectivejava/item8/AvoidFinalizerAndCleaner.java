@@ -10,6 +10,11 @@ import java.lang.ref.Cleaner;
  * - 실행을 예측할 수 없고, 상황에 따라 위험할 수 있어서 일반적으로 불필요합니다.<p>
  * 2.Cleaner<p>
  * - finalizer보다는 덜 위험하지만, 여전히 예측할 수 없고, 느리고, 일반적으로 불필요합니다.<p>
+ * <p>
+ * Java의 finalizer와 cleaner는 C++의 destructor과는 다른 개념입니다.<p>
+ * C++의 destructor는 비메모리자원을 회수하는 용도로 쓰입니다.<p>
+ * Java는 try-with-resources와 try-finally를 사용해서 해결합니다.<p>
+ * finalizer와 cleaner는 즉시 수행된다는 보장이 없습니다.<p>
  */
 class AvoidFinalizerAndCleaner {
 
