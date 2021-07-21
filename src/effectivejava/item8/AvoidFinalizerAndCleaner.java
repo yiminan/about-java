@@ -7,7 +7,9 @@ import java.lang.ref.Cleaner;
  * <p>
  * Java는 두 가지 객체 소멸자를 제공합니다.<p>
  * 1.Finalizer<p>
+ * - 실행을 예측할 수 없고, 상황에 따라 위험할 수 있어서 일반적으로 불필요합니다.<p>
  * 2.Cleaner<p>
+ * - finalizer보다는 덜 위험하지만, 여전히 예측할 수 없고, 느리고, 일반적으로 불필요합니다.<p>
  */
 class AvoidFinalizerAndCleaner {
 
