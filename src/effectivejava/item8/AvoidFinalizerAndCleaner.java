@@ -16,7 +16,11 @@ import java.lang.ref.Cleaner;
  * Java의 finalizer와 cleaner는 C++의 destructor과는 다른 개념입니다.<p>
  * C++의 destructor는 비메모리자원을 회수하는 용도로 쓰입니다.<p>
  * Java는 try-with-resources와 try-finally를 사용해서 해결합니다.<p>
- * finalizer와 cleaner는 즉시 수행된다는 보장이 없습니다.<p>
+ * <p>
+ * finalizer/cleaner의 단점<p>
+ * - finalizer/cleaner는 즉시 수행된다는 보장이 없습니다.<p>
+ * - 상태를 영구적으로 수정하는 작업에서는 절대 finalizer/cleaner에 의존해서는 안됩니다. 예시는 "데이터베이스 공유 자원의 영구 Lock 해제"가 있습니다.<p>
+ * - finalizer가심각한 성능 문제를 가집니다.
  */
 class AvoidFinalizerAndCleaner {
 
