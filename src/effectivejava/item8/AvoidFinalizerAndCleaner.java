@@ -21,7 +21,7 @@ import java.lang.ref.Cleaner;
  * - finalizer/cleaner는 즉시 수행된다는 보장이 없습니다.<p>
  * - 상태를 영구적으로 수정하는 작업에서는 절대 finalizer/cleaner에 의존해서는 안됩니다. 예시는 "데이터베이스 공유 자원의 영구 Lock 해제"가 있습니다.<p>
  * - finalizer가 심각한 성능 문제를 가집니다.<p>
- * - {@link AutoCloseable}을 구현한 객체를 try-with-resources를 사용한 Garbage Collector가 수거하는 시간은 짧다.<p>
+ * - {@link AutoCloseable}을 구현한 객체를 try-with-resources를 사용하여 Garbage Collector가 수거하는 시간은 짧다.<p>
  */
 class AvoidFinalizerAndCleaner {
 
