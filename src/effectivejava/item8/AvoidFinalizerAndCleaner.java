@@ -18,11 +18,12 @@ import java.lang.ref.Cleaner;
  * Java는 try-with-resources와 try-finally를 사용해서 해결합니다.<p>
  * <p>
  * finalizer/cleaner의 단점<p>
+ * (1) finalizer/cleaner는 GC를 발생하고 나서 실행하는 속도가 심각하게 느린 성능 문제를 가집니다.<p>
  * - finalizer/cleaner는 즉시 수행된다는 보장이 없습니다.<p>
  * - 상태를 영구적으로 수정하는 작업에서는 절대 finalizer/cleaner에 의존해서는 안됩니다. 예시는 "데이터베이스 공유 자원의 영구 Lock 해제"가 있습니다.<p>
- * - finalizer/cleaner는 GC를 발생하고 나서 실행하는 속도가 심각하게 느린 성능 문제를 가집니다.<p>
  * - {@link AutoCloseable}을 구현한 객체를 try-with-resources를 사용하여 Garbage Collector가 수거하는 시간은 짧다.<p>
- *
+ * (2) finalizer를 사용한 클래스는 finalizer 공격에 노출되면 심각한 보안 문제를 일으킵니다.<p>
+ * -
  */
 class AvoidFinalizerAndCleaner {
 
