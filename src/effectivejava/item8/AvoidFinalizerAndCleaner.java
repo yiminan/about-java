@@ -24,7 +24,7 @@ import java.lang.ref.Cleaner;
  * - {@link AutoCloseable}을 구현한 객체를 try-with-resources를 사용하여 Garbage Collector가 수거하는 시간은 짧다.<p>
  * (2) finalizer를 사용한 클래스는 finalizer 공격에 노출되면 심각한 보안 문제를 일으킵니다.<p>
  * - finalizer의 공격 원리는 생성자나 직렬화 과정에서 예외를 발생시켜서, 객체에서 악의적인 하위 클래스의 finalizer가 수행되게 만듭니다.<p>
- * -
+ * - 비고
  */
 class AvoidFinalizerAndCleaner {
 
