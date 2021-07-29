@@ -25,7 +25,7 @@ import java.lang.ref.Cleaner;
  * (2) finalizer를 사용한 클래스는 finalizer 공격에 노출되면 심각한 보안 문제를 일으킵니다.<p>
  * - finalizer의 공격 원리는 생성자나 직렬화 과정에서 예외를 발생시켜서, 객체에서 악의적인 하위 클래스의 finalizer가 수행되게 만듭니다.<p>
  * - 잘못된 객체가 만들어지는 것을 미리 예방하여 예외를 던지는 방법으로 막을 수 있지만, finalizer가 선언되면 호출되기 때문에 문제를 일으킵니다.<p>
- * -
+ * - final이 아닌 클래스를 finalizer 공격으로부터 방어하려면 아무 구현 내용이 없는 finalize() 메서드를 만들고 final로 선언합니다.<p>
  */
 class AvoidFinalizerAndCleaner {
 
