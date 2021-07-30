@@ -26,6 +26,12 @@ import java.lang.ref.Cleaner;
  * - finalizer의 공격 원리는 생성자나 직렬화 과정에서 예외를 발생시켜서, 객체에서 악의적인 하위 클래스의 finalizer가 수행되게 만듭니다.<p>
  * - 잘못된 객체가 만들어지는 것을 미리 예방하여 예외를 던지는 방법으로 막을 수 있지만, finalizer가 선언되면 호출되기 때문에 문제를 일으킵니다.<p>
  * - final이 아닌 클래스를 finalizer 공격으로부터 방어하려면 아무 구현 내용이 없는 finalize() 메서드를 만들고 final로 선언합니다.<p>
+ * <p>
+ * finalizer/cleaner의 단점을 해결하는 방법<p>
+ * - {@link AutoCloseable}를 구현해주고, 클라이언트에서 인스턴스를 다 쓰고 나면 close 메서드를 호출한다.<p>
+ * - 일반적으로 예외가 발생해도 제대로 종료되도록 try-with-resources를 사용해야 한다.<p>
+ * - close 메서드는 객체가 더 이상 유효하지 않음을 필드에 기록하고, 다른 메서드는 이 필드를 검사해서 객체가 닫힌 후에 호출되면 {@link IllegalStateException}를 던진다.<p>
+ * -
  */
 class AvoidFinalizerAndCleaner {
 
