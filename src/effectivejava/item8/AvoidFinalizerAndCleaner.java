@@ -31,7 +31,7 @@ import java.lang.ref.Cleaner;
  * - {@link AutoCloseable}를 구현해주고, 클라이언트에서 인스턴스를 다 쓰고 나면 close 메서드를 호출한다.<p>
  * - 일반적으로 예외가 발생해도 제대로 종료되도록 try-with-resources를 사용해야 한다.<p>
  * - close 메서드는 객체가 더 이상 유효하지 않음을 필드에 기록하고, 다른 메서드는 이 필드를 검사해서 객체가 닫힌 후에 호출되면 {@link IllegalStateException}를 던진다.<p>
- * -
+ * <p>
  */
 class AvoidFinalizerAndCleaner {
 
