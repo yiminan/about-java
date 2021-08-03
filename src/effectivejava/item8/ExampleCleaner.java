@@ -3,6 +3,22 @@ package effectivejava.item8;
 import java.lang.ref.Cleaner;
 
 class ExampleCleaner {
+
+    private static class Adult {
+        public static void main(String[] args) {
+            try (Room myRoom = new Room(7)) {
+                System.out.println("Hi~");
+            }
+        }
+    }
+
+    private static class Teenager {
+        public static void main(String[] args) {
+            new Room(99);
+            System.out.println("Anyway~");
+        }
+    }
+
     private static class Room implements AutoCloseable {
         // Room 인스턴스를 참조해서는 순환참조가 발생하므로 State는 static class 정의
         private static final Cleaner cleaner = Cleaner.create();
