@@ -34,6 +34,8 @@ import java.lang.ref.Cleaner;
  * <p>
  * cleaner & finalizer의 쓰임<p>
  * 1.지원의 소유자가 close 메서드를 호출하지 않는 것을 대비한 안정망 역할<p>
+ * - cleaner/finalizer가 즉시 호출되리라는 보장은 없지만, cleaner/finalizer를 사용해서 자원 회수를 늦게라도 해주는게 안하는 것보다 낫다.<p>
+ * - 안전망에 대한 필요성을 검증하고 cleaner/finalizer를 사용해야한다.<p>
  * -
  */
 class AvoidFinalizerAndCleaner {
