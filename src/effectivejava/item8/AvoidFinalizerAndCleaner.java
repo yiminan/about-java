@@ -33,10 +33,11 @@ import java.lang.ref.Cleaner;
  * - close 메서드는 객체가 더 이상 유효하지 않음을 필드에 기록하고, 다른 메서드는 이 필드를 검사해서 객체가 닫힌 후에 호출되면 {@link IllegalStateException}를 던진다.<p>
  * <p>
  * cleaner & finalizer의 쓰임<p>
- * 1.지원의 소유자가 close 메서드를 호출하지 않는 것을 대비한 안정망 역할<p>
+ * 1.지원의 소유자가 close 메서드를 호출하지 않는 것을 대비한 안전망 역할<p>
  * - cleaner/finalizer가 즉시 호출되리라는 보장은 없지만, cleaner/finalizer를 사용해서 자원 회수를 늦게라도 해주는게 안하는 것보다 낫다.<p>
  * - 안전망에 대한 필요성을 검증하고 cleaner/finalizer를 사용해야한다.<p>
- * -
+ * 2.네이티브 피어(native peer)와 연결된 객체에서 안전망 역할<p>
+ * - 네이티브 피어란? 일반 자바 객체가 네이티브 메서드를 통해 기능을 위임한 네이티브 객체를 말합니다.<p>
  */
 class AvoidFinalizerAndCleaner {
 
