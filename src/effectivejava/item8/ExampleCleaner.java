@@ -9,6 +9,10 @@ class ExampleCleaner {
             try (Room myRoom = new Room(7)) {
                 System.out.println("Hi~");
             }
+            /**
+             * Hi~
+             * Room Clean
+             */
         }
     }
 
@@ -17,6 +21,9 @@ class ExampleCleaner {
             new Room(99);
             System.out.println("Anyway~");
         }
+        /**
+         * Anyway~
+         */
     }
 
     private static class Room implements AutoCloseable {
