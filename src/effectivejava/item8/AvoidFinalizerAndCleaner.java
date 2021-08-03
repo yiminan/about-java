@@ -44,6 +44,20 @@ import java.lang.ref.Cleaner;
  */
 class AvoidFinalizerAndCleaner {
 
+    private static class SampleRunner {
+
+        public static void main(String[] args) {
+            SampleRunner runner = new SampleRunner();
+            runner.run();
+//            System.gc();
+        }
+
+        private void run() {
+            FinalizerExample finalizerExample = new FinalizerExample();
+            finalizerExample.hello();
+        }
+    }
+
     public static class FinalizerExample {
 
         /**
@@ -56,20 +70,6 @@ class AvoidFinalizerAndCleaner {
 
         public void hello() {
             System.out.println("hello()");
-        }
-    }
-
-    private static class SampleRunner {
-
-        public static void main(String[] args) {
-            SampleRunner runner = new SampleRunner();
-            runner.run();
-//            System.gc();
-        }
-
-        private void run() {
-            FinalizerExample finalizerExample = new FinalizerExample();
-            finalizerExample.hello();
         }
     }
 
