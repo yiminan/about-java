@@ -38,7 +38,7 @@ import java.lang.ref.Cleaner;
  * - 안전망에 대한 필요성을 검증하고 cleaner/finalizer를 사용해야한다.<p>
  * 2.네이티브 피어(native peer)와 연결된 객체에서 안전망 역할<p>
  * - 네이티브 피어란? 일반 자바 객체가 네이티브 메서드를 통해 기능을 위임한 네이티브 객체를 말합니다.<p>
- * - 네이티브 피어가 사용하는 자원을 즉시 회수해야 한다면 cleaner/finalizer를 사용한다.<p>
+ * - 네이티브 피어가 사용하는 자원을 즉시 회수해야 한다면 cleaner/finalizer의 close()를 사용한다.<p>
  * - <a href="https://www.baeldung.com/jni">native를 구현하는 JNI(Java Native Interface)</a><p>
  * - 우리가 사용하는 자바 라이브러리는 99.9% 이상이 maven central에서 가져옵니다. 사실 우리가 JNI를 쓸 일은 거의 없습니다.<p>
  */
