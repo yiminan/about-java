@@ -41,6 +41,10 @@ import java.lang.ref.Cleaner;
  * - 네이티브 피어가 사용하는 자원을 즉시 회수해야 한다면 cleaner/finalizer의 close()를 사용한다.<p>
  * - <a href="https://www.baeldung.com/jni">native를 구현하는 JNI(Java Native Interface)</a><p>
  * - 우리가 사용하는 자바 라이브러리는 99.9% 이상이 maven central에서 가져옵니다. 사실 우리가 JNI를 쓸 일은 거의 없습니다.<p>
+ * <p>
+ * 결론)
+ * - cleaner(Java 8까지는 finalizer)는 안전망 역할이나 중요하지 않은 네이티브 자원 회수용으로만 사용해야한다.<p>
+ * - cleaner(finalizer)를 사용하는 경우에는 자원회수의 불확실성과 성능 저하에 유의해야한다.<p>
  */
 class AvoidFinalizerAndCleaner {
 
