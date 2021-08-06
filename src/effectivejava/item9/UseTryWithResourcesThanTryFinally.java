@@ -43,4 +43,8 @@ class UseTryWithResourcesThanTryFinally {
             }
         }
     }
+
+    private static class ExampleForTryWithResources {
+
+    }
 }
