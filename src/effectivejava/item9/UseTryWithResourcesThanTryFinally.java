@@ -1,8 +1,6 @@
 package effectivejava.item9;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * "try-finally보다는 try-with-resources를 사용해야합니다."<p>
@@ -19,6 +17,23 @@ class UseTryWithResourcesThanTryFinally {
             return br.readLine();
         } finally {
             br.close();
+        }
+    }
+
+    static void copy(String src, String dst) throws IOException {
+        InputStream in = new FileInputStream(src);
+        try {
+            OutputStream out = new FileOutputStream(dst);
+            try {
+                byte[] buf = new byte[100];
+                int n;
+                while ((n = in.read(buf)) >= 0)
+                    out.write(buf, 0, n);
+            } finally {
+                out.close();
+            }
+        } finally {
+            in.close();
         }
     }
 }
