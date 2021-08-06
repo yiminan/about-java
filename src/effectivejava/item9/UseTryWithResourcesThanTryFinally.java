@@ -11,6 +11,11 @@ import java.io.*;
  */
 class UseTryWithResourcesThanTryFinally {
 
+    /**
+     * 기존의 try-finally를 사용한 예시
+     * - Java 라이브러리에서 close 메서드를 제대로 구현한 비율은 겨우 1/3정도다.
+     * - ...
+     */
     private static class ExampleForTryFinally {
         static String firstLineOfFile(String path) throws IOException {
             BufferedReader br = new BufferedReader(new FileReader(path));
