@@ -26,7 +26,7 @@ package effectivejava.item10;
  *  - 클래스가 애초에 equals()를 호출할 필요가 없는 경우이기 때문에 애초에 재정의하지 않거나, 재정의해서 호출시 예외를 발생하도록 하는 것도 좋습니다.<p>
  * <p>
  * equals()를 재정의해야 하는 경우<p>
- *
+ * -
  *
  * @see <a href="https://jojoldu.tistory.com/134">equals와 hashCode 사용하기 ( +lombok)</a>
  */
