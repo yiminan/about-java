@@ -18,9 +18,9 @@ package effectivejava.item10;
  * 2.인스턴스의 '논리적 동치성(logical equality)'을 검사할 일이 없는 경우<p>
  * - 인스턴스의 내부 필드에 값들이 존재할텐데, 애초에 이 값이 논리적으로 동치인지 확인이 필요하지 않은 경우는 equals()를 재정의할 필요가 없습니다.<p>
  * 3.상위 클래스에서 재정의한 equals가 하위 클래스에도 딱 들어맞는 경우<p>
- * - 대부분의 {@link java.util.Set} 구현체는 {@link java.util.AbstractSet}이 구현한 equals()를 상속받아 씁니다.<p>
- * - 대부분의 {@link java.util.List} 구현체는 {@link java.util.AbstractList}이 구현한 equals()를 상속받아 씁니다.<p>
- * - 대부분의 {@link java.util.Map} 구현체는 {@link java.util.AbstractMap}이 구현한 equals()를 상속받아 씁니다.<p>
+ * - 대부분의 {@link java.util.Set} 구현체는 {@link java.util.AbstractSet}이 구현한 equals()를 상속받아 사용합니다.<p>
+ * - 대부분의 {@link java.util.List} 구현체는 {@link java.util.AbstractList}이 구현한 equals()를 상속받아 사용합니다.<p>
+ * - 대부분의 {@link java.util.Map} 구현체는 {@link java.util.AbstractMap}이 구현한 equals()를 상속받아 사용합니다.<p>
  * - 상위 클래스의 equals()를 상속받아 쓰기 때문에 굳이 하위 클래스에서 재정의할 필요가 없습니다.<p>
  * 4.클래스가 private이거나 package-private이고 equals 메서드를 호출할 일이 없는 경우<p>
  * - 클래스가 애초에 equals()를 호출할 필요가 없는 경우이기 때문에 애초에 재정의하지 않거나, 재정의해서 호출시 예외를 발생하도록 하는 것도 좋습니다.<p>
