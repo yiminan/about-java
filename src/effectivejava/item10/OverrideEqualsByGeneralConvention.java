@@ -27,7 +27,7 @@ package effectivejava.item10;
  * <p>
  * equals()를 재정의해야 하는 경우<p>
  * - 객체 식별성(object identity=객체 동일성,물리적으로 같은가)이 아니라 논리적 동치성(=객체 동등성)을 확인해야하는데,상위 클래스의 equals가 논리적 동치성이 비교하도록 재정의되지 않았을 때다.<p>
- * -
+ * - ...
  *
  * @see <a href="https://jojoldu.tistory.com/134">equals와 hashCode 사용하기 ( +lombok)</a>
  */
