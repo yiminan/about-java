@@ -12,7 +12,7 @@ package effectivejava.item10;
  * 4.일관성(consistency)<p>
  * - null이 아닌 모든 참조 값 x, y에 대해, x.equals(y)를 반복해서 호출하면 항상 true를 반환하거나 항상 false를 반환한다.<p>
  * 5.null이 아님<p>
- * - <p>
+ * - null이 아닌 모든 참조 값 x에 대해, x.equals(null)은 false이다.<p>
  */
 class PrincipleMethodEquals {
 }
