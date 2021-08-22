@@ -10,7 +10,7 @@ package effectivejava.item10;
  * 3.추이성(transitivity)<p>
  * - null이 아닌 모든 참조 값 x, y, z에 대해, x.equals(y)가 true이고, y.equals(z)가 true면, x.equals(z)는 true이다.<p>
  * 4.일관성(consistency)<p>
- * - <p>
+ * - null이 아닌 모든 참조 값 x, y에 대해, x.equals(y)를 반복해서 호출하면 항상 true를 반환하거나 항상 false를 반환한다.<p>
  * 5.null이 아님<p>
  * - <p>
  */
