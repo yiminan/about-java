@@ -15,6 +15,7 @@ package effectivejava.item10.equivalence_relation;
  * 1.반사성(reflexivity)<p>
  * - null이 아닌 모든 참조 값 x에 대해, x.equals(x)는 true이다.<p>
  * - 즉, 자기 참조 객체를 equals()로 비교하였을때는 true라는 것이다.<p>
+ * - example) {@link ReflexivityForEquivalenceRelation ReflexivityForEquivalenceRelation}<p>
  * 2.대칭성(symmetry)<p>
  * - null이 아닌 모든 참조 값 x, y에 대해, x.equals(y)가 true면 y.equals(x)도 true이다.<p>
  * 3.추이성(transitivity)<p>
