@@ -9,6 +9,7 @@ package effectivejava.item10;
  * 동치관계(equivalence relation)란?<p>
  * - 동치관계란 집합을 서로 같은 원소들로 이뤄진 부분집합으로 나누는 연산<p>
  * - 이 부분집합을 동치류(equivalence class; 동치 클래스)라 한다.<p>
+ * - equals 메서드가 쓸모 있으려면 모든 원소가 같은 동치류에 속한 어떤 원소와도 서로 교환할 수 있어야합니다.<p>
  * <p>
  * 동치 관계를 만족시키기 위한 다섯 가지 조건<p>
  * 1.반사성(reflexivity)<p>
