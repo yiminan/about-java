@@ -5,7 +5,7 @@ package effectivejava.item10;
  * <p>
  * Object 명세에 적힌 일반 규약은 다음과 같다.<p>
  * 핵심) equals 메서드는 동치관계(equivalence relation)를 구현하며, 다음을 다섯가지를 만족해야한다.<p>
- *
+ * <p>
  * 동치관계(equivalence relation)란?<p>
  * - 동치관계란 집합을 서로 같은 원소들로 이뤄진 부분집합으로 나누는 연산<p>
  * - 이 부분집합을 동치류(equivalence class; 동치 클래스)라 한다.<p>
