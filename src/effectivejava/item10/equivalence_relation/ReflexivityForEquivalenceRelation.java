@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * "동치관계(equivalence relation)의 반사성(reflexivity)"<p>
- *
+ * -
  */
 class ReflexivityForEquivalenceRelation {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ class ReflexivityForEquivalenceRelation {
 
         @Override
         public boolean equals(Object o) {
-            return this == o;// 같은
+            return this == o;// 같은 객체인 경우에는 같아야한다.(반사성)
         }
     }
 }
