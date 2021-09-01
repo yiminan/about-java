@@ -7,4 +7,8 @@ package effectivejava.item10.equivalence_relation;
  * -
  */
 class SymmetryForEquicalenceRelation {
+
+    private static class InvalidSymmetry {
+
+    }
 }
