@@ -11,7 +11,11 @@ class SymmetryForEquivalenceRelation {
     public static void main(String[] args) {
         InvalidSymmetry is = new InvalidSymmetry("Ryan");
         String name = "ryan";
+        /**
+         * 대칭성 위반
+         */
         System.out.println(is.equals(name));// true
+        System.out.println(name.equals(is));// false
     }
 
     private static class InvalidSymmetry {
