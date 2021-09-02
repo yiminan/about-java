@@ -9,6 +9,9 @@ package effectivejava.item10.equivalence_relation;
 class SymmetryForEquicalenceRelation {
 
     private static class InvalidSymmetry {
-
+        @Override
+        public boolean equals(Object obj) {
+            return super.equals(obj);
+        }
     }
 }
