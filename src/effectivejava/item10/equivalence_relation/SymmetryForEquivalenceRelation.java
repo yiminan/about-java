@@ -6,7 +6,7 @@ package effectivejava.item10.equivalence_relation;
  * - 반사성(reflexivity)과 달리 대칭성(symmetry) 요건은 자칫하면 어길 수 있다.<p>
  * -
  */
-class SymmetryForEquicalenceRelation {
+class SymmetryForEquivalenceRelation {
 
     public static void main(String[] args) {
         InvalidSymmetry is = new InvalidSymmetry("Ryan");
