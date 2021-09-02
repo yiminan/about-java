@@ -9,9 +9,19 @@ package effectivejava.item10.equivalence_relation;
 class SymmetryForEquicalenceRelation {
 
     private static class InvalidSymmetry {
+        private final String name;
+
+        public InvalidSymmetry(String name) {
+            this.name = name;
+        }
+
         @Override
         public boolean equals(Object obj) {
-            return super.equals(obj);
+            if (obj instanceof InvalidSymmetry)
+                return name.equalsIgnoreCase(((InvalidSymmetry) obj).name);
+            if (obj instanceof String)
+                return name.equalsIgnoreCase((String) obj);
+            return false;
         }
     }
 }
