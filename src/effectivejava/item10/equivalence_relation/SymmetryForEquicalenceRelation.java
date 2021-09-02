@@ -8,6 +8,12 @@ package effectivejava.item10.equivalence_relation;
  */
 class SymmetryForEquicalenceRelation {
 
+    public static void main(String[] args) {
+        InvalidSymmetry is = new InvalidSymmetry("Ryan");
+        String name = "ryan";
+        System.out.println(is.equals(name));// true
+    }
+
     private static class InvalidSymmetry {
         private final String name;
 
