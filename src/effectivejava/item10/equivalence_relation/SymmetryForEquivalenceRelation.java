@@ -13,6 +13,7 @@ class SymmetryForEquivalenceRelation {
         String name = "ryan";
         /**
          * 대칭성 위반
+         * 대칭성인 서로 equals()를 호출했을때 결과물이 다르다.
          */
         System.out.println(is.equals(name));// true
         System.out.println(name.equals(is));// false
