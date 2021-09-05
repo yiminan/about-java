@@ -14,6 +14,7 @@ class SymmetryForEquivalenceRelation {
         /**
          * "대칭성 위반"
          * 대칭성인 서로 equals()를 호출했을때 결과물이 다르다.
+         * 대칭성 위반인 부분을 대칭성을 만족하게 바꾸어주어야한다.
          */
         System.out.println(is.equals(name));// true
         System.out.println(name.equals(is));// false
