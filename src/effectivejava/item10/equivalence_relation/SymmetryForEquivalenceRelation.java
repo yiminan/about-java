@@ -1,5 +1,8 @@
 package effectivejava.item10.equivalence_relation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * "동치관계(equivalence relation)의 대칭성(symmetry)"
  * - 두 객체는 서로에 대한 동치 여부에 똑같이 답해야 한다.<p>
@@ -18,6 +21,12 @@ class SymmetryForEquivalenceRelation {
          */
         System.out.println(is.equals(name));// true
         System.out.println(name.equals(is));// false
+        /**
+         * 컬렉션 비교 예시
+         */
+        List<InvalidSymmetry> iss = new ArrayList<>();
+        iss.add(is);
+        System.out.println(iss.contains(is));//true
     }
 
     private static class InvalidSymmetry {
