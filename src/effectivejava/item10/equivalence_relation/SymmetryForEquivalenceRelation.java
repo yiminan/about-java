@@ -22,7 +22,10 @@ class SymmetryForEquivalenceRelation {
         System.out.println(is.equals(name));// true
         System.out.println(name.equals(is));// false
         /**
-         * 컬렉션 비교 예시
+         * "컬렉션 대칭성 위반 비교 예시"
+         * 일단 Oracle JDK의 List는 대칭성을 잘 지켜준다.
+         * 하지만 이는 구현하기 나름이다. 꼭 JDK마다 확인해주어야하는 경우가 생긴다.
+         * 애초에 대칭성을 지키면서 구현해야합니다.
          */
         List<InvalidSymmetry> iss = new ArrayList<>();
         iss.add(is);
