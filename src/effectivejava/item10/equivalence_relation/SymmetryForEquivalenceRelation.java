@@ -12,7 +12,7 @@ import java.util.List;
 class SymmetryForEquivalenceRelation {
 
     public static void main(String[] args) {
-        InvalidSymmetry is = new InvalidSymmetry("Ryan");
+        Symmetry is = new Symmetry("Ryan");
         String name = "ryan";
         /**
          * "대칭성 위반"
@@ -27,22 +27,22 @@ class SymmetryForEquivalenceRelation {
          * 하지만 이는 구현하기 나름이다. 꼭 JDK마다 확인해주어야하는 경우가 생긴다.
          * 애초에 대칭성을 지키면서 구현해야합니다.
          */
-        List<InvalidSymmetry> iss = new ArrayList<>();
+        List<Symmetry> iss = new ArrayList<>();
         iss.add(is);
         System.out.println(iss.contains(is));//true
     }
 
-    private static class InvalidSymmetry {
+    private static class Symmetry {
         private final String name;
 
-        public InvalidSymmetry(String name) {
+        public Symmetry(String name) {
             this.name = name;
         }
 
         @Override
         public boolean equals(Object obj) {
-            if (obj instanceof InvalidSymmetry)
-                return name.equalsIgnoreCase(((InvalidSymmetry) obj).name);
+            if (obj instanceof Symmetry)
+                return name.equalsIgnoreCase(((Symmetry) obj).name);
             if (obj instanceof String)
                 return name.equalsIgnoreCase((String) obj);
             return false;
