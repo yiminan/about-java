@@ -30,9 +30,11 @@ class TransitivityForEquivalenceRelation {
     }
 
     private static class ColorPoint extends Point {
+        private final Color color;
 
-        public ColorPoint(int x, int y) {
+        public ColorPoint(int x, int y, Color color) {
             super(x, y);
+            this.color = color;
         }
     }
 }
