@@ -7,6 +7,7 @@ import java.util.Objects;
  * - 추이성은 'A->B'이고 'B->C' 이면, 'A->C'를 만족해야한다.<p>
  * - 추이성을 가지면 equals의 정합성을 유지할 수 있다.<p>
  * - 동치관계에 있어서 추이성은 필요조건이다.<p>
+ * - 추이성의 중관 관계가 훼손되면 모든 추이성은 유지되지 않는다.<p>
  */
 class TransitivityForEquivalenceRelation {
 
