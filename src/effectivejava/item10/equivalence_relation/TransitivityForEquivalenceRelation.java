@@ -36,4 +36,8 @@ class TransitivityForEquivalenceRelation {
             this.color = color;
         }
     }
+
+    private enum Color {
+        RED, BLUE, GREEN;
+    }
 }
