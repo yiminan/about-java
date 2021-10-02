@@ -42,21 +42,22 @@ class SymmetryForEquivalenceRelation {
         /**
          * 대칭성 위반 equals 예시
          */
-//        @Override
-//        public boolean equals(Object obj) {
-//            if (obj instanceof Symmetry)
-//                return name.equalsIgnoreCase(((Symmetry) obj).name);
-//            if (obj instanceof String)
-//                return name.equalsIgnoreCase((String) obj);
-//            return false;
-//        }
-
-        /**
-         * 대칭성을 지키기 위해서 String 케이스를 비교하는 부분을 없애버립니다.
-         */
         @Override
         public boolean equals(Object obj) {
-            return obj instanceof Symmetry && ((Symmetry) obj).name.equalsIgnoreCase(name);
+            if (obj instanceof Symmetry)
+                return name.equalsIgnoreCase(((Symmetry) obj).name);
+            if (obj instanceof String)
+                return name.equalsIgnoreCase((String) obj);
+            return false;
         }
+
+        /**
+         * 대칭성 적용 예시
+         * 대칭성을 지키기 위해서 String 케이스를 비교하는 부분을 없애버립니다.
+         */
+//        @Override
+//        public boolean equals(Object obj) {
+//            return obj instanceof Symmetry && ((Symmetry) obj).name.equalsIgnoreCase(name);
+//        }
     }
 }
