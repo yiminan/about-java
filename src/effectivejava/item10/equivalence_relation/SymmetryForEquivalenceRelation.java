@@ -52,16 +52,6 @@ class SymmetryForEquivalenceRelation {
 //        }
 
         /**
-         * 대칭성 위반 equals 예시
-         */
-//        @Override
-//        public boolean equals(Object o) {
-//            if (!(o instanceof ColorPoint))
-//                return false;
-//            return super.equals(o) && ((ColorPoint) o).color == color;
-//        }
-
-        /**
          * 대칭성을 지키기 위해서 String 케이스를 비교하는 부분을 없애버립니다.
          */
         @Override
