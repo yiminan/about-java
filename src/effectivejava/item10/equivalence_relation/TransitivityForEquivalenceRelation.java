@@ -10,6 +10,15 @@ import java.util.Objects;
  */
 class TransitivityForEquivalenceRelation {
 
+    public static void main(String[] args) {
+        ColorPoint p1 = new ColorPoint(1, 2, Color.RED);
+        Point p2 = new Point(1, 2);
+        ColorPoint p3 = new ColorPoint(1, 2, Color.BLUE);
+        System.out.println(p1.equals(p2));// true
+        System.out.println(p2.equals(p3));// true
+        System.out.println(p1.equals(p3));// false
+    }
+
     private static class Point {
         private final int x;
         private final int y;
