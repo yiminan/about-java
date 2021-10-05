@@ -27,7 +27,9 @@ package effectivejava.item10.equivalence_relation;
  * <p>
  * 반드시 위의 규약은 지켜져야한다.<p>
  * 이유는 컬렉션 클래스를 포함한 많은 클래스는 전달받은 객체가 equals 규약을 지킨다고 가정하고 동작한다. 그렇기 때문에 지켜지지 않으면 오동작을 발생한다.<p>
- *
+ * <p>
+ * 단점)<p>
+ * - 구체 클래스를 확장해 새로운 값을 추가하면서 equals 규약을 만족시킬 방법은 존재하지 않는다.<p>
  */
 class PrincipleMethodEquals {
 }
