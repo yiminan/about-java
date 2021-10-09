@@ -30,6 +30,10 @@ package effectivejava.item10.equivalence_relation;
  * <p>
  * 단점)<p>
  * - 구체 클래스를 확장해 새로운 값을 추가하면서 equals 규약을 만족시킬 방법은 존재하지 않는다.<p>
+ * <p>
+ * 결론)<p>
+ * 꼭 필요한 경우가 아니면 equals를 재정의하지 말아야한다. 많은 경우에 Object의 equals가 여러분이 원하는 비교를 정확히 수행해준다.<p>
+ * 재정의해야 할 때는 그 틀래스의 핵심 필드 모두를 빠짐없이, 다섯 가지 규약을 확실히 지켜가며 비교해야합니다.<p>
  */
 class PrincipleMethodEquals {
 }
