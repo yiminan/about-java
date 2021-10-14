@@ -10,6 +10,8 @@ package effectivejava.item11;
  * 2.equals로 두 객체가 비교되는데 같다면, hashCode 값도 같다.<p>
  * 3.equals가 두 객체를 다르게 판단해도, hashCode가 다른 값을 반환할 필요는 없다. 단, 다른 값을 반환해야 해시테이블의 성능이 좋아진다.<p>
  * <p>
+ * hashCode 재정의를 잘못하게되면 문제가 되는 부분은 2번 규약이다. 즉, 논리적으로 같은 객체는 같은 해시코드를 반환해야 한다.<p>
+ * hashCode가 제대로 재정의되지 않고 {@link java.util.Collection}에 인자로 들어간 객체는 서로 다른 hashCode를 반환한다.<p>
  */
 class OverrideEqualsWithHashCode {
 }
