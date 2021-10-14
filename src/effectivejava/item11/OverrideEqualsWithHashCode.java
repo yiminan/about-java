@@ -9,6 +9,7 @@ package effectivejava.item11;
  * 1.equals 비교에 사용되는 정보가 변경되지 않았다면, 애플리케이션 실행동안 객체의 hashCode는 여러번 호출해도 항상 같은 값을 반환해야한다.<p>
  * 2.equals로 두 객체가 비교되는데 같다면, hashCode 값도 같다.<p>
  * 3.equals가 두 객체를 다르게 판단해도, hashCode가 다른 값을 반환할 필요는 없다. 단, 다른 값을 반환해야 해시테이블의 성능이 좋아진다.<p>
+ * <p>
  */
 class OverrideEqualsWithHashCode {
 }
