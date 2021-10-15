@@ -1,5 +1,8 @@
 package effectivejava.item11;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * "equals를 재정의할때는 hashCode도 재정의해야합니다"<p>
  * hashCode를 재정의하지 않으면 일반 규약을 어기게 됩니다.<p>
@@ -14,4 +17,18 @@ package effectivejava.item11;
  * hashCode가 제대로 재정의되지 않고 {@link java.util.Collection}에 인자로 들어간 객체는 서로 다른 hashCode를 반환한다.<p>
  */
 class OverrideEqualsWithHashCode {
+    public static void main(String[] args) {
+        PhoneNumberWithDefaultHashCode phoneNumber = new PhoneNumberWithDefaultHashCode("010-1234-5678");
+        Map<PhoneNumberWithDefaultHashCode, String> phoneNumbers = new HashMap<>();
+        phoneNumbers.put(phoneNumber, "Ryan");
+        System.out.println(phoneNumber.hashCode() == phoneNumbers.get(phoneNumber).hashCode());//false
+    }
+
+    private static final class PhoneNumberWithDefaultHashCode {
+        private final String number;
+
+        public PhoneNumberWithDefaultHashCode(String number) {
+            this.number = number;
+        }
+    }
 }
