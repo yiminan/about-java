@@ -22,7 +22,7 @@ class OverrideEqualsWithHashCode {
         Map<PhoneNumberWithDefaultHashCode, String> phoneNumbers = new HashMap<>();
         phoneNumbers.put(phoneNumber, "Ryan");
         System.out.println(phoneNumbers.get(new PhoneNumberWithDefaultHashCode("010-1234-5678")));//null
-        System.out.println(phoneNumber.hashCode() == phoneNumbers.get(phoneNumber).hashCode());//false
+        System.out.println("Ryan".equals(phoneNumbers.get(new PhoneNumberWithDefaultHashCode("010-1234-5678"))));//false
     }
 
     private static final class PhoneNumberWithDefaultHashCode {
