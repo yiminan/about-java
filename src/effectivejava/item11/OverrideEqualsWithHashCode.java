@@ -2,6 +2,7 @@ package effectivejava.item11;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * "equals를 재정의할때는 hashCode도 재정의해야합니다"<p>
@@ -30,6 +31,27 @@ class OverrideEqualsWithHashCode {
 
         public PhoneNumberWithDefaultHashCode(String number) {
             this.number = number;
+        }
+    }
+
+    private static final class PhoneNumberWithOverrideHashCode {
+        private final String number;
+
+        public PhoneNumberWithOverrideHashCode(String number) {
+            this.number = number;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            PhoneNumberWithOverrideHashCode that = (PhoneNumberWithOverrideHashCode) o;
+            return Objects.equals(number, that.number);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(number);
         }
     }
 }
