@@ -19,12 +19,17 @@ import java.util.Objects;
  */
 class OverrideEqualsWithHashCode {
     public static void main(String[] args) {
+        /**
+         * Example for object with default hashCode
+         */
         PhoneNumberWithDefaultHashCode phoneNumber = new PhoneNumberWithDefaultHashCode("010-1234-5678");
         Map<PhoneNumberWithDefaultHashCode, String> phoneNumbers = new HashMap<>();
         phoneNumbers.put(phoneNumber, "Ryan");
         System.out.println(phoneNumbers.get(new PhoneNumberWithDefaultHashCode("010-1234-5678")));//null
         System.out.println("Ryan".equals(phoneNumbers.get(new PhoneNumberWithDefaultHashCode("010-1234-5678"))));//false
-
+        /**
+         * Example for object with override hashCode
+         */
         PhoneNumberWithOverrideHashCode phoneNumberWithHashCode = new PhoneNumberWithOverrideHashCode("010-1234-5678");
         Map<PhoneNumberWithOverrideHashCode, String> phoneNumberWithHashCodes = new HashMap<>();
         phoneNumberWithHashCodes.put(phoneNumberWithHashCode, "Ryan");
