@@ -11,4 +11,19 @@ package effectivejava.item12;
  * - 대다수의 컬렉션 구현체는 추상 컬렉션의 클래스들의 toString을 상속해서 사용한다.<p>
  */
 class AlwaysOverrideToString {
+
+    private static final class PhoneNumber {
+        private final String number;
+
+        public PhoneNumber(String number) {
+            this.number = number;
+        }
+
+        @Override
+        public String toString() {
+            return "PhoneNumber{" +
+                    "number='" + number + '\'' +
+                    '}';
+        }
+    }
 }
