@@ -12,6 +12,11 @@ package effectivejava.item12;
  */
 class AlwaysOverrideToString {
 
+    public static void main(String[] args) {
+        System.out.println(new PhoneNumber("010-1234-5678"));// PhoneNumber{number='010-1234-5678'}
+        System.out.println(BookingClass.ECONOMY);
+    }
+
     private static final class PhoneNumber {
         private final String number;
 
@@ -28,6 +33,6 @@ class AlwaysOverrideToString {
     }
 
     private enum BookingClass {
-        ECONOMY, BUSINESS, FIRST
+        ECONOMY, BUSINESS, FIRST;
     }
 }
