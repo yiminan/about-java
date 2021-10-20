@@ -26,4 +26,8 @@ class AlwaysOverrideToString {
                     '}';
         }
     }
+
+    private enum BookingClass {
+        ECONOMY, BUSINESS, FIRST
+    }
 }
