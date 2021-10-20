@@ -14,7 +14,7 @@ class AlwaysOverrideToString {
 
     public static void main(String[] args) {
         System.out.println(new PhoneNumber("010-1234-5678"));// PhoneNumber{number='010-1234-5678'}
-        System.out.println(BookingClass.ECONOMY);
+        System.out.println(BookingClass.ECONOMY);// ECONOMY
     }
 
     private static final class PhoneNumber {
