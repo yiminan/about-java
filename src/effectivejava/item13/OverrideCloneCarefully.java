@@ -5,7 +5,13 @@ package effectivejava.item13;
  */
 class OverrideCloneCarefully {
 
-    private static final class PhoneNumber {
+    public static void main(String[] args) {
+        PhoneNumber phoneNumber = new PhoneNumber("010-1234-5678");
+        PhoneNumber copyPhoneNumber = (PhoneNumber) phoneNumber.clone();
+        System.out.println(copyPhoneNumber);
+    }
+
+    private static final class PhoneNumber implements Cloneable {
         private final String number;
 
         public PhoneNumber(String number) {
@@ -17,6 +23,15 @@ class OverrideCloneCarefully {
             return "PhoneNumber{" +
                     "number='" + number + '\'' +
                     '}';
+        }
+
+        @Override
+        protected Object clone() {
+            try {
+                return super.clone();
+            } catch (CloneNotSupportedException e) {
+                throw new AssertionError();
+            }
         }
     }
 }
