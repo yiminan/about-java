@@ -28,7 +28,7 @@ public class ConsiderWhetherToImplementComparable {
         Collections.addAll(books, new Book("An Apple"));
         Collections.addAll(books, new Book("Creative Idea"));
         Collections.addAll(books, new Book("Beyond Today"));
-        System.out.println(books);
+        System.out.println(books);// [Book{name='An Apple'}, Book{name='Beyond Today'}, Book{name='Creative Idea'}]
     }
 
     private static final class Book implements Comparable<Book> {
