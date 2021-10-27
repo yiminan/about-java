@@ -23,5 +23,24 @@ public class ConsiderWhetherToImplementComparable {
          * compareTo를 통해서 단순 동치성 비교에 더해 순서까지 비교할 수 있습니다.<p>
          */
         System.out.println(strings);// [A, B, C]
+
+    private static final class Book implements Comparable<Book> {
+        private final String name;
+
+        public Book(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public int compareTo(Book book) {
+            return String.CASE_INSENSITIVE_ORDER.compare(this.name, book.name);
+        }
+
+        @Override
+        public String toString() {
+            return "Book{" +
+                    "name='" + name + '\'' +
+                    '}';
+        }
     }
 }
