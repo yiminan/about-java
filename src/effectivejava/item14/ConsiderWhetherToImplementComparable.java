@@ -24,6 +24,13 @@ public class ConsiderWhetherToImplementComparable {
          */
         System.out.println(strings);// [A, B, C]
 
+        Set<Book> a = new TreeSet<>();
+        Collections.addAll(a, new Book("An Apple"));
+        Collections.addAll(a, new Book("Creative Idea"));
+        Collections.addAll(a, new Book("Beyond Today"));
+        System.out.println(a);
+    }
+
     private static final class Book implements Comparable<Book> {
         private final String name;
 
