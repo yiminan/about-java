@@ -1,8 +1,11 @@
 package effectivejava.item14;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * "{@link Comparable}을 구현할지 고려해야합니다."<p>
@@ -35,6 +38,11 @@ public class ConsiderWhetherToImplementComparable {
                 new Book("An Apple"), new Book("Creative Idea"), new Book("Beyond Today")
         );
         System.out.println(books);// [Book{name='An Apple'}, Book{name='Beyond Today'}, Book{name='Creative Idea'}]
+
+        // case 3)
+        String[] alphabet = new String[] {"C", "A", "B"};
+        Arrays.sort(alphabet);
+        System.out.println(Stream.of(alphabet).collect(Collectors.joining(",")));// A,B,C
     }
 
     private static final class Book implements Comparable<Book> {
