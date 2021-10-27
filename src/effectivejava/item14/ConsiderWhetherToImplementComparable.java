@@ -19,9 +19,7 @@ public class ConsiderWhetherToImplementComparable {
     public static void main(String[] args) {
         // case 1)
         Set<String> strings = new TreeSet<>();
-        Collections.addAll(strings, "B");
-        Collections.addAll(strings, "C");
-        Collections.addAll(strings, "A");
+        Collections.addAll(strings, "B", "C", "A");
         /**
          * String은 {@link Comparable}을 구현한 구현체입니다.<p>
          * compareTo를 통해서 단순 동치성 비교에 더해 순서까지 비교할 수 있습니다.<p>
@@ -30,9 +28,10 @@ public class ConsiderWhetherToImplementComparable {
 
         // case 2)
         Set<Book> books = new TreeSet<>();
-        Collections.addAll(books, new Book("An Apple"));
-        Collections.addAll(books, new Book("Creative Idea"));
-        Collections.addAll(books, new Book("Beyond Today"));
+        Collections.addAll(
+                books,
+                new Book("An Apple"), new Book("Creative Idea"), new Book("Beyond Today")
+        );
         System.out.println(books);// [Book{name='An Apple'}, Book{name='Beyond Today'}, Book{name='Creative Idea'}]
     }
 
