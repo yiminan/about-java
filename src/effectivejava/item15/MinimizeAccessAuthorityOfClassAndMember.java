@@ -15,6 +15,16 @@ package effectivejava.item15;
  * 1.클래스<p>
  * 2.인터페이스<p>
  * 3.멤버의 접근지정자<p>
+ * <p>
+ * 기본 원칙<p>
+ * - 모든 클래스와 멤버의 접근성을 가능한 한 좁혀야 한다.<p>
+ * - 가능한 접근 지정자는 private으로 선언해야 한다.<p>
+ * <p>
+ * 멤버의 접근 지정자<p>
+ * 1.private : 선언된 톱 레벨 클래스에서만 접근 가능<p>
+ * 2.default(package-private) : 선언된 클래스의 패키지 안에서만 접근 가능<p>
+ * 3.protected : detault + 상속한 하위 클래스 에서 접근 가능<p>
+ * 4.public : 모든 곳에서 접근 가능<p>
  */
 class MinimizeAccessAuthorityOfClassAndMember {
 }
