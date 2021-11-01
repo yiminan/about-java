@@ -32,6 +32,12 @@ package effectivejava.item15;
  * 3.protected를 적용하는 경우에는 공개범위가 넓어진다. 그래서 protected는 적으면 적을수록 좋다.<p>
  * 4.public class의 인스턴스 필드는 되도록 public이 되지않아야한다.<p>
  * 5.class 내부 public 인스턴스 필드는 'public final'을 사용해도 외부에 공유가 되기 때문에 스레드에 안전하지 않습니다.<p>
+ * <p>
+ * 결론)<p>
+ * - 프로그램의 접근성은 가능한한 최소화해야한다.<p>
+ * - 필요한 부분만 public API를 설계해야한다.<p>
+ * - public class는 상수용 public static final 필드 외에는 어떤한 필드도 가져서는 안된다.<p>
+ * - public static final 필드가 참조하는 객체가 불변인지 확인해야한다. 배열과 같은 경우에는 디폴트가 수정이 가능하다.<p>
  */
 class MinimizeAccessAuthorityOfClassAndMember {
 }
