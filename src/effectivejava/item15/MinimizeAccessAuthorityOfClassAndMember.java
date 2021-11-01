@@ -25,6 +25,13 @@ package effectivejava.item15;
  * 2.default(package-private) : 선언된 클래스의 패키지 안에서만 접근 가능<p>
  * 3.protected : detault + 상속한 하위 클래스 에서 접근 가능<p>
  * 4.public : 모든 곳에서 접근 가능<p>
+ * <p>
+ * class에서 접근 지정자 사용 방법<p>
+ * 1.클래스의 공개 API를 세심히 설계한 후, 그외의 모든 멤버는 private으로 만들자.<p>
+ * 2.이후 같은 패키지의 다른 클래스가 접근하는 멤버에 한하여, package-private(default)로 풀어준다.<p>
+ * 3.protected를 적용하는 경우에는 공개범위가 넓어진다. 그래서 protected는 적으면 적을수록 좋다.<p>
+ * 4.public class의 인스턴스 필드는 되도록 public이 되지않아야한다.<p>
+ * 5.
  */
 class MinimizeAccessAuthorityOfClassAndMember {
 }
