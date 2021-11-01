@@ -31,7 +31,7 @@ package effectivejava.item15;
  * 2.이후 같은 패키지의 다른 클래스가 접근하는 멤버에 한하여, package-private(default)로 풀어준다.<p>
  * 3.protected를 적용하는 경우에는 공개범위가 넓어진다. 그래서 protected는 적으면 적을수록 좋다.<p>
  * 4.public class의 인스턴스 필드는 되도록 public이 되지않아야한다.<p>
- * 5.
+ * 5.class 내부 public 인스턴스 필드는 'public final'을 사용해도 외부에 공유가 되기 때문에 스레드에 안전하지 않습니다.<p>
  */
 class MinimizeAccessAuthorityOfClassAndMember {
 }
