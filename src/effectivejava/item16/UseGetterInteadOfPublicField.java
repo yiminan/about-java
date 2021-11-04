@@ -6,6 +6,9 @@ package effectivejava.item16;
  */
 class UseGetterInteadOfPublicField {
 
+    /**
+     * public class로 지정해서 사용한다면 절대 내부 가변 필드를 public으로 노출해서는 안된다.
+     */
     private static class InvalidPoint {
         public double x;
         public double y;
