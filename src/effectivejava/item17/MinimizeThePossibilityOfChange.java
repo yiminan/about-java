@@ -12,7 +12,11 @@ package effectivejava.item17;
  * 불변 클래스는 Thread Safe 합니다.<p>
  * <p>
  * 불변 클래스 작성 다섯 가지 규칙<p>
- * 1.
+ * 1.객체의 상태를 변경하는 setter 역할의 메서드를 제공하지 않는다.<p>
+ * 2.클래스를 확장할 수 없도록 해야한다. final class 또는 다른 방법도 존재한다.<p>
+ * 3.클래스의 모든 필드는 final을 선언해준다.<p>
+ * 4.클래스의 모든 필드의 접근 지정자를 private으로 선언해준다.<p>
+ * 5.자신 클래스 외에는 내부 가변 컴포넌트에 접근하지 못하게 해야한다.<p>
  */
 class MinimizeThePossibilityOfChange {
 }
