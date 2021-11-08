@@ -25,7 +25,10 @@ import java.util.Objects;
  */
 class MinimizeThePossibilityOfChange {
 
-    private final class Operand {
+    private static final class Operand {
+        public static final Operand ZERO = new Operand(0);
+        public static final Operand ONE = new Operand(1);
+
         private final int number;
 
         Operand(int number) {
