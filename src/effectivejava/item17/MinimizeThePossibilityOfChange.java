@@ -22,4 +22,28 @@ package effectivejava.item17;
  * 불변 객체는 안심하고 공유가 가능한 객체를 만들 수 있습니다.<p>
  */
 class MinimizeThePossibilityOfChange {
+
+    private final class Operand {
+        private final int number;
+
+        Operand(int number) {
+            this.number = number;
+        }
+
+        Operand plus(Operand operand) {
+            return new Operand(this.number + operand.number);
+        }
+
+        Operand minus(Operand operand) {
+            return new Operand(this.number - operand.number);
+        }
+
+        Operand times(Operand operand) {
+            return new Operand(this.number * operand.number);
+        }
+
+        Operand dividedBy(Operand operand) {
+            return new Operand(this.number / operand.number);
+        }
+    }
 }
