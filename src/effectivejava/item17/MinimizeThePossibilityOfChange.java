@@ -22,6 +22,7 @@ import java.util.Objects;
  * <p>
  * 불변 객체는 단순합니다. 불변 객체는 생성된 시점의 상태를 파괴될 때까지 그대로 간직합니다.<p>
  * 불변 객체는 안심하고 공유가 가능한 객체를 만들 수 있습니다.<p>
+ * 불변 객체끼리는 클래스 내부 데이터를 공유해서 연산을 구현할 수도 있습니다.<p>
  */
 class MinimizeThePossibilityOfChange {
 
