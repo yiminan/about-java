@@ -1,5 +1,7 @@
 package effectivejava.item17;
 
+import java.util.Objects;
+
 /**
  * "변경 가능성을 최소화해야합니다"<p>
  * <p>
@@ -44,6 +46,19 @@ class MinimizeThePossibilityOfChange {
 
         Operand dividedBy(Operand operand) {
             return new Operand(this.number / operand.number);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Operand operand = (Operand) o;
+            return number == operand.number;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(number);
         }
     }
 }
