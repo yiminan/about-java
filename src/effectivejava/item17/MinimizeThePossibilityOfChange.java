@@ -10,8 +10,11 @@ import java.util.Objects;
  * ex) {@link String}, {@link java.math.BigInteger}, {@link java.math.BigDecimal}, etc.<p>
  * <p>
  * 불변 클래스의 장점<p>
- * 불변 클래스는 초기화 이후에 변경하지 못하므로 가변 클래스보다 설계하고 구현하기 쉽니다.<p>
- * 불변 클래스는 Thread Safe 합니다.<p>
+ * - 불변 클래스는 초기화 이후에 변경하지 못하므로 가변 클래스보다 설계하고 구현하기 쉽니다.<p>
+ * - 불변 클래스는 Thread Safe 합니다.<p>
+ * <p>
+ * 불변 클래스의 단점<p>
+ * - 값이 달라지면 독립된 객체로 만들어야하는데, 객체 생성비용이 상당히 크다.<p>
  * <p>
  * 불변 클래스 작성 다섯 가지 규칙<p>
  * 1.객체의 상태를 변경하는 setter 역할의 메서드를 제공하지 않는다.<p>
