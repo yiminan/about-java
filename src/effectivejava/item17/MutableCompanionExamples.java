@@ -16,7 +16,7 @@ class MutableCompanionExamples {
         System.out.println(moby == moby.flipBit(0));// false
 
         /**
-         * 가변 클래스를 통해 동일한 객체를 재활용 예시
+         * 가변 동반 클래스로 생성된 객체를 재활용하는 예시
          */
         BitSet five = BitSet.valueOf(new long[]{1L, 2L});
         five.flip(0);// 가변 클래스 사용
