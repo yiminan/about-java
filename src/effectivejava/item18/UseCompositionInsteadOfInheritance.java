@@ -30,13 +30,23 @@ class UseCompositionInsteadOfInheritance {
         private static class MyHashSet<E> extends HashSet<E> {
             private int addCount = 0; // 추가된 원소의 개수
 
+            /**
+             * 이 메서드가 @Override가 되면, addAll()이 호출될 떄, 이 메서드를 호출하게 된다.<p>
+             * 만약 없다면, 상위 클래스의 add()가 호출되게 된다. 이 관계를 유념해야한다.<p>
+             */
             @Override
             public boolean add(E e) {
-                System.out.println("add");
                 addCount++;
                 return super.add(e);
             }
 
+            /**
+             * {@link HashSet}의 addAll이 super.addAll(c) 형태로 사용되었다.<p>
+             * 그런데 위를 보면 add(E e) 메서드가 @Override 되었다.<p>
+             * super.addAll(c) 구현 내용을 보면, 위 @Override add(E e)를 사용한다.<p>
+             * 결국, super.addAll(c) 호출시, @Override add(E e)이 추가된 element만큼 호출되고,<p>
+             * 최종적으로 c.size()까지 더해져서 예상되지 않는 값이 나올 수 있다.<p>
+             */
             @Override
             public boolean addAll(Collection<? extends E> c) {
                 addCount = addCount + c.size();
