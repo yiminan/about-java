@@ -1,5 +1,9 @@
 package effectivejava.item18;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+
 /**
  * "상속보다는 컴포지션(구성)을 사용해야합니다"<p>
  * 상속은 코드를 재사용하는 강력한 수단이지만, 항상 최선은 아닙니다.<p>
@@ -14,4 +18,34 @@ package effectivejava.item18;
  * 특히 래퍼 클래스로 구현할 적당한 인터페이스가 있다면 더욱 그렇다. 래퍼 클래스는 하위 클래스보다 견고하고 강력하다.<p>
  */
 class UseCompositionInsteadOfInheritance {
+
+    private static class InvalidCase {
+
+        public static void main(String[] args) {
+            MyHashSet<String> myHashSet = new MyHashSet<>();
+            myHashSet.addAll(List.of("1", "2", "3"));
+            System.out.println(myHashSet.getAddCount());// 예상 3, 실제 6
+        }
+
+        private static class MyHashSet<E> extends HashSet<E> {
+            private int addCount = 0; // 추가된 원소의 개수
+
+            @Override
+            public boolean add(E e) {
+                System.out.println("add");
+                addCount++;
+                return super.add(e);
+            }
+
+            @Override
+            public boolean addAll(Collection<? extends E> c) {
+                addCount = addCount + c.size();
+                return super.addAll(c);
+            }
+
+            public int getAddCount() {
+                return addCount;
+            }
+        }
+    }
 }
