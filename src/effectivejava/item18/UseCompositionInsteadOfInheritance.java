@@ -1,8 +1,6 @@
 package effectivejava.item18;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * "상속보다는 컴포지션(구성)을 사용해야합니다"<p>
@@ -55,6 +53,119 @@ class UseCompositionInsteadOfInheritance {
 
             public int getAddCount() {
                 return addCount;
+            }
+        }
+    }
+
+    private static class ValidCase {
+
+        public static void main(String[] args) {
+            ValidCase.MySet<String> myHashSet = new ValidCase.MySet<>(new HashSet<>());
+            myHashSet.addAll(List.of("1", "2", "3"));
+            System.out.println(myHashSet.getAddCount());// 예상 3, 실제 3
+        }
+
+        private static class MySet<E> extends ForwardingSet<E> {
+            private int addCount = 0;
+
+            public MySet(Set<E> set) {
+                super(set);
+            }
+
+            @Override
+            public boolean add(E e) {
+                addCount++;
+                return super.add(e);
+            }
+
+            @Override
+            public boolean addAll(Collection<? extends E> collection) {
+                addCount = addCount + collection.size();
+                return super.addAll(collection);
+            }
+
+            public int getAddCount() {
+                return addCount;
+            }
+        }
+
+        /**
+         * 기존 클래스를 확장하는 대신에 새로운 클래스를 만들고 private 필드로 기존 클래스의 인스턴스를 참조하게 하면 됩니다.<p>
+         * 기존 클래스가 새로운 클래스의 구성요소로 쓰인다는 뜻에서 이를 컴포지션(Composition)이라고 합니다.<p>
+         * 새로운 클래스의 인스턴스 메서드들은 기존클래스에 대응하는 메서드를 호출해 그 결과를 반환합니다.<p>
+         * 이를 전달(Forwarding)이라고 하며, 새 클래스의 메서드들은 전달 메서드라고 합니다.<p>
+         * 이렇게 되면 새로운 클래스는 기존 클래스의 영향이 적어지고 기존 클래스 안에 새로운 메서드가 추가되어도 안전하게 됩니다.<p>
+         */
+        private static class ForwardingSet<E> implements Set<E> {
+            private final Set<E> set;
+
+            public ForwardingSet(Set<E> set) {
+                this.set = set;
+            }
+
+            public void clear() {
+                set.clear();
+            }
+
+            public boolean isEmpty() {
+                return set.isEmpty();
+            }
+
+            public boolean add(E e) {
+                return set.add(e);
+            }
+
+            public boolean addAll(Collection<? extends E> c) {
+                return set.addAll(c);
+            }
+
+            /**
+             * 아래부터는 구현 생략
+             */
+
+            @Override
+            public int size() {
+                return 0;
+            }
+
+            @Override
+            public boolean contains(Object o) {
+                return false;
+            }
+
+            @Override
+            public Iterator<E> iterator() {
+                return null;
+            }
+
+            @Override
+            public Object[] toArray() {
+                return new Object[0];
+            }
+
+            @Override
+            public <T> T[] toArray(T[] a) {
+                return null;
+            }
+
+            @Override
+            public boolean remove(Object o) {
+                return false;
+            }
+
+            @Override
+            public boolean containsAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public boolean retainAll(Collection<?> c) {
+                return false;
+            }
+
+            @Override
+            public boolean removeAll(Collection<?> c) {
+                return false;
             }
         }
     }
