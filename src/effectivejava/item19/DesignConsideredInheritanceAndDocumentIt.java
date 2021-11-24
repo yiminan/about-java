@@ -19,7 +19,7 @@ package effectivejava.item19;
  * - 일반적인 문서화 주석은 해당 메서드와 클라이언트 사이의 관계를 설명<p>
  * - @implSpec 주석은 해당 메서드와 하위 클래스 사이의 관계를 설명하여, 하위 클래스들이 그 메서드를 상속하거나 super 키워드를 이용해 호출할 때 그 메서드가 어떻게 동작하는지를 명확히 인지하고 사용하게 해야 한다.<p>
  * - -tag "implSpec:a:Implementation Requirement" 스위치를 키지 않으면 @implSpec 태그를 무시한다<p>
- *
+ * <p>
  */
 class DesignConsideredInheritanceAndDocumentIt {
 }
