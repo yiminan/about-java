@@ -13,6 +13,7 @@ package effectivejava.item20;
  * 쉽게 생각하면, 추상 클래스는 상속 구현하게 된 클래스가 1개의 상속 밖에 불가능하지만, 믹스인 인터페이스는 여러 인터페이스를 선택해서 구현할 수 있다.<p>
  * <p>
  * 인터페이스로는 계층구조가 없는 타입 프레임워크를 만들 수 있습니다.<p>
+ *
  */
 class UseInterfaceThanAbstractClass {
 }
