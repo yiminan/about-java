@@ -9,7 +9,7 @@ package effectivejava.item20;
  * 자바에서도 기존 클래스에 쉽게 {@link Comparable}, {@link Iterable}, {@link AutoCloseable}를 추가 구현할 수 있다.<p>
  * <p>
  * 인터페이스는 믹스인(mixin) 정의에 안성맞춤이다.<p>
- *
+ * 믹스인(mixin) 인터페이스를 구현한 클래스의 원래 주된 기능에 선택적 기능을 혼합한다고 해서 믹스인(mixin)이라고 합니다.
  */
 class UseInterfaceThanAbstractClass {
 }
