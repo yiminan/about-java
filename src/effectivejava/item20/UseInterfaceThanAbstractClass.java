@@ -1,5 +1,7 @@
 package effectivejava.item20;
 
+import java.applet.AudioClip;
+
 /**
  * "추상 클래스보다는 인터페이스를 우선하라"<p>
  * <p>
@@ -16,4 +18,15 @@ package effectivejava.item20;
  * 현실의 개념중에는 타입을 계층적으로 정의하면 수많은 개념을 구조적으로 잘 표현할 수 있는 개념이 있다.<p>
  */
 class UseInterfaceThanAbstractClass {
+    public interface Song {
+
+    }
+
+    public interface Singer {
+        AudioClip sing(Song s);
+    }
+
+    public interface SongWriter{
+        Song compose(int chartPosition);
+    }
 }
