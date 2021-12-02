@@ -167,6 +167,7 @@ class UseInterfaceThanAbstractClass {
     }
 
     /**
+     * Reference)<p>
      * 이미 상속을 사용하고 있는 경우 자바에서 추상 골격 클래스를 다중 상속하는 방법<p>
      */
     public class MilkCream {
