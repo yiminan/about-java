@@ -16,6 +16,8 @@ package effectivejava.item20;
  * 3.인터페이스로는 계층구조가 없는 타입 프레임워크를 만들 수 있습니다.<p>
  * 현실의 개념중에는 타입을 계층적으로 정의하면 수많은 개념을 구조적으로 잘 표현할 수 있는 개념이 있다.<p>
  * 가수와 작곡가가 싱어송 라이터가 될 수 있는 예시입니다. 이렇게 계층적 구조가 없는 개념들은 인터페이스로 만들기 편합니다.<p>
+ * <p>
+ * 4.래퍼 클래스 관용구와 함께 사용하면 기능을 향상시키는 안전하고 강력한 수단이 됩니다.<p>
  */
 class UseInterfaceThanAbstractClass {
 
@@ -83,4 +85,9 @@ class UseInterfaceThanAbstractClass {
 
     private interface Song {
     }
+
+    /**
+     * Example)<p>
+     * 4.래퍼 클래스 관용구와 함께 사용하면 기능을 향상시키는 안전하고 강력한 수단이 됩니다.<p>
+     */
 }
