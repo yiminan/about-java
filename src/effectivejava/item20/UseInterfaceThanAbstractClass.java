@@ -1,7 +1,5 @@
 package effectivejava.item20;
 
-import java.applet.AudioClip;
-
 /**
  * "추상 클래스보다는 인터페이스를 우선하라"<p>
  * <p>
@@ -20,6 +18,31 @@ import java.applet.AudioClip;
  */
 class UseInterfaceThanAbstractClass {
 
+    /**
+     * Example)<p>
+     * 1.기존 클래스에도 손쉽게 새로운 인터페이스를 사용 구현해 넣을 수 있습니다.<p>
+     */
+    private class User implements Comparable<User> {
+        private final String nickName;
+        private final int age;
+
+        User(String nickName, int age) {
+            this.nickName = nickName;
+            this.age = age;
+        }
+
+        @Override
+        public int compareTo(User user) {
+            if (this.age > user.age) {
+                return 1;
+            }
+            if (this.age < user.age) {
+                return -1;
+            }
+            return 0;
+        }
+    }
+
     private class IU implements Singer, SongWriter {
         @Override
         public AudioClip sing(Song s) {
@@ -34,6 +57,7 @@ class UseInterfaceThanAbstractClass {
 
     private interface SingerSongWriter extends Singer, SongWriter {
         AudioClip strum();
+
         void actSensitive();
     }
 
