@@ -100,5 +100,64 @@ class UseInterfaceThanAbstractClass {
      * Example)<p>
      * 4.래퍼 클래스 관용구와 함께 사용하면 기능을 향상시키는 안전하고 강력한 수단이 됩니다.<p>
      */
+    public interface Coffee {
+        void boilWater();
 
+        void putEspresso();
+
+        void putIce();
+
+        void putExtra();
+
+        void makeCoffee();
+    }
+
+    public abstract class AbstractCoffee implements Coffee {
+        @Override
+        public void boilWater() {
+            System.out.println("물을 끓인다.");
+        }
+
+        @Override
+        public void putEspresso() {
+            System.out.println("에스프레소를 넣는다.");
+        }
+
+        @Override
+        public void putIce() {
+            System.out.println("얼음을 넣는다.");
+        }
+    }
+
+    public class IceAmericano extends AbstractCoffee implements Coffee {
+
+        @Override
+        public void putExtra() {
+            System.out.println("시럽을 넣는다.");
+        }
+
+        @Override
+        public void makeCoffee() {
+            boilWater();
+            putEspresso();
+            putExtra();
+            putIce();
+        }
+    }
+
+    public class IceLatte extends AbstractCoffee implements Coffee {
+
+        @Override
+        public void putExtra() {
+            System.out.println("우유를 넣는다.");
+        }
+
+        @Override
+        public void makeCoffee() {
+            boilWater();
+            putEspresso();
+            putExtra();
+            putIce();
+        }
+    }
 }
