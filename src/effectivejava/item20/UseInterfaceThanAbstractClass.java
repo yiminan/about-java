@@ -59,6 +59,10 @@ class UseInterfaceThanAbstractClass {
         }
     }
 
+    /**
+     * Example)<p>
+     * 3.인터페이스로는 계층구조가 없는 타입 프레임워크를 만들 수 있습니다.<p>
+     */
     private interface SingerSongWriter extends Singer, SongWriter {
         AudioClip strum();
 
