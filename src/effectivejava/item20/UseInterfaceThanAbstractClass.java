@@ -43,6 +43,10 @@ class UseInterfaceThanAbstractClass {
         }
     }
 
+    /**
+     * Example)<p>
+     * 2.인터페이스는 믹스인(mixin) 정의에 안성맞춤이다.<p>
+     */
     private class IU implements Singer, SongWriter {
         @Override
         public AudioClip sing(Song s) {
