@@ -165,4 +165,60 @@ class UseInterfaceThanAbstractClass {
             putIce();
         }
     }
+
+    /**
+     * 이미 상속을 사용하고 있는 경우 자바에서 추상 골격 클래스를 다중 상속하는 방법<p>
+     */
+    public class MilkCream {
+        public void putCream() {
+            System.out.println("우유 크림을 넣는다.");
+        }
+    }
+
+    public class IceCappuccino extends MilkCream implements Coffee {
+        InnerAbstractCoffee innerAbstractCoffee = new InnerAbstractCoffee();
+
+        @Override
+        public void boilWater() {
+            innerAbstractCoffee.boilWater();
+        }
+
+        @Override
+        public void putEspresso() {
+            innerAbstractCoffee.putEspresso();
+        }
+
+        @Override
+        public void putIce() {
+            innerAbstractCoffee.putIce();
+        }
+
+        @Override
+        public void putExtra() {
+            innerAbstractCoffee.putExtra();
+            putCream();
+        }
+
+        @Override
+        public void makeCoffee() {
+            boilWater();
+            putEspresso();
+            putIce();
+            putExtra();
+        }
+
+        // private 내부 클래스 - 추상 골격 클래스를 상속한다.
+        private class InnerAbstractCoffee extends AbstractCoffee {
+
+            @Override
+            public void putExtra() {
+                System.out.println("우유를 넣는다.");
+            }
+
+            @Override
+            public void makeCoffee() {
+                System.out.println("커피를 만든다.");
+            }
+        }
+    }
 }
