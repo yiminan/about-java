@@ -18,15 +18,17 @@ import java.applet.AudioClip;
  * 현실의 개념중에는 타입을 계층적으로 정의하면 수많은 개념을 구조적으로 잘 표현할 수 있는 개념이 있다.<p>
  */
 class UseInterfaceThanAbstractClass {
-    public interface Song {
-
+    private interface Song {
     }
 
-    public interface Singer {
-        AudioClip sing(Song s);
+    private interface AudioClip {
     }
 
-    public interface SongWriter{
+    private interface Singer {
+        UseInterfaceThanAbstractClass.AudioClip sing(Song s);
+    }
+
+    private interface SongWriter {
         Song compose(int chartPosition);
     }
 }
