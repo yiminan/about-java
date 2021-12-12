@@ -19,4 +19,32 @@ package effectivejava.item21;
  * - 인터페이스를 릴리스한 후에 결함이 발생해서 수정 가능한 경우도 있지만, 절대 그 가능성에 기대어서는 안됩니다.<p>
  */
 class DesignInterfaceWhichIsConsideredForImplementedClass {
+
+    public static void main(String[] args) {
+        DefaultTestable studentTest = new StudentTest();
+        studentTest.rest();// 게임을 한다.
+    }
+
+    private interface DefaultTestable {
+
+        void study();
+
+        default void rest() {
+            System.out.println("그냥 쉰다.");
+        }
+
+    }
+
+    private static class StudentTest implements DefaultTestable {
+
+        @Override
+        public void study() {
+            System.out.println("공부한다.");
+        }
+
+        @Override
+        public void rest() {
+            System.out.println("게임을 한다.");
+        }
+    }
 }
