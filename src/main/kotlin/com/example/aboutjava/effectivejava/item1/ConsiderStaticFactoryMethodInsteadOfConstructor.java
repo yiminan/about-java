@@ -1,14 +1,9 @@
 package com.example.aboutjava.effectivejava.item1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.nio.file.FileStore;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.time.Instant;
-import java.util.*;
+import java.util.Collections;
+import java.util.EnumSet;
+import java.util.JumboEnumSet;
+import java.util.RegularEnumSet;
 
 /**
  * "생성자 대신 정적 팩터리 메서드를 고려하라"<p>

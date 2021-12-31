@@ -2,7 +2,7 @@ package com.example.aboutjava.elegantobject.step2_education.step2_7_makeatestins
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MakeATestInsteadOfDocsTest {
 

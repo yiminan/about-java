@@ -1,6 +1,5 @@
 package com.example.aboutjava.elegantobject.step2_education.step2_8_usefakeobjectinsteadofmockobject;
 
-import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

@@ -1,7 +1,10 @@
 package com.example.aboutjava.elegantobject.step3_employment.step3_4_immutableobjectisloyalorconstant;
 
 import java.net.URI;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * "충성스러우면서 불변 객체이거나, 아니면 상수 객체이어야 합니다"<p>
