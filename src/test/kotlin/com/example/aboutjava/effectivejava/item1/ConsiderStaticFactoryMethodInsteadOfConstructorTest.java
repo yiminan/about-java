@@ -3,6 +3,7 @@ package com.example.aboutjava.effectivejava.item1;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigInteger;
 import java.time.Instant;
 import java.util.Date;
 import java.util.EnumSet;
@@ -38,13 +39,17 @@ class ConsiderStaticFactoryMethodInsteadOfConstructorTest {
         );
     }
 
-//        EnumSet types = EnumSet.of(Type.VIP, Type.GENERAL);
-//
-//        /**
-//         * "valueOf"
-//         * - "from", "of"에서 조금 더 자세하게 네이밍한 정적 팩토리 메서드
-//         */
-//        BigInteger maxIntValue = BigInteger.valueOf(Integer.MAX_VALUE);
+    @DisplayName("from, of 에서 조금 더 자세하게 네이밍한 정적 팩토리 메서드")
+    @Test
+    void valueOf() {
+        // when
+        BigInteger zeroIntValue = BigInteger.valueOf(0);
+        // then
+        assertAll(
+                () -> assertThat(zeroIntValue).isInstanceOf(BigInteger.class),
+                () -> assertThat(zeroIntValue).isEqualTo(BigInteger.ZERO)
+        );
+    }
 //
 //        /**
 //         * "instance" or "getInstance"
