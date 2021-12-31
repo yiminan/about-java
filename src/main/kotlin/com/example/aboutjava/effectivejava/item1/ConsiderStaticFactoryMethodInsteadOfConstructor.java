@@ -2,8 +2,6 @@ package com.example.aboutjava.effectivejava.item1;
 
 import java.util.Collections;
 import java.util.EnumSet;
-import java.util.JumboEnumSet;
-import java.util.RegularEnumSet;
 
 /**
  * "생성자 대신 정적 팩터리 메서드를 고려하라"<p>
@@ -29,7 +27,7 @@ import java.util.RegularEnumSet;
  * <p>
  * 4. 입력 매개변수에 따라 매번 다른 클래스의 객체를 반환할 수 있습니다.<p>
  * - 반환 타입의 하위 타입이면 어떤 클래스의 객체를 반환해도 상관없습니다.<p>
- * - ex) {@link EnumSet EnumSet}은 원소가 64개 이하이면 {@link RegularEnumSet RegularEnumSet}, 65개 이상이면 {@link JumboEnumSet JumboEnumSet}을 반환합니다.<p>
+ * - ex) {@link EnumSet EnumSet}은 원소가 64개 이하이면 RegularEnumSet, 65개 이상이면 JumboEnumSet을 반환합니다.<p>
  * - 클라이언트는 정적 팩토리 메서드를 사용만하면 되지, 무엇이 반환되는지는 신경 안써도 된다.<p>
  * <p>
  * 5. 정적 팩토리 메서드를 작성하는 시점에는 반환할 객체의 클래스가 존재하지 않아도 됩니다.<p>
