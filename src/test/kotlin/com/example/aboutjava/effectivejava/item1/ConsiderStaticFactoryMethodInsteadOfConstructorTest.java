@@ -60,6 +60,16 @@ class ConsiderStaticFactoryMethodInsteadOfConstructorTest {
         // when
         assertThat(stackWalker).isInstanceOf(StackWalker.class);
     }
+
+    @DisplayName("instance or getInstance 와 같다. 다른 점은 매번 새로운 인스턴스를 생성하는 정적 팩토리 메서드")
+    @Test
+    void createOrNewInstance() {
+        // when
+        String[] strings = (String[]) Array.newInstance(String.class, 10);
+        // then
+        assertThat(strings).isInstanceOf(String[].class);
+    }
+
 //        /**
 //         * "get[Type]"
 //         * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
