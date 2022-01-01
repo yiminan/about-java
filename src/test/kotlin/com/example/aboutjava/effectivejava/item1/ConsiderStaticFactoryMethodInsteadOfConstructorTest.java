@@ -3,8 +3,13 @@ package com.example.aboutjava.effectivejava.item1;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.math.BigInteger;
+import java.nio.file.FileStore;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.Instant;
 import java.util.Date;
 import java.util.EnumSet;
@@ -71,20 +76,21 @@ class ConsiderStaticFactoryMethodInsteadOfConstructorTest {
     }
 
 //        /**
-//         * "get[Type]"
-//         * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
-//         * - "getInstance"와 같습니다.
-//         * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
-//         */
-//        FileStore testFile = Files.getFileStore(Path.of("/home/test.txt"));
-//
-//        /**
 //         * "new[Type]"
 //         * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
 //         * - "newInstance"와 같습니다.
 //         * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
 //         */
 //        BufferedReader bufferedReader = Files.newBufferedReader(Path.of("/home/test.txt"));
+    @DisplayName("다른 클래스 인스턴스를 반환하는 경우 사용. 'getInstance'와 같습니다. [ClassType]은 팩터리 메서드가 반환할 객체의 타입입니다.")
+    @Test
+    void getClassType() throws IOException {
+        // when
+        FileStore fileStore = Files.getFileStore(Path.of("test.txt"));
+        // then
+        assertThat(fileStore).isInstanceOf(FileStore.class);
+    }
+
 //
 //        /**
 //         * "type"
