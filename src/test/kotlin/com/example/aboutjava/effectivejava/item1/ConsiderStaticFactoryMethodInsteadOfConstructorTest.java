@@ -11,8 +11,7 @@ import java.nio.file.FileStore;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Instant;
-import java.util.Date;
-import java.util.EnumSet;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -75,13 +74,6 @@ class ConsiderStaticFactoryMethodInsteadOfConstructorTest {
         assertThat(strings).isInstanceOf(String[].class);
     }
 
-//        /**
-//         * "new[Type]"
-//         * - 다른 클래스 인스턴스를 반환하는 경우 사용합니다.
-//         * - "newInstance"와 같습니다.
-//         * - [Type]은 팩터리 메서드가 반환할 객체의 타입입니다.
-//         */
-//        BufferedReader bufferedReader = Files.newBufferedReader(Path.of("/home/test.txt"));
     @DisplayName("다른 클래스 인스턴스를 반환하는 경우 사용. 'getInstance'와 같습니다. [ClassType]은 팩터리 메서드가 반환할 객체의 타입입니다.")
     @Test
     void getClassType() throws IOException {
@@ -99,4 +91,13 @@ class ConsiderStaticFactoryMethodInsteadOfConstructorTest {
 //         */
 //        List<Integer> integers = Collections.unmodifiableList(Arrays.asList(1, 2));
 //    }
+    @DisplayName("다른 클래스 인스턴스를 반환하는 경우 사용. 'newInstance'와 같습니다. [ClassType]은 팩터리 메서드가 반환할 객체의 타입입니다.")
+    @Test
+    void newClassType() throws IOException {
+        // when
+        BufferedReader bufferedReader = Files.newBufferedReader(Path.of("test.txt"));
+        // then
+        assertThat(bufferedReader).isInstanceOf(BufferedReader.class);
+    }
+
 }
