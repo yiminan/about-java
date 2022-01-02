@@ -13,17 +13,9 @@ package com.example.aboutjava.effectivejava.item4;
  */
 class UsePrivateConstructorToBlockInstantiation {
 
-    public static void main(String[] args) {
-        try {
-            new ExampleUtility();
-        } catch (AssertionError ex) {
-            System.out.println("인스턴스화가 불가능한 클래스 예외");
-        }
-    }
-
-    private static class ExampleUtility {
-        // public 생성자가 만들어져 인스턴스화 방지
-        private ExampleUtility() {
+    static class ExampleUtility {
+        // 기본적으로 private으로 선언되어야한다. 추가로 예외 선언으로 이중 인스턴스화 방지
+        ExampleUtility() {
             throw new AssertionError();
         }
     }
