@@ -60,14 +60,14 @@ class ConsiderABuilderWhenIHaveManyParameters {
     /**
      * 2.자바빈즈 패턴(javaBeans pattern)
      */
-    private static class JavaBeansPatternForUser {
+    static class JavaBeansPattern {
         private String firstName;
         private String lastName;
         private int age;
         private String sex;
         private String email;
 
-        public JavaBeansPatternForUser() {
+        public JavaBeansPattern() {
         }
 
         public void setFirstName(String firstName) {
