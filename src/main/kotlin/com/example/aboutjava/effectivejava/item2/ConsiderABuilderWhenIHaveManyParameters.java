@@ -31,14 +31,14 @@ class ConsiderABuilderWhenIHaveManyParameters {
     /**
      * 1.점층적 생성자 패턴(telescoping constructor pattern)
      */
-    private static class TelescopingConstructorPatternForUser {
+    static class TelescopingConstructorPattern {
         private final String firstName;
         private final String lastName;
         private final int age;
         private final String sex;
         private final String email;
 
-        public TelescopingConstructorPatternForUser(String firstName, String lastName) {
+        public TelescopingConstructorPattern(String firstName, String lastName) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = 0;
@@ -46,7 +46,7 @@ class ConsiderABuilderWhenIHaveManyParameters {
             this.email = "";
         }
 
-        public TelescopingConstructorPatternForUser(String firstName, String lastName, int age, String sex, String email) {
+        public TelescopingConstructorPattern(String firstName, String lastName, int age, String sex, String email) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
@@ -147,14 +147,5 @@ class ConsiderABuilderWhenIHaveManyParameters {
                 return new BuilderPatternForUser(builder);
             }
         }
-    }
-
-    public static void main(String[] args) {
-        MrPizza mrPizza = new MrPizza.Builder(MrPizza.Size.SMALL)
-                .addTopping(Pizza.Topping.SAUSAGE).addTopping(Pizza.Topping.ONION)
-                .build();
-        DominoPizza dominoPizza = new DominoPizza.Builder()
-                .addTopping(Pizza.Topping.ONION).sauceInside().build();
-
     }
 }
