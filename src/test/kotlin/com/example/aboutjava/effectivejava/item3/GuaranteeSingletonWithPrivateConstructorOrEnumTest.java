@@ -32,4 +32,16 @@ class GuaranteeSingletonWithPrivateConstructorOrEnumTest {
                 () -> assertThat(actual).isInstanceOf(SingletonByStaticFactoryMethod.class)
         );
     }
+
+    @DisplayName("'static factory' method를 만들어서 사용하는 방식")
+    @Test
+    void singletonByEnum() {
+        // when
+        SingletonByEnum actual = SingletonByEnum.INSTANCE;
+        // then
+        assertAll(
+                () -> assertThat(actual).isNotNull(),
+                () -> assertThat(actual).isInstanceOf(SingletonByEnum.class)
+        );
+    }
 }
