@@ -94,29 +94,19 @@ class ConsiderABuilderWhenIHaveManyParameters {
     /**
      * 3.빌더 패턴(builder pattern)
      */
-    private static class BuilderPatternForUser {
+    static class BuilderPattern {
         private final String firstName;
         private final String lastName;
         private final String email;
         private final int age;
         private final String sex;
 
-        private BuilderPatternForUser(Builder builder) {
-            validate(builder);// 이 지점에서 유효성 검사를 실시합니다.
+        private BuilderPattern(Builder builder) {
             this.firstName = builder.firstName;
             this.lastName = builder.lastName;
             this.email = builder.email;
             this.age = builder.age;
             this.sex = builder.sex;
-        }
-
-        private void validate(Builder builder) {
-            if (!builder.firstName.equals("")) {
-                throw new IllegalArgumentException("Invalid firstName");
-            }
-            if (builder.age > 0) {
-                throw new IllegalArgumentException("Invalid age");
-            }
         }
 
         public static class Builder {
@@ -143,8 +133,8 @@ class ConsiderABuilderWhenIHaveManyParameters {
                 return this;
             }
 
-            public BuilderPatternForUser build(Builder builder) {
-                return new BuilderPatternForUser(builder);
+            public BuilderPattern build() {
+                return new BuilderPattern(this);
             }
         }
     }

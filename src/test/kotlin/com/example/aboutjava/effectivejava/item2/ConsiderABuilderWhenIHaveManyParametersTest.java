@@ -35,4 +35,15 @@ class ConsiderABuilderWhenIHaveManyParametersTest {
         // then
         assertThat(actual).isNotNull();
     }
+
+    @DisplayName("빌더 패턴(builder pattern)")
+    @Test
+    void builderPattern() {
+        // when
+        BuilderPattern actual = new BuilderPattern
+                .Builder("Ryan", "An", "test@gmail.com")
+                .age(32).sex("man").build();
+        // then
+        assertThat(actual).isNotNull();
+    }
 }
