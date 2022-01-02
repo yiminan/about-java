@@ -37,26 +37,10 @@ package com.example.aboutjava.effectivejava.item3;
  */
 class GuaranteeSingletonWithPrivateConstructorOrEnum {
 
-    public static void main(String[] args) {
-        /**
-         * 1. 'public static final' field를 만들어서 사용하는 방식
-         */
-        System.out.println(SingletonByPublicStaticFinalField.INSTANCE);
-        /**
-         * 2. 'static factory' method를 만들어서 사용하는 방식
-         */
-        System.out.println(SingletonByStaticFactoryMethod.getINSTANCE());
-        /**
-         * 3. enum 타입을 사용한 방식
-         */
-        System.out.println(SingletonByEnum.INSTANCE);
-        System.out.println(SingletonByEnum.INSTANCE.getInstance());
-    }
-
     /**
      * 1. 'public static final' field를 만들어서 사용하는 방식
      */
-    private static class SingletonByPublicStaticFinalField {
+    static class SingletonByPublicStaticFinalField {
         public static final SingletonByPublicStaticFinalField INSTANCE = new SingletonByPublicStaticFinalField();
 
         private SingletonByPublicStaticFinalField() {
