@@ -19,4 +19,14 @@ class InjectDependencyObjectInsteadOfDirectNotationTest {
         // then
         assertThat(dictionaryName).isEqualTo("oxfordDictionary");
     }
+
+    @DisplayName("자원을 직접 명시하지 말고 의존 객체 주입을 사용해야합니다 - 함수형 인터페이스로 람다 사용")
+    @Test
+    void injectDependencyObjectInsteadOfDirectNotationWithLambda() {
+        // when
+        SpellChecker spellChecker = new SpellChecker(() -> "oxfordDictionary");
+        String dictionaryName = spellChecker.dictionaryName();
+        // then
+        assertThat(dictionaryName).isEqualTo("oxfordDictionary");
+    }
 }
