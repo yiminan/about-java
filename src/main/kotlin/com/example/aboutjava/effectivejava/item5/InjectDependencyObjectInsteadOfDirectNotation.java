@@ -20,15 +20,10 @@ import java.util.Objects;
  */
 class InjectDependencyObjectInsteadOfDirectNotation {
 
-    public static void main(String[] args) {
-        SpellChecker spellChecker = new SpellChecker(new OxfordDictionary());
-        spellChecker.foundIndex("apple");
-    }
-
     /**
      * 의존 객체 주입을 사용한 올바른 예시
      */
-    private static class SpellChecker {
+    static class SpellChecker {
 
         private final Lexicon dictionary;
 
@@ -41,11 +36,11 @@ class InjectDependencyObjectInsteadOfDirectNotation {
         }
     }
 
-    private interface Lexicon {
+    interface Lexicon {
         String foundIndex(String spell);
     }
 
-    private static class OxfordDictionary implements Lexicon {
+    static class OxfordDictionary implements Lexicon {
         @Override
         public String foundIndex(String spell) {
             /**
