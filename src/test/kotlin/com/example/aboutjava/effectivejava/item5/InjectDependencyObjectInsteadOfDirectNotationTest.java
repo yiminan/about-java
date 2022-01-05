@@ -3,9 +3,7 @@ package com.example.aboutjava.effectivejava.item5;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.example.aboutjava.effectivejava.item5.InjectDependencyObjectInsteadOfDirectNotation.OxfordDictionary;
-import static com.example.aboutjava.effectivejava.item5.InjectDependencyObjectInsteadOfDirectNotation.SpellChecker;
-import static com.example.aboutjava.effectivejava.item5.InjectDependencyObjectInsteadOfDirectNotation.Lexicon;
+import static com.example.aboutjava.effectivejava.item5.InjectDependencyObjectInsteadOfDirectNotation.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class InjectDependencyObjectInsteadOfDirectNotationTest {
@@ -17,8 +15,8 @@ class InjectDependencyObjectInsteadOfDirectNotationTest {
         Lexicon oxfordDictionary = new OxfordDictionary();
         // when
         SpellChecker spellChecker = new SpellChecker(oxfordDictionary);
-        String foundIndex = spellChecker.foundIndex("apple");
+        String dictionaryName = spellChecker.dictionaryName();
         // then
-        assertThat(foundIndex).isNotEmpty();
+        assertThat(dictionaryName).isEqualTo("oxfordDictionary");
     }
 }

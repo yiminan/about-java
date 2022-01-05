@@ -31,22 +31,22 @@ class InjectDependencyObjectInsteadOfDirectNotation {
             this.dictionary = Objects.requireNonNull(dictionary);
         }
 
-        public String foundIndex(String spell) {
-            return dictionary.foundIndex(spell);
+        public String dictionaryName() {
+            return dictionary.dictionaryName();
         }
     }
 
     interface Lexicon {
-        String foundIndex(String spell);
+        String dictionaryName();
     }
 
     static class OxfordDictionary implements Lexicon {
         @Override
-        public String foundIndex(String spell) {
+        public String dictionaryName() {
             /**
              * spell을 이용해서 index 찾기
              */
-            return "index";
+            return "oxfordDictionary";
         }
     }
 
