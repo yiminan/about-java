@@ -10,9 +10,20 @@ class InjectDependencyObjectInsteadOfDirectNotationTest {
 
     @DisplayName("잘못된 유틸 클래스 사용 형태의 객체 주입 형태")
     @Test
-    void injectDependencyObjectInsteadOfDirectNotationWithDirectInstance() {
+    void injectDependencyObjectInsteadOfDirectNotationByUtilClass() {
         // when
         String dictionaryName = SpellChecker2.dictionaryName();
+        // then
+        assertThat(dictionaryName).isEqualTo("oxfordDictionary");
+    }
+
+    @DisplayName("잘못된 싱글턴 클래스 사용 형태의 객체 주입 형태")
+    @Test
+    void injectDependencyObjectInsteadOfDirectNotationWithSingletonClass() {
+        // given
+        SpellChecker3 spellChecker3 = SpellChecker3.INSTANCE;
+        // when
+        String dictionaryName = spellChecker3.dictionaryName();
         // then
         assertThat(dictionaryName).isEqualTo("oxfordDictionary");
     }

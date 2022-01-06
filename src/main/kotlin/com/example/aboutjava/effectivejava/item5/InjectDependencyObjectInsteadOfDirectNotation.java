@@ -37,12 +37,16 @@ class InjectDependencyObjectInsteadOfDirectNotation {
     /**
      * 싱글턴을 잘못 사용한 예 = 유연하지 않고 테스트하기 어렵다.
      */
-    private static class SpellChecker3 {
+    static class SpellChecker3 {
         private final Lexicon dictionary = new OxfordDictionary();
 
         public static SpellChecker3 INSTANCE = new SpellChecker3();
 
         private SpellChecker3() {
+        }
+
+        public String dictionaryName() {
+            return dictionary.dictionaryName();
         }
     }
 
