@@ -21,6 +21,32 @@ import java.util.Objects;
 class InjectDependencyObjectInsteadOfDirectNotation {
 
     /**
+     * 정적 유틸리티를 잘못 사용한 예 - 유연하지 않고 테스트하기 어렵다.
+     */
+    static class SpellChecker2 {
+        private static final Lexicon dictionary = new OxfordDictionary();
+
+        private SpellChecker2() {
+        }
+
+        public static String dictionaryName() {
+            return dictionary.dictionaryName();
+        }
+    }
+
+    /**
+     * 싱글턴을 잘못 사용한 예 = 유연하지 않고 테스트하기 어렵다.
+     */
+    private static class SpellChecker3 {
+        private final Lexicon dictionary = new OxfordDictionary();
+
+        public static SpellChecker3 INSTANCE = new SpellChecker3();
+
+        private SpellChecker3() {
+        }
+    }
+
+    /**
      * 의존 객체 주입을 사용한 올바른 예시
      */
     static class SpellChecker {
@@ -47,28 +73,6 @@ class InjectDependencyObjectInsteadOfDirectNotation {
              * spell을 이용해서 index 찾기
              */
             return "oxfordDictionary";
-        }
-    }
-
-    /**
-     * 정적 유틸리티를 잘못 사용한 예 - 유연하지 않고 테스트하기 어렵다.
-     */
-    private static class SpellChecker2 {
-        private static final Lexicon dictionary = new OxfordDictionary();
-
-        private SpellChecker2() {
-        }
-    }
-
-    /**
-     * 싱글턴을 잘못 사용한 예 = 유연하지 않고 테스트하기 어렵다.
-     */
-    private static class SpellChecker3 {
-        private final Lexicon dictionary = new OxfordDictionary();
-
-        public static SpellChecker3 INSTANCE = new SpellChecker3();
-
-        private SpellChecker3() {
         }
     }
 }
