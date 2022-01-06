@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class InjectDependencyObjectInsteadOfDirectNotationTest {
 
-    @DisplayName("잘못된 유틸 클래스 사용 형태의 객체 주입 형태")
+    @DisplayName("정적 유틸리티를 잘못 사용한 예 - 유연하지 않고 테스트하기 어렵다.")
     @Test
     void injectDependencyObjectInsteadOfDirectNotationByUtilClass() {
         // when
@@ -17,7 +17,7 @@ class InjectDependencyObjectInsteadOfDirectNotationTest {
         assertThat(dictionaryName).isEqualTo("oxfordDictionary");
     }
 
-    @DisplayName("잘못된 싱글턴 클래스 사용 형태의 객체 주입 형태")
+    @DisplayName("싱글턴을 잘못 사용한 예 = 유연하지 않고 테스트하기 어렵다.")
     @Test
     void injectDependencyObjectInsteadOfDirectNotationWithSingletonClass() {
         // given
