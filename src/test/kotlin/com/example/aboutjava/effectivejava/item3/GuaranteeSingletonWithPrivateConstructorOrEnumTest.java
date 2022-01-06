@@ -7,6 +7,7 @@ import static com.example.aboutjava.effectivejava.item3.GuaranteeSingletonWithPr
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
+@DisplayName("Item 3 - private 생성자나 열거 타입으로 싱글턴임을 보증하라")
 class GuaranteeSingletonWithPrivateConstructorOrEnumTest {
 
     @DisplayName("'public static final' field를 만들어서 사용하는 방식")

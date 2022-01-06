@@ -16,7 +16,7 @@ import java.util.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-@DisplayName("생성자 대신 정적 팩터리 메서드를 고려하라")
+@DisplayName("Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라")
 class ConsiderStaticFactoryMethodInsteadOfConstructorTest {
 
     @DisplayName("1개 파라미터로 호출되는 클래스 타입을 반환하는 정적 팩토리 메서드")

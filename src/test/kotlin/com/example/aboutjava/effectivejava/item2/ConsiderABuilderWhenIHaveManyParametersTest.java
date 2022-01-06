@@ -7,6 +7,7 @@ import static com.example.aboutjava.effectivejava.item2.ConsiderABuilderWhenIHav
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
+@DisplayName("Item 2 - 생성자에 매개변수가 많다면 빌더를 고려해라")
 class ConsiderABuilderWhenIHaveManyParametersTest {
 
     @DisplayName("점층적 생성자 패턴(telescoping constructor pattern)")
