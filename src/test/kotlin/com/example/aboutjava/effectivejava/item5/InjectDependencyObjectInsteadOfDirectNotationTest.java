@@ -29,4 +29,10 @@ class InjectDependencyObjectInsteadOfDirectNotationTest {
         // then
         assertThat(dictionaryName).isEqualTo("oxfordDictionary");
     }
+
+    @DisplayName("잘못된 사용 형태의 객체 주입 형태")
+    @Test
+    void injectDependencyObjectInsteadOfDirectNotationWithDirectInstance() {
+
+    }
 }
