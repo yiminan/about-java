@@ -37,15 +37,6 @@ import java.util.regex.Pattern;
  */
 class AvoidUnnecessaryObjectCreation {
 
-    private static void exampleBoolean() {
-        Boolean b1 = Boolean.valueOf("true");
-        Boolean b2 = Boolean.valueOf("true");
-        Boolean b3 = new Boolean("false");
-        Boolean b4 = new Boolean("false");
-        System.out.println(String.format("Boolean 생성자 생성 %b", b1 == b2));
-        System.out.println(String.format("Boolean 정적 팩토리 메서드 생성 %b", b3 == b4));
-    }
-
     /**
      * 생성 비용이 비싼 객체를 로컬 변수로 사용하는 경우
      */
