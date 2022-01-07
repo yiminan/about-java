@@ -37,26 +37,6 @@ import java.util.regex.Pattern;
  */
 class AvoidUnnecessaryObjectCreation {
 
-    public static void main(String[] args) {
-        /**
-         * 예시) {@link String}을 생성자와 상수풀에 선언해서 사용하는 방식 차이
-         */
-        exampleString();
-        /**
-         * 예시) {@link Boolean}을 생성자와 상수풀에 선언해서 사용하는 방식 차이
-         */
-        exampleBoolean();
-    }
-
-    private static void exampleString() {
-        String s1 = new String("example");
-        String s2 = new String("example");
-        String s3 = "example";
-        String s4 = "example";
-        System.out.println(String.format("String 생성자 생성 %b", s1 == s2));// false
-        System.out.println(String.format("String 상수풀 생성 %b", s3 == s4));// true
-    }
-
     private static void exampleBoolean() {
         Boolean b1 = Boolean.valueOf("true");
         Boolean b2 = Boolean.valueOf("true");
