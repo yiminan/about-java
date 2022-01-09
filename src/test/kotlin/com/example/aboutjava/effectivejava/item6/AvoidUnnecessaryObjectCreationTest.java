@@ -37,4 +37,15 @@ class AvoidUnnecessaryObjectCreationTest {
         // then
         assertThat(b3).isSameAs(b4);
     }
+
+    @DisplayName("생성 비용이 높은 객체를 한 번만 사용해야한다. - 비싼 객체를 매번 생성하는 경우")
+    @Test
+    void isRomanNumeralWithoutCache() {
+        // given
+        String koreanNumeric = "한글123";
+        // when
+        boolean isRomanNumeral = AvoidUnnecessaryObjectCreation.isRomanNumeralWithoutCache(koreanNumeric);
+        // then
+        assertThat(isRomanNumeral).isFalse();
+    }
 }

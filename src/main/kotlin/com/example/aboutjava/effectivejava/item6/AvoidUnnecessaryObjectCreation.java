@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  * 3. 비싼 객체는 재사용한다.<p>
  * - 메서드를 사용하다보면 로컬 변수로 객체 선언되고 매번 GC 대상이 됩니다.<p>
  * - 대체로 클래스 변수로 객체 선언해서 재사용하는 것이 좋습니다.<p>
- * - {@link RomanNumerals}<p>
+ * - {@link org.springframework.util.AntPathMatcher}<p>
  * <p>
  * 4. Auto-boxing을 피합니다.<p>
  * - Auto-boxing은 primitive type과 boxing type을 섞어서 연산할 때 자동으로 타입 변환을 해주는 것을 말합니다.<p>
@@ -40,7 +40,7 @@ class AvoidUnnecessaryObjectCreation {
     /**
      * 생성 비용이 비싼 객체를 로컬 변수로 사용하는 경우
      */
-    private static boolean isRomanNumeral(String s) {
+    static boolean isRomanNumeralWithoutCache(String s) {
         return s.matches("^(?=.)M*(C[MD]|D?C{0,3})" + "(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$");
     }
 
