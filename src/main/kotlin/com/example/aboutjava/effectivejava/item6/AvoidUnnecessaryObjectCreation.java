@@ -59,7 +59,7 @@ class AvoidUnnecessaryObjectCreation {
     /**
      * 의도치 않은 Auto-boxing이 진행되는 경우
      */
-    private static long sum() {
+    static long sum() {
         Long sum = 0L;
         for (long i = 0; i <= Integer.MAX_VALUE; i++) {
             sum += i;// Long 타입인 sum에 primitive long 타입이 더해질 때마다 Auto-boxing이 됩니다.
