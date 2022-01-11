@@ -22,14 +22,16 @@ class DeregistrateUnusedObjectReferenceTest {
         assertThat(stack.sizeForObjectReference()).isEqualTo(4);
     }
 
-    @DisplayName("메모리가 누수가 되는 Array 사용 형태")
+    @DisplayName("Array element 의 null 참조가 풀린 경우, 메모리 GC")
     @Test
     void usageArrayInCaseOfNonMemoryLeak() {
         // given
-
+        Stack stack = new Stack();
+        IntStream.rangeClosed(1, 4)
+                .forEach(stack::push);
         // when
-
+        stack.popWithoutMemoryLeak();
         // then
-
+        assertThat(stack.sizeForObjectReference()).isEqualTo(3);
     }
 }
