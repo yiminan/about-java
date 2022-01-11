@@ -10,12 +10,22 @@ class DeregistrateUnusedObjectReferenceTest {
     @DisplayName("메모리가 누수가 되는 Array 사용 형태")
     @Test
     void usageArrayInCaseOfMemoryLeak() {
+        // given
+
+        // when
+
+        // then
 
     }
 
     @DisplayName("메모리가 누수가 되는 Array 사용 형태")
     @Test
     void usageArrayInCaseOfNonMemoryLeak() {
+        // given
+
+        // when
+
+        // then
 
     }
 }
