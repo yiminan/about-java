@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class DeregistrateUnusedObjectReferenceTest {
+class FreeUnusedObjectReferenceTest {
 
     @DisplayName("Array element 의 null 참조가 풀리지 않은 경우, 메모리 누수")
     @Test

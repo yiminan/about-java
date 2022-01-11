@@ -26,5 +26,5 @@ package com.example.aboutjava.effectivejava.item7;
  * 메모리 누수는 겉으로 잘 나타나지 않아서 시스템에 수년간 잠복해있을 수 있습니다.<p>
  * 발견하는 방법은 (1) 철저한 코드 리뷰 (2) 디버깅 도구 사용 이 있습니다.
  */
-class DeregistrateUnusedObjectReference {
+class FreeUnusedObjectReference {
 }
