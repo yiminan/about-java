@@ -45,33 +45,4 @@ package com.example.aboutjava.effectivejava.item8;
  * - cleaner(finalizer)를 사용하는 경우에는 자원회수의 불확실성과 성능 저하에 유의해야한다.<p>
  */
 class AvoidFinalizerAndCleaner {
-
-    private static class SampleRunner {
-
-        public static void main(String[] args) {
-            SampleRunner runner = new SampleRunner();
-            runner.run();
-//            System.gc();
-        }
-
-        private void run() {
-            FinalizerExample finalizerExample = new FinalizerExample();
-            finalizerExample.hello();
-        }
-    }
-
-    public static class FinalizerExample {
-
-        /**
-         * 객체 사용 이후에 호출될 지 여부를 보장하지 못한다.
-         */
-        @Override
-        protected final void finalize() throws Throwable {
-            System.out.println("Clean up");
-        }
-
-        public void hello() {
-            System.out.println("hello()");
-        }
-    }
 }
