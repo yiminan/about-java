@@ -7,6 +7,7 @@ import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("Item 7 - 다 쓴 객체 참조를 해제 해야 합니다")
 class FreeUnusedObjectReferenceTest {
 
     @DisplayName("Array element 의 null 참조가 풀리지 않은 경우, 메모리 누수")
