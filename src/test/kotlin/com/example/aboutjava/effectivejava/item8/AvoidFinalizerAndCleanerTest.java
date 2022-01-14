@@ -23,4 +23,16 @@ class AvoidFinalizerAndCleanerTest {
         // then
         assertThat(capturedOutput.toString()).hasToString("hello()finalize()");
     }
+
+    @DisplayName("AutoCloseable 을 구현한 객체는 try~ 사용시 자동 close 가 호출 되고 자원을 회수할 수 있다.")
+    @Test
+    void finalizeInCaseOfTargetObjectWithAutoCloseable(CapturedOutput capturedOutput) {
+        // when
+        // {@link AutoCloseable}이 구현된 객체를 try ~ with resources로 사용하면, 자동으로 close 메서드가 호출이 가능합니다.
+        try (Room myRoom = new Room(7)) {
+            System.out.println("try()");
+        }
+        // then
+        assertThat(capturedOutput.toString()).hasToString("try()\nclose()\nState.run()\n");
+    }
 }

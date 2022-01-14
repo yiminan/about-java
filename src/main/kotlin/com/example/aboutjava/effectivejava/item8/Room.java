@@ -35,7 +35,7 @@ class Room implements AutoCloseable {
          */
         @Override
         public void run() {
-            System.out.println("Room Clean");
+            System.out.println("State.run()");
             numJunkPiles = 0;
         }
     }
