@@ -8,6 +8,7 @@ import org.springframework.boot.test.system.OutputCaptureExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("Item 8 - finalizer와 cleaner 사용을 피하라")
 @ExtendWith(OutputCaptureExtension.class)
 class AvoidFinalizerAndCleanerTest {
 
