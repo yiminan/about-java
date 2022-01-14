@@ -49,7 +49,7 @@ class ExampleCleaner {
 
         @Override
         public void close() {
-            System.out.println("call close()");
+            System.out.println("close()");
             cleanable.clean();
         }
 
