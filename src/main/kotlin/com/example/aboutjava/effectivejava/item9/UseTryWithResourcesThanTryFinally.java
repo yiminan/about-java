@@ -58,7 +58,7 @@ class UseTryWithResourcesThanTryFinally {
 
         private static final int BUFFER_SIZE = 100;
 
-        static String firstLineOfFile(String path, String defaultValue) throws IOException {
+        static String firstLineOfFile(String path, String defaultValue) {
             try (BufferedReader br = new BufferedReader(new FileReader(path))) {
                 return br.readLine();
             } catch (IOException e) {
