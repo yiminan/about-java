@@ -20,40 +20,6 @@ import java.io.*;
  * - try-finally로 작성하면 실용적이지 못할 만큼 지저분한 코드도, try-with-resources는 정확하고 쉽게 자원을 회수할 수 있다.<p>
  */
 class UseTryWithResourcesThanTryFinally {
-
-    /**
-     * 기존의 try-finally를 사용한 예시
-     * - Java 라이브러리에서 close 메서드를 제대로 구현한 비율은 겨우 1/3정도다.
-     * - ...
-     */
-    private static class ExampleForTryFinally {
-        static String firstLineOfFile(String path) throws IOException {
-            BufferedReader br = new BufferedReader(new FileReader(path));
-            try {
-                return br.readLine();
-            } finally {
-                br.close();
-            }
-        }
-
-        static void copy(String src, String dst) throws IOException {
-            InputStream in = new FileInputStream(src);
-            try {
-                OutputStream out = new FileOutputStream(dst);
-                try {
-                    byte[] buf = new byte[100];
-                    int n;
-                    while ((n = in.read(buf)) >= 0)
-                        out.write(buf, 0, n);
-                } finally {
-                    out.close();
-                }
-            } finally {
-                in.close();
-            }
-        }
-    }
-
     private static class ExampleForTryWithResources {
 
         private static final int BUFFER_SIZE = 100;
