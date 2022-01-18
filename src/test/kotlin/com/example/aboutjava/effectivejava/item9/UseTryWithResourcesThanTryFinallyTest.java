@@ -2,6 +2,7 @@ package com.example.aboutjava.effectivejava.item9;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 
@@ -36,10 +37,23 @@ class UseTryWithResourcesThanTryFinallyTest {
 
     @DisplayName("개선된 try-with-resources")
     @Test
-    void useTryWithResources() {
+    void useFirstLineOfFileWithTryWithResources() {
         // given
         String testFileName = "test.txt";
         // when
+        String firstLine = ExampleForTryWithResources.firstLineOfFile(testFileName, "test");
+        // then
+        assertThat(firstLine).isEqualTo("test");
+    }
+
+    @DisplayName("보완이 필요한 try-finally 사용 예시")
+    @Test
+    void useCopyWithTryWithResources() throws IOException {
+        // given
+        String testFileName = "test.txt";
+        String copyTestFileName = "copy_test.txt";
+        // when
+        ExampleForTryWithResources.copy(testFileName, copyTestFileName);
         String firstLine = ExampleForTryWithResources.firstLineOfFile(testFileName, "test");
         // then
         assertThat(firstLine).isEqualTo("test");
