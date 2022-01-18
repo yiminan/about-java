@@ -12,11 +12,24 @@ class UseTryWithResourcesThanTryFinallyTest {
 
     @DisplayName("보완이 필요한 try-finally 사용 예시")
     @Test
-    void useTryFinally() throws IOException {
+    void useFirstLineOfFileWithTryFinally() throws IOException {
         // given
         String testFileName = "test.txt";
         // when
         String firstLine = ExampleForTryFinally.firstLineOfFile(testFileName);
+        // then
+        assertThat(firstLine).isEqualTo("test");
+    }
+
+    @DisplayName("보완이 필요한 try-finally 사용 예시")
+    @Test
+    void useCopyWithTryFinally() throws IOException {
+        // given
+        String testFileName = "test.txt";
+        String copyTestFileName = "copy_test.txt";
+        // when
+        ExampleForTryFinally.copy(testFileName, copyTestFileName);
+        String firstLine = ExampleForTryFinally.firstLineOfFile(copyTestFileName);
         // then
         assertThat(firstLine).isEqualTo("test");
     }
