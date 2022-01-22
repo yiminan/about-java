@@ -2,7 +2,6 @@ package com.example.aboutjava.effectivejava.item9;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 
