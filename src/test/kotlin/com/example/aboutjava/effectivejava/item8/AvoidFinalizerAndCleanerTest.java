@@ -19,10 +19,9 @@ class AvoidFinalizerAndCleanerTest {
         FinalizerUsage finalizerUsage = new FinalizerUsage();
         // when
         finalizerUsage.hello();
-        finalizerUsage = null; // 객체를 null 할당해주지 않으면 gc 대상이 되지 않아서 finalize 호출을 보장하지 않는다.
         System.gc();
         // then
-        assertThat(capturedOutput.toString()).hasToString("hello()finalize()");
+        assertThat(capturedOutput.toString()).hasToString("hello()");
     }
 
     @DisplayName("AutoCloseable 을 구현한 객체는 try~ 사용시 자동 close 가 호출 되고 자원을 회수할 수 있다.")
