@@ -25,4 +25,14 @@ class OverrideEqualsByGeneralConventionTest {
         // then
         assertThat(ryan1).isNotSameAs(ryan2);
     }
+
+    @DisplayName("equals 재정의가 필요하지 않은 경우 - thread")
+    @Test
+    void dontNeedEqualsWithThread() {
+        // when
+        Thread thread1 = new Thread("thread");
+        Thread thread2 = new Thread("thread");
+        // then
+        assertThat(thread1).isNotSameAs(thread2);
+    }
 }
