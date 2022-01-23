@@ -13,4 +13,16 @@ class OverrideEqualsByGeneralConventionTest {
 
     @Autowired
     private UserRepository userRepository;
+
+    @DisplayName("equals 재정의가 필요하지 않은 경우 - entity")
+    @Test
+    void dontNeedEqualsWithEntity() {
+        // when
+        User ryan1 = new User("Ryan");
+        User ryan2 = new User("Ryan");
+        userRepository.save(ryan1);
+        userRepository.save(ryan2);
+        // then
+        assertThat(ryan1).isNotSameAs(ryan2);
+    }
 }
