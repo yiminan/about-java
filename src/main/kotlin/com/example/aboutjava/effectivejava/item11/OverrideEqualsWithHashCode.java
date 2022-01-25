@@ -1,7 +1,6 @@
 package com.example.aboutjava.effectivejava.item11;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -20,24 +19,6 @@ import java.util.Objects;
  * 서로 다른 인스턴스도 되도록이면 다른 hashCode를 갖게 하는것이 좋다.<p>
  */
 class OverrideEqualsWithHashCode {
-    public static void main(String[] args) {
-        /**
-         * Example for object with default hashCode
-         */
-        PhoneNumberWithDefaultHashCode phoneNumber = new PhoneNumberWithDefaultHashCode("010-1234-5678");
-        Map<PhoneNumberWithDefaultHashCode, String> phoneNumbers = new HashMap<>();
-        phoneNumbers.put(phoneNumber, "Ryan");
-        System.out.println(phoneNumbers.get(new PhoneNumberWithDefaultHashCode("010-1234-5678")));//null
-        System.out.println("Ryan".equals(phoneNumbers.get(new PhoneNumberWithDefaultHashCode("010-1234-5678"))));//false
-        /**
-         * Example for object with override hashCode
-         */
-        PhoneNumberWithOverrideHashCode phoneNumberWithHashCode = new PhoneNumberWithOverrideHashCode("010-1234-5678");
-        Map<PhoneNumberWithOverrideHashCode, String> phoneNumberWithHashCodes = new HashMap<>();
-        phoneNumberWithHashCodes.put(phoneNumberWithHashCode, "Ryan");
-        System.out.println(phoneNumberWithHashCodes.get(new PhoneNumberWithOverrideHashCode("010-1234-5678")));//Ryan
-        System.out.println("Ryan".equals(phoneNumberWithHashCodes.get(new PhoneNumberWithOverrideHashCode("010-1234-5678"))));//true
-    }
 
     static final class PhoneNumberWithDefaultHashCode {
         private final String number;
