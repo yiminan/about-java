@@ -39,7 +39,7 @@ class OverrideEqualsWithHashCode {
         System.out.println("Ryan".equals(phoneNumberWithHashCodes.get(new PhoneNumberWithOverrideHashCode("010-1234-5678"))));//true
     }
 
-    private static final class PhoneNumberWithDefaultHashCode {
+    static final class PhoneNumberWithDefaultHashCode {
         private final String number;
 
         public PhoneNumberWithDefaultHashCode(String number) {
@@ -47,7 +47,7 @@ class OverrideEqualsWithHashCode {
         }
     }
 
-    private static final class PhoneNumberWithOverrideHashCode {
+    static final class PhoneNumberWithOverrideHashCode {
         private final String number;
 
         public PhoneNumberWithOverrideHashCode(String number) {
