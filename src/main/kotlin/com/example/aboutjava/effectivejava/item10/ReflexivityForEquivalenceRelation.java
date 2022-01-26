@@ -1,7 +1,4 @@
-package com.example.aboutjava.effectivejava.item10.equivalence_relation;
-
-import java.util.Arrays;
-import java.util.List;
+package com.example.aboutjava.effectivejava.item10;
 
 /**
  * "동치관계(equivalence relation)의 반사성(reflexivity)"<p>
@@ -10,21 +7,10 @@ import java.util.List;
  * - 반사성을 어기면 컬렉션에 객체를 넣고, contains 메서드를 호출하면 false를 내보내게 됩니다.<p>
  */
 class ReflexivityForEquivalenceRelation {
-    public static void main(String[] args) {
-        Member member = new Member("Ryan");
-        if (member.equals(member)) {
-            System.out.println("Member is member.");
-        }
-        List<Member> members = Arrays.asList(member);
-        if (members.contains(member)) {
-            System.out.println("Member contains in members.");
-        }
-    }
-
-    private static class Member {
+    static class Member {
         private final String name;
 
-        private Member(String name) {
+        public Member(String name) {
             this.name = name;
         }
 
