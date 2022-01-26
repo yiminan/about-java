@@ -1,4 +1,4 @@
-package com.example.aboutjava.effectivejava.item10.equivalence_relation;
+package com.example.aboutjava.effectivejava.item10;
 
 import java.util.ArrayList;
 import java.util.List;

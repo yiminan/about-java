@@ -1,4 +1,4 @@
-package com.example.aboutjava.effectivejava.item10.equivalence_relation;
+package com.example.aboutjava.effectivejava.item10;
 
 /**
  * "equals 메서드를 재정의할 때는 반드시 일반 규약을 따라야 합니다."<p>

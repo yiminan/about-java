@@ -1,4 +1,4 @@
-package com.example.aboutjava.effectivejava.item10.equivalence_relation;
+package com.example.aboutjava.effectivejava.item10;
 
 class Point {
     private final int x;

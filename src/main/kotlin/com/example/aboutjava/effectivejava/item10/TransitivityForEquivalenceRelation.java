@@ -1,4 +1,4 @@
-package com.example.aboutjava.effectivejava.item10.equivalence_relation;
+package com.example.aboutjava.effectivejava.item10;
 
 /**
  * 동치관계(equivalence relation)의 추이성(transitivity)"
