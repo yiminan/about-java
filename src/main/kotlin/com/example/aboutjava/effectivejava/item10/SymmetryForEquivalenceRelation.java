@@ -10,27 +10,6 @@ import java.util.List;
  */
 class SymmetryForEquivalenceRelation {
 
-    public static void main(String[] args) {
-        Symmetry is = new Symmetry("Ryan");
-        String name = "ryan";
-        /**
-         * "대칭성 위반"
-         * 대칭성인 서로 equals()를 호출했을때 결과물이 다르다.
-         * 대칭성 위반인 부분을 대칭성을 만족하게 바꾸어주어야한다.
-         */
-        System.out.println(is.equals(name));// true
-        System.out.println(name.equals(is));// false
-        /**
-         * "컬렉션 대칭성 위반 비교 예시"
-         * 일단 Oracle JDK의 List는 대칭성을 잘 지켜준다.
-         * 하지만 이는 구현하기 나름이다. 꼭 JDK마다 확인해주어야하는 경우가 생긴다.
-         * 애초에 대칭성을 지키면서 구현해야합니다.
-         */
-        List<Symmetry> iss = new ArrayList<>();
-        iss.add(is);
-        System.out.println(iss.contains(is));//true
-    }
-
     private static class Symmetry {
         private final String name;
 
