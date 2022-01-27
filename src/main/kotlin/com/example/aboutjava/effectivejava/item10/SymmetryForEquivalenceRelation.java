@@ -1,8 +1,5 @@
 package com.example.aboutjava.effectivejava.item10;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * "동치관계(equivalence relation)의 대칭성(symmetry)"
  * - 두 객체는 서로에 대한 동치 여부에 똑같이 답해야 한다.<p>
