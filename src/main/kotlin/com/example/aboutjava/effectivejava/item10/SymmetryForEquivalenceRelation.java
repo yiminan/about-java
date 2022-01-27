@@ -7,7 +7,7 @@ package com.example.aboutjava.effectivejava.item10;
  */
 class SymmetryForEquivalenceRelation {
 
-    private static class Symmetry {
+    static class Symmetry {
         private final String name;
 
         public Symmetry(String name) {
