@@ -78,4 +78,10 @@ class OverrideEqualsByGeneralConventionTest {
         iss.add(is);
         assertThat(iss.contains(is)).isTrue();
     }
+
+    @DisplayName("동치관계(equivalence relation)의 추이성(transitivity)")
+    @Test
+    void equalsWithTransitivity() {
+
+    }
 }
