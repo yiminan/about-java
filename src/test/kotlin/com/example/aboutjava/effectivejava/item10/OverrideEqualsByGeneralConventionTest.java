@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.aboutjava.effectivejava.item10.ReflexivityForEquivalenceRelation.Member;
-import static com.example.aboutjava.effectivejava.item10.SymmetryForEquivalenceRelation.*;
+import static com.example.aboutjava.effectivejava.item10.SymmetryForEquivalenceRelation.Symmetry;
+import static com.example.aboutjava.effectivejava.item10.TransitivityForEquivalenceRelation.Color;
+import static com.example.aboutjava.effectivejava.item10.TransitivityForEquivalenceRelation.ColorPoint;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Item 10 - equals 는 일반 규약을 지켜 재정의 해야 한다.")
@@ -82,6 +84,15 @@ class OverrideEqualsByGeneralConventionTest {
     @DisplayName("동치관계(equivalence relation)의 추이성(transitivity)")
     @Test
     void equalsWithTransitivity() {
-
+        ColorPoint p1 = new ColorPoint(1, 2, Color.RED);
+        Point p2 = new Point(1, 2);
+        ColorPoint p3 = new ColorPoint(1, 2, Color.BLUE);
+        // when & then
+        // p1 -> p2
+        assertThat(p1.equals(p2)).isTrue();
+        // p2 -> p3
+        assertThat(p2.equals(p3)).isTrue();
+        // p1 -> p3 추이성 위배
+        assertThat(p1.equals(p3)).isFalse();
     }
 }

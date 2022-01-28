@@ -8,16 +8,7 @@ package com.example.aboutjava.effectivejava.item10;
  */
 class TransitivityForEquivalenceRelation {
 
-    public static void main(String[] args) {
-        ColorPoint p1 = new ColorPoint(1, 2, Color.RED);
-        Point p2 = new Point(1, 2);
-        ColorPoint p3 = new ColorPoint(1, 2, Color.BLUE);
-        System.out.println(p1.equals(p2));// true
-        System.out.println(p2.equals(p3));// true
-        System.out.println(p1.equals(p3));// false
-    }
-
-    private static class ColorPoint extends Point {
+    static class ColorPoint extends Point {
         private final Color color;
 
         public ColorPoint(int x, int y, Color color) {
@@ -38,7 +29,7 @@ class TransitivityForEquivalenceRelation {
         }
     }
 
-    private enum Color {
+    enum Color {
         RED, BLUE, GREEN;
     }
 }
