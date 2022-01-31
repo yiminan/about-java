@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * "{@link Comparable}을 구현할지 고려해야합니다."<p>
+ * "Item 14 - {@link Comparable}을 구현할지 고려해야합니다."<p>
+ * <p>
  * {@link Comparable}를 구현하면, 수많은 제네릭 알고리즘과 컬렉션의 힘을 누릴 수 있습니다.<p>
  * 사실상 자바 플랫폼 라이브러리의 모든 값 클래스와 열거타입이 {@link Comparable}를 구현했다.<p>
  * compareTo 메서드를 구현할때는 필드 값 비교시 <와 >를 사용하면 안됩니다.<p>
