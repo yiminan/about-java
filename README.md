@@ -1,6 +1,6 @@
 # about-java
 
-Example codes for JAVA
+Example production & test codes for JAVA
 
 ## Reference Books
 
