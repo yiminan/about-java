@@ -24,21 +24,13 @@ import java.util.stream.Stream;
 public class ConsiderWhetherToImplementComparable {
 
     public static void main(String[] args) {
-        // case 2)
-        Set<Book> books = new TreeSet<>();
-        Collections.addAll(
-                books,
-                new Book("An Apple"), new Book("Creative Idea"), new Book("Beyond Today")
-        );
-        System.out.println(books);// [Book{name='An Apple'}, Book{name='Beyond Today'}, Book{name='Creative Idea'}]
-
         // case 3)
         String[] alphabet = new String[] {"C", "A", "B"};
         Arrays.sort(alphabet);
         System.out.println(Stream.of(alphabet).collect(Collectors.joining(",")));// A,B,C
     }
 
-    private static final class Book implements Comparable<Book> {
+    static final class Book implements Comparable<Book> {
         private final String name;
 
         public Book(String name) {
