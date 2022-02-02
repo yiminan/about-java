@@ -24,15 +24,6 @@ import java.util.stream.Stream;
 public class ConsiderWhetherToImplementComparable {
 
     public static void main(String[] args) {
-        // case 1)
-        Set<String> strings = new TreeSet<>();
-        Collections.addAll(strings, "B", "C", "A");
-        /**
-         * String은 {@link Comparable}을 구현한 구현체입니다.<p>
-         * compareTo를 통해서 단순 동치성 비교에 더해 순서까지 비교할 수 있습니다.<p>
-         */
-        System.out.println(strings);// [A, B, C]
-
         // case 2)
         Set<Book> books = new TreeSet<>();
         Collections.addAll(
