@@ -1,12 +1,5 @@
 package com.example.aboutjava.effectivejava.item14;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 /**
  * "Item 14 - {@link Comparable}을 구현할지 고려해야합니다."<p>
  * <p>
@@ -22,13 +15,6 @@ import java.util.stream.Stream;
  * @see <a href="https://recordsoflife.tistory.com/313">compareTo 메서드 구현 가이드</a>
  */
 public class ConsiderWhetherToImplementComparable {
-
-    public static void main(String[] args) {
-        // case 3)
-        String[] alphabet = new String[] {"C", "A", "B"};
-        Arrays.sort(alphabet);
-        System.out.println(Stream.of(alphabet).collect(Collectors.joining(",")));// A,B,C
-    }
 
     static final class Book implements Comparable<Book> {
         private final String name;
