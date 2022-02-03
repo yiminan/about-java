@@ -1,7 +1,7 @@
 package com.example.aboutjava.effectivejava.item15;
 
 /**
- * "클래스와 멤버의 접근권한을 최소화해야합니다."<p>
+ * "Item 15 - 클래스와 멤버의 접근권한을 최소화해야합니다."<p>
  * <p>
  * 잘 설계된 클래스는 내부 데이터와 구현정보를 외부에 대하여 캡슐화(은닉)시켰는지 입니다.<p>
  * <p>
@@ -35,7 +35,7 @@ package com.example.aboutjava.effectivejava.item15;
  * 5.class 내부 public 인스턴스 필드는 'public final'을 사용해도 외부에 공유가 되기 때문에 스레드에 안전하지 않습니다.<p>
  * <p>
  * 결론)<p>
- * - 프로그램의 접근성은 가능한한 최소화해야한다.<p>
+ * - 프로그램의 접근성은 가능한 최소화해야한다.<p>
  * - 필요한 부분만 public API를 설계해야한다.<p>
  * - public class는 상수용 public static final 필드 외에는 어떤한 필드도 가져서는 안된다.<p>
  * - public static final 필드가 참조하는 객체가 불변인지 확인해야한다. 배열과 같은 경우에는 디폴트가 수정이 가능하다.<p>
