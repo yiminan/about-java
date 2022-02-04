@@ -1,7 +1,7 @@
 package com.example.aboutjava.effectivejava.item16;
 
 /**
- * "public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용해야합니다"<p>
+ * "Item 16 - public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용해야합니다"<p>
  * 기본적으로 내부 인스턴스 필드는 private을 적용하고, 필드의 내용을 변경하거나, 가져올땐 public setter, getter를 사용합니다.<p>
  */
 class UseGetterInteadOfPublicField {
