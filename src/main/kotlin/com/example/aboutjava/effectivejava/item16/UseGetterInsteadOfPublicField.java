@@ -14,11 +14,11 @@ class UseGetterInsteadOfPublicField {
         public double y;
     }
 
-    private static class ValidPoint {
+    private static class MutablePoint {
         private double x;
         private double y;
 
-        public ValidPoint(double x, double y) {
+        public MutablePoint(double x, double y) {
             this.x = x;
             this.y = y;
         }
