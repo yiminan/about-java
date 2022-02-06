@@ -32,4 +32,13 @@ class UseGetterInsteadOfPublicFieldTest {
         // then
         assertThat(point).isEqualTo(new MutablePoint(1, 2));
     }
+
+    @DisplayName("Thread Safe 한 Immutable Instance 를 사용하는 경우")
+    @Test
+    void useImmutableInstanceWithThreadSafe() {
+        // given
+        ImmutablePoint point = new ImmutablePoint(0, 0);
+        // when & then
+        assertThat(point).isEqualTo(new ImmutablePoint(0, 0));
+    }
 }
