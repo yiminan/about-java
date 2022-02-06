@@ -10,7 +10,7 @@ class UseGetterInsteadOfPublicFieldTest {
 
     @DisplayName("Thread Safe 하지 않은 public 인스턴스 필드를 사용하는 경우")
     @Test
-    void usePublicInstanceFieldWithThreadSafe() {
+    void usePublicInstanceFieldWithNonThreadSafe() {
         // given
         PointWithPublicInstanceField point = new PointWithPublicInstanceField();
         // when
