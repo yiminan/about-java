@@ -20,4 +20,16 @@ class UseGetterInsteadOfPublicFieldTest {
         assertThat(point.x).isEqualTo(1);
         assertThat(point.y).isEqualTo(2);
     }
+
+    @DisplayName("Thread Safe 하지 않는 Mutable Instance 를 사용하는 경우")
+    @Test
+    void useMutableInstanceWithNonThreadSafe() {
+        // given
+        MutablePoint point = new MutablePoint(0, 0);
+        // when
+        point.setX(1);
+        point.setY(2);
+        // then
+        assertThat(point).isEqualTo(new MutablePoint(1, 2));
+    }
 }
