@@ -36,17 +36,7 @@ import java.util.Objects;
  */
 class MinimizeThePossibilityOfChange {
 
-    public static void main(String[] args) {
-        System.out.println(Operand.ONE.plus(Operand.ZERO));// Operand{number=1}
-        System.out.println(Operand.ONE.plus(new Operand(0)));// Operand{number=1}
-        System.out.println(new Operand(1).plus(Operand.ZERO));// Operand{number=1}
-        System.out.println(new Operand(1).plus(new Operand(0)));// Operand{number=1}
-    }
-
-    private static final class Operand {
-        public static final Operand ZERO = new Operand(0);
-        public static final Operand ONE = new Operand(1);
-
+    static final class Operand {
         private final int number;
 
         Operand(int number) {
