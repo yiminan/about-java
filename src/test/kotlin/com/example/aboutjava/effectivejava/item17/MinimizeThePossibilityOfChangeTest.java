@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
+import java.util.BitSet;
 
 import static com.example.aboutjava.effectivejava.item17.MinimizeThePossibilityOfChange.Operand;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -29,5 +30,17 @@ class MinimizeThePossibilityOfChangeTest {
         BigInteger moby = BigInteger.valueOf(10L);
         // when & then
         assertThat(moby).isNotSameAs(moby.flipBit(0));
+    }
+
+    @DisplayName("가변 동반 클래스로 생성된 객체를 재활용하는 예시")
+    @Test
+    void useMutableCompanionInstance() {
+        // given
+        BitSet five = BitSet.valueOf(new long[]{1L, 2L});
+        int beforeHashCode = five.hashCode();
+        // when
+        five.flip(0);// 가변 클래스 사용(동일 인스턴스 재활용)
+        // then
+        assertThat(five.hashCode()).isNotEqualTo(beforeHashCode);
     }
 }

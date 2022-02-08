@@ -8,9 +8,6 @@ import java.util.BitSet;
  */
 class MutableCompanionExamples {
     public static void main(String[] args) {
-        /**
-         * 가변 동반 클래스로 생성된 객체를 재활용하는 예시
-         */
         BitSet five = BitSet.valueOf(new long[]{1L, 2L});
         five.flip(0);// 가변 클래스 사용
         System.out.println(five);
