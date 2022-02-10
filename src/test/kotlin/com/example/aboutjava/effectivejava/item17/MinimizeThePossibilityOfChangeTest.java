@@ -9,6 +9,7 @@ import java.util.BitSet;
 import static com.example.aboutjava.effectivejava.item17.MinimizeThePossibilityOfChange.Operand;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("Item 17 - 변경 가능성을 최소화해야합니다")
 class MinimizeThePossibilityOfChangeTest {
 
     @DisplayName("변경 가능성을 최소화 시켜줄 수 있는 불변 인스턴스 사용")
