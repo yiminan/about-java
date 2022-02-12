@@ -3,6 +3,7 @@ package com.example.aboutjava.effectivejava.item18;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -22,4 +23,11 @@ class UseCompositionInsteadOfInheritanceTest {
         assertThat(myHashSet.getAddCount()).isNotEqualTo(addNumbers.size());// 예상 3, 실제 6
     }
 
+    @DisplayName("컴포지션으로 구현된 Set 의 요소 추가 예시")
+    @Test
+    void useClassWithComposition() {
+        UseCompositionInsteadOfInheritance.ValidCase.MySet<String> myHashSet = new UseCompositionInsteadOfInheritance.ValidCase.MySet<>(new HashSet<>());
+        myHashSet.addAll(List.of("1", "2", "3"));
+        System.out.println(myHashSet.getAddCount());// 예상 3, 실제 3
+    }
 }

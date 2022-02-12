@@ -49,7 +49,7 @@ class UseCompositionInsteadOfInheritance {
         }
     }
 
-    private static class ValidCase {
+    static class ValidCase {
 
         public static void main(String[] args) {
             MySet<String> myHashSet = new MySet<>(new HashSet<>());
@@ -57,7 +57,7 @@ class UseCompositionInsteadOfInheritance {
             System.out.println(myHashSet.getAddCount());// 예상 3, 실제 3
         }
 
-        private static class MySet<E> extends ForwardingSet<E> {
+        static class MySet<E> extends ForwardingSet<E> {
             private int addCount = 0;
 
             public MySet(Set<E> set) {
