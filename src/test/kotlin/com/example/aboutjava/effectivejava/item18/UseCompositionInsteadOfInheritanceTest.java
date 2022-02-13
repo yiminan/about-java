@@ -26,8 +26,12 @@ class UseCompositionInsteadOfInheritanceTest {
     @DisplayName("컴포지션으로 구현된 Set 의 요소 추가 예시")
     @Test
     void useClassWithComposition() {
-        UseCompositionInsteadOfInheritance.ValidCase.MySet<String> myHashSet = new UseCompositionInsteadOfInheritance.ValidCase.MySet<>(new HashSet<>());
-        myHashSet.addAll(List.of("1", "2", "3"));
-        System.out.println(myHashSet.getAddCount());// 예상 3, 실제 3
+        // given
+        UseCompositionInsteadOfInheritance.MySet<String> myHashSet = new UseCompositionInsteadOfInheritance.MySet<>(new HashSet<>());
+        List<String> addNumbers = List.of("1", "2", "3");
+        // when
+        myHashSet.addAll(addNumbers);
+        // then
+        assertThat(myHashSet.getAddCount()).isEqualTo(addNumbers.size());// 예상 3, 실제 3
     }
 }
