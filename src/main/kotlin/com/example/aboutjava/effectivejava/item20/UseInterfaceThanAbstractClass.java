@@ -40,7 +40,7 @@ class UseInterfaceThanAbstractClass {
      * Example)<p>
      * 1.기존 클래스에도 손쉽게 새로운 인터페이스를 사용 구현해 넣을 수 있습니다.<p>
      */
-    private class User implements Comparable<User> {
+    static class User implements Comparable<User> {
         private final String nickName;
         private final int age;
 
