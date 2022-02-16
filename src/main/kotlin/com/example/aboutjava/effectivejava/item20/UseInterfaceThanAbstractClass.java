@@ -65,15 +65,16 @@ class UseInterfaceThanAbstractClass {
      * Example)<p>
      * 2.인터페이스는 믹스인(mixin) 정의에 안성맞춤이다.<p>
      */
-    private class IU implements Singer, SongWriter {
+    static class IU implements Singer, SongWriter {
         @Override
         public AudioClip sing(Song s) {
-            return null;
+            return new YouAndIForYouTube();
         }
 
         @Override
         public Song compose(int chartPosition) {
-            return null;
+            // find song by chart position
+            return new YouAndI();
         }
     }
 
@@ -87,18 +88,26 @@ class UseInterfaceThanAbstractClass {
         void actSensitive();
     }
 
-    private interface Singer {
+    interface Singer {
         AudioClip sing(Song s);
 
-        interface AudioClip {
-        }
     }
 
-    private interface SongWriter {
+    interface SongWriter {
         Song compose(int chartPosition);
     }
 
-    private interface Song {
+    interface AudioClip {
+    }
+
+    static class YouAndIForYouTube implements AudioClip {
+    }
+
+
+    interface Song {
+    }
+
+    static class YouAndI implements Song {
     }
 
     /**
