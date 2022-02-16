@@ -25,10 +25,10 @@ class UseInterfaceThanAbstractClassTest {
     @Test
     void useClassWithMixinInterfaces() {
         // given
-        Singer singerIu = new IU();
-        SongWriter songWriterIu = (SongWriter) singerIu;
+        Singer singerIu = new IU();// 가수이면서,
+        SongWriter songWriterIu = (SongWriter) singerIu;// 작곡가이다.
         // when
-        Singer.AudioClip audioClip = singerIu.sing(songWriterIu.compose(1));
+        AudioClip audioClip = singerIu.sing(songWriterIu.compose(1));
         // then
         assertThat(audioClip).isNotNull();
     }
