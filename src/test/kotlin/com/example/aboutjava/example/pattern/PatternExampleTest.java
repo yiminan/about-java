@@ -14,7 +14,10 @@ class PatternExampleTest {
     @DisplayName("유효한 Email 검증 예시 with suffix `_suspended`")
     @Test
     void validateValidEmailWithSuffix_suspended() {
-        boolean isEmail = EMAIL_PATTERN.matcher("ryan.an@gmail.com_suspended").find();
+        // given
+        String email = "ryan.an@gmail.com_suspended";
+        // when
+        boolean isEmail = EMAIL_PATTERN.matcher(email).find();
         // then
         assertThat(isEmail).isTrue();
     }
