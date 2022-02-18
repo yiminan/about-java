@@ -4,8 +4,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.example.aboutjava.effectivejava.item20.UseInterfaceThanAbstractClass.*;
-import static com.example.aboutjava.effectivejava.item20.UseInterfaceThanAbstractClass.User;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertAll;
 
 @DisplayName("Item 20 - 추상 클래스보다는 인터페이스를 우선하라")
 class UseInterfaceThanAbstractClassTest {
@@ -36,15 +36,13 @@ class UseInterfaceThanAbstractClassTest {
     @DisplayName("래퍼 클래스 관용구와 함께 사용하면 기능을 향상시키는 안전하고 강력한 수단이 됩니다.")
     @Test
     void useWrapperClassWithInterface() {
-        // given
-        Coffee iceAmericano = new IceAmericano();
         // when
-        iceAmericano.boilWater();
-        iceAmericano.putEspresso();
-        iceAmericano.putIce();
-        iceAmericano.putExtra();
-        iceAmericano.makeCoffee();
+        Coffee iceAmericano = new IceAmericano();
+        Coffee iceLatte = new IceLatte();
         // then
-        assertThat(iceAmericano).isNotNull();
+        assertAll(
+                () -> assertThat(iceAmericano).isNotNull(),
+                () -> assertThat(iceLatte).isNotNull()
+        );
     }
 }
