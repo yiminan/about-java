@@ -126,7 +126,7 @@ class UseInterfaceThanAbstractClass {
         void makeCoffee();
     }
 
-    public abstract class AbstractCoffee implements Coffee {
+    public static abstract class AbstractCoffee implements Coffee {
         @Override
         public void boilWater() {
             System.out.println("물을 끓인다.");
@@ -143,7 +143,7 @@ class UseInterfaceThanAbstractClass {
         }
     }
 
-    public class IceAmericano extends AbstractCoffee implements Coffee {
+    public static class IceAmericano extends AbstractCoffee implements Coffee {
 
         @Override
         public void putExtra() {
@@ -159,7 +159,7 @@ class UseInterfaceThanAbstractClass {
         }
     }
 
-    public class IceLatte extends AbstractCoffee implements Coffee {
+    public static class IceLatte extends AbstractCoffee implements Coffee {
 
         @Override
         public void putExtra() {
