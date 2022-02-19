@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("String 학습 예시")
 class StringExampleTest {
     @DisplayName("concat 사용 예시")
     @Test
