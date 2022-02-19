@@ -4,5 +4,5 @@ Example production & test codes for JAVA
 
 ## Reference Books
 
-* "Elagant Object"
+* "Elegant Object"
 * "Effective Java"
