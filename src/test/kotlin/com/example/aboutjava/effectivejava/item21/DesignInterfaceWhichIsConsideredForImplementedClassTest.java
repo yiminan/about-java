@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.example.aboutjava.effectivejava.item21.DesignInterfaceWhichIsConsideredForImplementedClass.DefaultTestable;
-import static com.example.aboutjava.effectivejava.item21.DesignInterfaceWhichIsConsideredForImplementedClass.StudentWithOverrideRestTest;
+import static com.example.aboutjava.effectivejava.item21.DesignInterfaceWhichIsConsideredForImplementedClass.StudentWithOverrideRest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Item 21 - 인터페이스는 구현하는 쪽을 생각해 설계해야합니다")
@@ -14,7 +14,7 @@ class DesignInterfaceWhichIsConsideredForImplementedClassTest {
     @Test
     void useImplementationThanDefaultMethodInInterface() {
         // given
-        DefaultTestable studentTest = new StudentWithOverrideRestTest();
+        DefaultTestable studentTest = new StudentWithOverrideRest();
         // when & then
         assertThat(studentTest.rest()).isEqualTo("게임을 한다.");
     }

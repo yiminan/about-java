@@ -30,7 +30,7 @@ class DesignInterfaceWhichIsConsideredForImplementedClass {
 
     }
 
-    static class StudentWithOverrideRestTest implements DefaultTestable {
+    static class StudentWithOverrideRest implements DefaultTestable {
 
         @Override
         public void study() {
@@ -40,6 +40,14 @@ class DesignInterfaceWhichIsConsideredForImplementedClass {
         @Override
         public String rest() {
             return "게임을 한다.";
+        }
+    }
+
+    static class StudentWithDefaultRest implements DefaultTestable {
+
+        @Override
+        public void study() {
+            System.out.println("공부한다.");
         }
     }
 }
