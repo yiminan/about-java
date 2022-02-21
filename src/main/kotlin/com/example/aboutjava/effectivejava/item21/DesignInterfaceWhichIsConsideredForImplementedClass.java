@@ -30,7 +30,7 @@ class DesignInterfaceWhichIsConsideredForImplementedClass {
 
     }
 
-    static class StudentTest implements DefaultTestable {
+    static class StudentWithOverrideRestTest implements DefaultTestable {
 
         @Override
         public void study() {
