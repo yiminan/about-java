@@ -20,22 +20,17 @@ package com.example.aboutjava.effectivejava.item21;
  */
 class DesignInterfaceWhichIsConsideredForImplementedClass {
 
-    public static void main(String[] args) {
-        DefaultTestable studentTest = new StudentTest();
-        studentTest.rest();// 게임을 한다.
-    }
-
-    private interface DefaultTestable {
+    interface DefaultTestable {
 
         void study();
 
-        default void rest() {
-            System.out.println("그냥 쉰다.");
+        default String rest() {
+            return "그냥 쉰다.";
         }
 
     }
 
-    private static class StudentTest implements DefaultTestable {
+    static class StudentTest implements DefaultTestable {
 
         @Override
         public void study() {
@@ -43,8 +38,8 @@ class DesignInterfaceWhichIsConsideredForImplementedClass {
         }
 
         @Override
-        public void rest() {
-            System.out.println("게임을 한다.");
+        public String rest() {
+            return "게임을 한다.";
         }
     }
 }
