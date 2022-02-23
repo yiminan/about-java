@@ -13,4 +13,7 @@ package com.example.aboutjava.effectivejava.item22;
  * 잘못 사용된 상수 인터페이스 예) {@link java.io.ObjectStreamConstants} ... <p>
  */
 class UseInterfaceOnlyToDefineType {
+    interface InvalidInterface {
+        int INDEX = 1;
+    }
 }
