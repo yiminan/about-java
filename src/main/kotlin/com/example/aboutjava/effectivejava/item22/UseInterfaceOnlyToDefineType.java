@@ -14,6 +14,6 @@ package com.example.aboutjava.effectivejava.item22;
  */
 class UseInterfaceOnlyToDefineType {
     interface InvalidInterface {
-        int INDEX = 1;
+        int ONE = 1;
     }
 }
