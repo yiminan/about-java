@@ -1,5 +1,8 @@
 package com.example.aboutjava.effectivejava.item23;
 
+/**
+ * item 23의 잘못된 태그형태 사용 예시
+ */
 public class ExampleClassWithTag {
     static class Figure {
         enum Shape {RECTANGLE, CIRCLE}
