@@ -2,9 +2,8 @@ package com.example.aboutjava.effectivejava.item23;
 
 /**
  * item 23의 잘못된 태그형태 사용 예시<p>
- * {@link UseHierarchicalClassThanClassWithTag}
  */
-class ExampleClassWithTag {
+class ExampleClassWithTag implements UseHierarchicalClassThanClassWithTag {
     static class Figure {
         enum Shape {RECTANGLE, CIRCLE}
 
