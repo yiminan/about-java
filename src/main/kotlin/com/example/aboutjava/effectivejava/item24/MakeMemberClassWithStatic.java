@@ -10,7 +10,7 @@ package com.example.aboutjava.effectivejava.item24;
  * 2. 비정적 멤버 클래스<p>
  * 3. 익명 클래스<p>
  * 4. 지역 클래스<p>
- * 총 네가지가 있다.<p>
+ * 총 네 가지가 있다.<p>
  */
 class MakeMemberClassWithStatic {
 }
