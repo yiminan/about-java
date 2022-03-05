@@ -7,6 +7,7 @@ package com.example.aboutjava.effectivejava.item24;
  * <p>
  * 중첩 클래스의 종류<p>
  * 1. 정적 멤버 클래스<p>
+ *  - 정적 멤버 클래스는 바깥 클래스와 함께 쓰일 때만 유용한 public 도우미 클래스로 쓰인다.<p>
  * 2. 비정적 멤버 클래스<p>
  * 3. 익명 클래스<p>
  * 4. 지역 클래스<p>
