@@ -13,6 +13,7 @@ package com.example.aboutjava.effectivejava.item24;
  * 4. 지역 클래스<p>
  * 총 네 가지가 있다.<p>
  * 정적 멤버 클래스와 비정적 멤버 클래스의 차이는 static 접두 유무이다.<p>
+ * 비정적 멤버 클래스의 인스턴스는 바깥 클래스의 인스턴소와 암묵적으로 연결된다.<p>
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
