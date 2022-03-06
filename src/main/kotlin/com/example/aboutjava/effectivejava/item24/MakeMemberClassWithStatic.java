@@ -12,6 +12,7 @@ package com.example.aboutjava.effectivejava.item24;
  * 3. 익명 클래스<p>
  * 4. 지역 클래스<p>
  * 총 네 가지가 있다.<p>
+ * 정적 멤버 클래스와 비정적 멤버 클래스의 차이는 static 접두 유무이다.<p>
  */
 class MakeMemberClassWithStatic {
 }
