@@ -15,4 +15,9 @@ package com.example.aboutjava.effectivejava.item24;
  * 정적 멤버 클래스와 비정적 멤버 클래스의 차이는 static 접두 유무이다.<p>
  */
 class MakeMemberClassWithStatic {
+    public static class Calculator {
+        enum Operation {
+            PLUS, MINUS, MULTIPLY, DIVIDE
+        }
+    }
 }
