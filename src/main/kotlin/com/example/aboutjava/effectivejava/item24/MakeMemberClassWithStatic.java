@@ -14,6 +14,12 @@ package com.example.aboutjava.effectivejava.item24;
  * 총 네 가지가 있다.<p>
  * 정적 멤버 클래스와 비정적 멤버 클래스의 차이는 static 접두 유무이다.<p>
  * 비정적 멤버 클래스의 인스턴스는 바깥 클래스의 인스턴소와 암묵적으로 연결된다.<p>
+ * 그래서 비정적 멤버 클래스의 인스턴스 메서드에서 정규화된 this를 사용해 바깥 인스턴스의 메서드를 호출하거나 바깥 인스턴스의 참조를 가져올 수 있습니다.<p>
+ * <p>
+ * 정규화된 this란?<p>
+ * 클래스명.this 형태로 바깥 클래스의 이름을 명시하는 용법<p>
+ * <p>
+ *
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
