@@ -20,6 +20,7 @@ package com.example.aboutjava.effectivejava.item24;
  * 클래스명.this 형태로 바깥 클래스의 이름을 명시하는 용법<p>
  * <p>
  * 중첩 클래스의 인스턴스가 바깥 인스턴스와 독립적으로 존재할 수 있다면 정적 멤버 클래스로 만들어야합니다.<p>
+ * 비정적 멤버 클래스는 바깥 인스턴스 없이는 생성할 수 없기 때문입니다.<p>
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
