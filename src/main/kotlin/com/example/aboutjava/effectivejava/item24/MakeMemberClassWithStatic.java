@@ -22,6 +22,8 @@ package com.example.aboutjava.effectivejava.item24;
  * 중첩 클래스의 인스턴스가 바깥 인스턴스와 독립적으로 존재할 수 있다면 정적 멤버 클래스로 만들어야합니다.<p>
  * 비정적 멤버 클래스는 바깥 인스턴스 없이는 생성할 수 없기 때문입니다.<p>
  * 비정적 멤버 클래스의 인스턴스와 바깥 인스턴스 사이의 관계는 멤버 클래스가 인스턴스화될 때 확립하고, 변경할 수 없다.<p>
+ * <p>
+ * "멤버 클래스에서 바깥 인스턴스에 접근할 일이 없다면 무조건 static을 붙여서 정적 멤버 클래스로 만들어야 합니다.<p>
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
