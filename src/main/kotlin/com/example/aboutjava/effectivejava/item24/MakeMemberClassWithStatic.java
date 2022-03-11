@@ -24,7 +24,7 @@ package com.example.aboutjava.effectivejava.item24;
  * 비정적 멤버 클래스의 인스턴스와 바깥 인스턴스 사이의 관계는 멤버 클래스가 인스턴스화될 때 확립하고, 변경할 수 없다.<p>
  * <p>
  * "멤버 클래스에서 바깥 인스턴스에 접근할 일이 없다면 무조건 static을 붙여서 정적 멤버 클래스로 만들어야 합니다.<p>
- * static을 생략하면 바깥 인스턴스로의 숨은 외부 참조를 갖게 됩니다.<p>
+ * static을 생략하면 바깥 인스턴스로의 숨은 외부 참조를 갖게 됩니다. 이 참조를 저장하려면 시간과 공간이 소비됩니다.<p>
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
