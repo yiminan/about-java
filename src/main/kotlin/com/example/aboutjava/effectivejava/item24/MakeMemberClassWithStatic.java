@@ -26,6 +26,7 @@ package com.example.aboutjava.effectivejava.item24;
  * "멤버 클래스에서 바깥 인스턴스에 접근할 일이 없다면 무조건 static을 붙여서 정적 멤버 클래스로 만들어야 합니다.<p>
  * static을 생략하면 바깥 인스턴스로의 숨은 외부 참조를 갖게 됩니다. 이 참조를 저장하려면 시간과 공간이 소비됩니다.<p>
  * Gabage Collection이 바깥 클래스의 인스턴스를 수거하지 못하는 메모리 누수가 생길 수 있다는 점입니다.<p>
+ * 하지만 바깥 클래스의 인스턴스 참조가 찾기 어려워 메모리 누수에 엄청난 문제를 초래하기도 한다.<p>
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
