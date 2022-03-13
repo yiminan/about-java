@@ -29,8 +29,9 @@ package com.example.aboutjava.effectivejava.item24;
  * 하지만 바깥 클래스의 인스턴스 참조가 찾기 어려워 메모리 누수에 엄청난 문제를 초래하기도 합니다.<p>
  * <p>
  * 결론)<p>
- * 중첩 클래스에는 네 가지가 있rh, 각각의 쓰임은 다릅니다.<p>
+ * 중첩 클래스에는 네 가지가 있고, 각각의 쓰임은 다릅니다.<p>
  * 1. 해당 클래스 메서드 밖에서도 사용하거나 메서드 안에 정의하기엔 너무 길다면 멤버 클래스로 만들어야합니다.<p>
+ * 2. 멤버 클래스의 인스턴스 각각이 바깥 인스턴스를 참조한다면 비정적으로, 그렇지 않으면 정적으로 만들어야합니다.<p>
  */
 class MakeMemberClassWithStatic {
     public static class Calculator {
