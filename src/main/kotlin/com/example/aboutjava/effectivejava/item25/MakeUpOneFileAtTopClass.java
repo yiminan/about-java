@@ -9,4 +9,18 @@ package com.example.aboutjava.effectivejava.item25;
  * 여러 클래스가 하나의 파일에서 정의하는게 필요하다면, '정적 멤버 클래스'를 만들어야 합니다.<p>
  */
 class MakeUpOneFileAtTopClass {
+
+    /**
+     * 정적 멤버 클래스
+     */
+    private static class Car {
+        static final String NAME = "BMW";
+    }
+
+    /**
+     * 정적 멤버 클래스
+     */
+    private static class Book {
+        static final String NAME = "Real MySQL";
+    }
 }
