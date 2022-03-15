@@ -1,7 +1,7 @@
 package com.example.aboutjava.effectivejava.item26;
 
 import java.util.Collection;
-import java.util.Collections;
+import java.util.List;
 
 /**
  * "Item 26 - Raw Type 은 사용하지 말아야합니다"<p>
@@ -14,6 +14,7 @@ class DontUseRawType {
 
     /**
      * 잘못된 Collection의 Raw Type 선언
+     * 이 코드를 사용하면 실수로 다른 제네릭 타입이 들어가서 Compile Time 까지 가는 것을 막아줍니다.
      */
-    private final Collection empties = Collections.EMPTY_LIST;
+    private final Collection names = List.of("Ryan", "June");
 }
