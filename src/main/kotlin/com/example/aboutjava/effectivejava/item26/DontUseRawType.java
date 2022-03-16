@@ -18,5 +18,11 @@ class DontUseRawType {
      * 잘못된 Collection의 Raw Type 선언
      * 이 코드를 사용하면 실수로 다른 제네릭 타입이 들어가서 Compile Time 까지 가는 것을 막아줍니다.
      */
-    private final Collection names = List.of("Ryan", "June");
+    private final Collection namesWithRawType = List.of("Ryan", "June");
+
+    /**
+     * 제대로된 Collection의 Parameterized Type 선언
+     * 컴파일 타임에 바로 코드의 잘못된 모습을 찾을 수 있습니다.
+     */
+    private final Collection<String> namesWithParameterizedType = List.of("Ryan", "June");
 }
