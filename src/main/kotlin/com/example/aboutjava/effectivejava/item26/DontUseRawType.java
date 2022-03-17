@@ -19,7 +19,7 @@ class DontUseRawType {
 
     /**
      * 잘못된 Collection의 Raw Type 선언
-     * 이 코드를 사용하면 실수로 다른 제네릭 타입이 들어가서 Compile Time 까지 가는 것을 막아줍니다.
+     * 이 코드를 사용하면 실수로 다른 제네릭 타입이 들어가서 Compile Time 까지 가는 것을 막아주지 못합니다.
      */
     private final Collection namesWithRawType = List.of("Ryan", "June");
 
