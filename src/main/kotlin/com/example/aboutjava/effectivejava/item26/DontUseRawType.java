@@ -14,7 +14,7 @@ import java.util.List;
  * Raw Type 을 쓰게 되면 제네릭이 주는 Type Safe와 Expression 을 모두 잃게 됩니다.<p>
  * <p>
  * 그러면 애초에 써서는 안되는 Raw Type 을 사용할 수 있게 만들었을까?<p>
- * 
+ * Generic 이 나오기 전까지 Raw Type 을 사용했는데, 그 코드까지 호환하여 사용할 수 있게 허용하였습니다.<p>
  */
 class DontUseRawType {
 
