@@ -15,6 +15,11 @@ import java.util.List;
  * <p>
  * 그러면 애초에 써서는 안되는 Raw Type 을 사용할 수 있게 만들었을까?<p>
  * Generic 이 나오기 전까지 Raw Type 을 사용했는데, 그 코드까지 호환하여 사용할 수 있게 허용하였습니다.<p>
+ * <p>
+ * 정리)<p>
+ * Raw Type 은 Runtime Exception 이 발생할 수 있으니 사용하면 안됩니다.<p>
+ * Raw Type 은 Generic 이 나오기 전 코드의 호환용입니다.<p>
+ * 예를 들어, Set&#60;Object&#62; , Set&#60;?&#62; 는 안전하지만, Raw Type Set 은 안전하지 않습니다.<p>
  */
 class DontUseRawType {
 
