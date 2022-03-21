@@ -18,4 +18,13 @@ class RemoveUncheckedWarningsTest {
         // then
         assertThat(names).isNotNull();
     }
+
+    @DisplayName("비검사 경고 제거 예시")
+    @Test
+    void removeUncheckedWarnings() {
+        // given & when
+        Set<String> names = new HashSet<>();
+        // then
+        assertThat(names).isNotNull();
+    }
 }
