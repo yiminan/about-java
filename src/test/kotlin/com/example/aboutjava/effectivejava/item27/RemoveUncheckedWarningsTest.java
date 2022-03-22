@@ -27,4 +27,14 @@ class RemoveUncheckedWarningsTest {
         // then
         assertThat(names).isNotNull();
     }
+
+    @DisplayName("비검사 경고 발생 시, @SuppressWarnings(\"unchecked\"를 사용해서 경고를 숨기는 경우")
+    @Test
+    void makeUncheckedWarningsWithAnnotation() {
+        // given & when
+        @SuppressWarnings("unchecked")
+        Set<String> names = new HashSet();
+        // then
+        assertThat(names).isNotNull();
+    }
 }
