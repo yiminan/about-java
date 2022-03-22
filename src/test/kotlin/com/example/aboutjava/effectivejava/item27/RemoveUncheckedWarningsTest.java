@@ -28,7 +28,7 @@ class RemoveUncheckedWarningsTest {
         assertThat(names).isNotNull();
     }
 
-    @DisplayName("비검사 경고 발생 시, @SuppressWarnings(\"unchecked\"를 사용해서 경고를 숨기는 경우")
+    @DisplayName("비검사 경고 발생 시, @SuppressWarnings(\"unchecked\"를 사용해서 경고를 숨기는 경우는 무시해도 되는 경우입니다.")
     @Test
     void makeUncheckedWarningsWithAnnotation() {
         // given & when
