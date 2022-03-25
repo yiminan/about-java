@@ -1,5 +1,9 @@
 package com.example.aboutjava.effectivejava.item28;
 
+import java.util.Collection;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * "Item 28 - 배열보다는 리스트를 사용해야 합니다"<p>
  * <p>
@@ -13,7 +17,16 @@ package com.example.aboutjava.effectivejava.item28;
  */
 class UseListThanArray {
     private static class ChooserWithArr {
+        private final Object[] choiceArray;
 
+        ChooserWithArr(Collection choice) {
+            this.choiceArray = choice.toArray();
+        }
+
+        public Object choose() {
+            Random rnd = ThreadLocalRandom.current();
+            return choiceArray[rnd.nextInt(choiceArray.length)];
+        }
     }
 
     private static class ChooserWithList {
