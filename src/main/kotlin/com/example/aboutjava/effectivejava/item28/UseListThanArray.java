@@ -18,28 +18,28 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 class UseListThanArray {
     private static class ChooserWithArr {
-        private final Object[] choiceArray;
+        private final Object[] choices;
 
         ChooserWithArr(Collection choice) {
-            this.choiceArray = choice.toArray();
+            this.choices = choice.toArray();
         }
 
         public Object choose() {
             Random rnd = ThreadLocalRandom.current();
-            return choiceArray[rnd.nextInt(choiceArray.length)];
+            return choices[rnd.nextInt(choices.length)];
         }
     }
 
     private static class ChooserWithList<T> {
-        private final List<T> choiceList;
+        private final List<T> choices;
 
-        ChooserWithList(List<T> choiceList) {
-            this.choiceList = choiceList;
+        ChooserWithList(List<T> choices) {
+            this.choices = choices;
         }
 
         public Object choose() {
             Random rnd = ThreadLocalRandom.current();
-            return choiceList.get(rnd.nextInt(choiceList.size()));
+            return choices.get(rnd.nextInt(choices.size()));
         }
     }
 }
