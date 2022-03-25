@@ -15,4 +15,8 @@ class UseListThanArray {
     private static class ChooserWithArr {
 
     }
+
+    private static class ChooserWithList {
+
+    }
 }
