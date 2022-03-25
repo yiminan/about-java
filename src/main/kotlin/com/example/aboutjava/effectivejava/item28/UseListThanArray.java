@@ -17,6 +17,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * 둘을 섞어 쓰다가 컴파일 오류나 경고를 만나면, 가장 먼저 배열을 리스트로 대체하는 방법을 적용해야합니다.<p>
  */
 class UseListThanArray {
+    /**
+     * Bad case
+     * 배열을 이용하여 타입 안정성을 확보하지 못함
+     */
     private static class ChooserWithArr {
         private final Object[] choices;
 
