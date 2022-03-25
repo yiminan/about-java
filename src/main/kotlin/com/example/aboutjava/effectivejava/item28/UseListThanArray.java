@@ -12,4 +12,7 @@ package com.example.aboutjava.effectivejava.item28;
  * 둘을 섞어 쓰다가 컴파일 오류나 경고를 만나면, 가장 먼저 배열을 리스트로 대체하는 방법을 적용해야합니다.<p>
  */
 class UseListThanArray {
+    private static class ChooserWithArr {
+
+    }
 }
