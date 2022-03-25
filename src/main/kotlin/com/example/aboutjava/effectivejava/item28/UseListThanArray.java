@@ -1,6 +1,7 @@
 package com.example.aboutjava.effectivejava.item28;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -29,7 +30,16 @@ class UseListThanArray {
         }
     }
 
-    private static class ChooserWithList {
+    private static class ChooserWithList<T> {
+        private final List<T> choiceList;
 
+        ChooserWithList(List<T> choiceList) {
+            this.choiceList = choiceList;
+        }
+
+        public Object choose() {
+            Random rnd = ThreadLocalRandom.current();
+            return choiceList.get(rnd.nextInt(choiceList.size()));
+        }
     }
 }
