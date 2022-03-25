@@ -30,6 +30,10 @@ class UseListThanArray {
         }
     }
 
+    /**
+     * Good case
+     * 제네릭을 사용하여, 타입 안전성 확보
+     */
     private static class ChooserWithList<T> {
         private final List<T> choices;
 
