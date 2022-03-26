@@ -4,9 +4,6 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @DisplayName("Item 28 - 배열보다는 리스트를 사용합니다.")
 class UseListThanArrayTest {
     @DisplayName("배열을 사용하여, 런타임에 실패하는 경우")
