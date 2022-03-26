@@ -25,6 +25,6 @@ class UseListThanArrayTest {
         // given
 //        List<Object> objects = new ArrayList<Long>();
         // when
-//        objects.add("타입이 달아 넣을 수 없다.");
+//        objects.add("타입이 달라서 넣을 수 없다.");
     }
 }
