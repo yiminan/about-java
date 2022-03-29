@@ -68,7 +68,8 @@ class MakeGenericTypeIfPossible {
         public E pop() {
             if (size == 0)
                 throw new EmptyStackException();
-            E result = elements[--size];
+            @SuppressWarnings("unchecked") // (2)
+            E result = (E) elements[--size];
             elements[size] = null; // Eliminate obsolete reference
             return result;
         }
