@@ -54,7 +54,8 @@ class MakeGenericTypeIfPossible {
         private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
         public Stack2() {
-            elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY];
+//            elements = new E[DEFAULT_INITIAL_CAPACITY]; // (1)
+            elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY]; // (2)
         }
 
         public void push(E e) {
