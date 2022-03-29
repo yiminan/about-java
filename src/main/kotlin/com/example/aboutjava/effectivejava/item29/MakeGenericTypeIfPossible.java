@@ -26,15 +26,6 @@ class MakeGenericTypeIfPossible {
             elements[size++] = e;
         }
 
-        /**
-         * Ensure space for at least one more element, roughly
-         * doubling the capacity each time the array needs to grow.
-         */
-        private void ensureCapacity() {
-            if (elements.length == size)
-                elements = Arrays.copyOf(elements, 2 * size + 1);
-        }
-
         // Corrected version of pop method (Page 27)
         public Object pop() {
             if (size == 0)
@@ -42,6 +33,19 @@ class MakeGenericTypeIfPossible {
             Object result = elements[--size];
             elements[size] = null; // Eliminate obsolete reference
             return result;
+        }
+
+        public boolean isEmpty() {
+            return size == 0;
+        }
+
+        /**
+         * Ensure space for at least one more element, roughly
+         * doubling the capacity each time the array needs to grow.
+         */
+        private void ensureCapacity() {
+            if (elements.length == size)
+                elements = Arrays.copyOf(elements, 2 * size + 1);
         }
     }
 
@@ -72,6 +76,10 @@ class MakeGenericTypeIfPossible {
             E result = (E) elements[--size];
             elements[size] = null; // Eliminate obsolete reference
             return result;
+        }
+
+        public boolean isEmpty() {
+            return size == 0;
         }
 
         /**
