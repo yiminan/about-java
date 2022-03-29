@@ -53,6 +53,7 @@ class MakeGenericTypeIfPossible {
         private int size = 0;
         private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
+        @SuppressWarnings("unchecked") // (2)
         public Stack2() {
 //            elements = new E[DEFAULT_INITIAL_CAPACITY]; // (1)
             elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY]; // (2)
