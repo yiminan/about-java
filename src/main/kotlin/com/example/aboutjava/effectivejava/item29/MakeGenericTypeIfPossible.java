@@ -64,10 +64,10 @@ class MakeGenericTypeIfPossible {
         }
 
         // Corrected version of pop method (Page 27)
-        public Object pop() {
+        public E pop() {
             if (size == 0)
                 throw new EmptyStackException();
-            Object result = elements[--size];
+            E result = elements[--size];
             elements[size] = null; // Eliminate obsolete reference
             return result;
         }
