@@ -91,4 +91,14 @@ class MakeGenericTypeIfPossible {
                 elements = Arrays.copyOf(elements, 2 * size + 1);
         }
     }
+
+    public static void main(String[] args) {
+        String[] args2 = {"A", "B", "C", "D"};
+        Stack2<String> stack = new Stack2();
+        for (String arg : args2) {
+            stack.push(arg);
+        }
+        while (!stack.isEmpty())
+            System.out.println(stack.pop().toUpperCase());
+    }
 }
