@@ -52,13 +52,13 @@ class MakeGenericTypeIfPossible {
     /**
      * 제네릭 스택으로 가는 첫 단계 - 컴파일되지 않는다.
      */
-    private static class Stack2<E> {
+    private static class StackByGeneric<E> {
         private E[] elements;
         private int size = 0;
         private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
         @SuppressWarnings("unchecked") // (2)
-        public Stack2() {
+        public StackByGeneric() {
 //            elements = new E[DEFAULT_INITIAL_CAPACITY]; // (1)
             elements = (E[]) new Object[DEFAULT_INITIAL_CAPACITY]; // (2)
         }
@@ -94,7 +94,7 @@ class MakeGenericTypeIfPossible {
 
     public static void main(String[] args) {
         String[] args2 = {"A", "B", "C", "D"};
-        Stack2<String> stack = new Stack2();
+        StackByGeneric<String> stack = new StackByGeneric();
         for (String arg : args2) {
             stack.push(arg);
         }
