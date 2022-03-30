@@ -92,6 +92,9 @@ class MakeGenericTypeIfPossible {
         }
     }
 
+    /**
+     * 제네릭으로 구현한 Stack의 최종 구현 예시
+     */
     public static void main(String[] args) {
         String[] args2 = {"A", "B", "C", "D"};
         StackByGeneric<String> stack = new StackByGeneric();
