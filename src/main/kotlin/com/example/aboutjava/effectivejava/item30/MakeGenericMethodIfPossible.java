@@ -8,6 +8,9 @@ import java.util.Set;
  */
 class MakeGenericMethodIfPossible {
 
+    /**
+     * Raw Type 사용 - 수용 불가하다.
+     */
     public static Set union(Set s1, Set s2) {
         Set result = new HashSet(s1);
         result.addAll(s2);
