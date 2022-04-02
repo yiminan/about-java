@@ -17,13 +17,13 @@ class MakeGenericMethodIfPossible {
     /**
      * Raw Type 사용 - 수용 불가하다.
      */
-    public static Set union(Set s1, Set s2) {
+    private static Set union(Set s1, Set s2) {
         Set result = new HashSet(s1);
         result.addAll(s2);
         return result;
     }
 
-    public static <E> Set<E> union2(Set<E> s1, Set<E> s2) {
+    private static <E> Set<E> union2(Set<E> s1, Set<E> s2) {
         Set<E> result = new HashSet(s1);
         result.addAll(s2);
         return result;
