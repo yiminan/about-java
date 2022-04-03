@@ -31,4 +31,11 @@ class MakeGenericMethodIfPossible {
         result.addAll(s2);
         return result;
     }
+
+    public static void main(String[] args) {
+        Set<String> guys = Set.of("톰", "딕", "해리");
+        Set<String> stooges = Set.of("래리", "모에", "컬리");
+        System.out.println(union(guys, stooges));
+        System.out.println(union2(guys, stooges));
+    }
 }
