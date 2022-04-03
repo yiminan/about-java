@@ -23,6 +23,9 @@ class MakeGenericMethodIfPossible {
         return result;
     }
 
+    /**
+     * Generic 사용
+     */
     private static <E> Set<E> union2(Set<E> s1, Set<E> s2) {
         Set<E> result = new HashSet(s1);
         result.addAll(s2);
