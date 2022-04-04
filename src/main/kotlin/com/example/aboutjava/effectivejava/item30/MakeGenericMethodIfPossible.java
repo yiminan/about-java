@@ -2,6 +2,7 @@ package com.example.aboutjava.effectivejava.item30;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.UnaryOperator;
 
 /**
  * "Item 30 - 이왕이면 제네릭 메서드로 만들어라"<p>
@@ -37,5 +38,12 @@ class MakeGenericMethodIfPossible {
         Set<String> stooges = Set.of("래리", "모에", "컬리");
         System.out.println(union(guys, stooges));
         System.out.println(union2(guys, stooges));
+    }
+
+    private static UnaryOperator<Object> IDENTITY_FN = (t) -> t;
+
+    @SuppressWarnings("unchecked")
+    public static <T> UnaryOperator<T> identityFunction() {
+        return (UnaryOperator<T>) IDENTITY_FN;
     }
 }
