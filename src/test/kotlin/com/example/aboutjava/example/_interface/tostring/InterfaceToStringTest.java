@@ -6,4 +6,14 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class InterfaceToStringTest {
+    @DisplayName("구현 클래스에서 toString()을 상속하고 있는지 여부 확인")
+    @Test
+    void useToStringWithInterfaceTest() {
+        // given
+        Animal lion = new Lion();
+        Animal bear = new Bear();
+        // when & then
+        assertThat(lion).hasToString("Lion");
+        assertThat(bear).hasToString("Bear");
+    }
 }
