@@ -33,6 +33,9 @@ class MakeGenericMethodIfPossible {
         return result;
     }
 
+    /**
+     * 예시
+     */
     public static void main(String[] args) {
         Set<String> guys = Set.of("톰", "딕", "해리");
         Set<String> stooges = Set.of("래리", "모에", "컬리");
