@@ -43,7 +43,7 @@ class MakeGenericMethodIfPossible {
         System.out.println(union2(guys, stooges));
     }
 
-    private static UnaryOperator<Object> IDENTITY_FN = (t) -> t;
+    private static final UnaryOperator<Object> IDENTITY_FN = (t) -> t;
 
     @SuppressWarnings("unchecked")
     public static <T> UnaryOperator<T> identityFunction() {
