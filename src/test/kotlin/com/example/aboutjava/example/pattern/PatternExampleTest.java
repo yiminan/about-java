@@ -8,8 +8,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 class PatternExampleTest {
     // email 유효 검사 또는 suffix '_suspended' 까지 허용
@@ -35,6 +38,14 @@ class PatternExampleTest {
         boolean isEmail = EMAIL_PATTERN.matcher(email).find();
         // then
         assertThat(isEmail).isTrue();
+    }
+
+    @DisplayName("matcher의 파라미터에 null이 들어온 경우, 예외 발생")
+    @Test
+    void exceptionPatternMatcherWithNull() {
+        // when & then
+        assertThatExceptionOfType(NullPointerException.class)
+                .isThrownBy(() -> EMAIL_PATTERN.matcher(null).find());
     }
 
     @DisplayName("유효한 Email 검증 예시 with suffix `_suspended`")
