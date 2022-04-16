@@ -49,4 +49,8 @@ class MakeGenericMethodIfPossible {
     public static <T> UnaryOperator<T> identityFunction() {
         return (UnaryOperator<T>) IDENTITY_FN;
     }
+
+    public interface Comparable<T> {
+        int compareTo(T o);
+    }
 }
