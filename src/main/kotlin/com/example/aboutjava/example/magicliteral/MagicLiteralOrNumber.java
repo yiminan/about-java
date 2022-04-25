@@ -37,5 +37,33 @@ class MagicLiteralOrNumber {
         }
     }
 
-    
+    /**
+     * 3.매직 넘버를 enum 으로 상수화 시킨 예시
+     */
+    static final class PositiveNumberWithEnum {
+
+        private final int value;
+
+        public PositiveNumberWithEnum(int value) {
+            if (IntegerConstant.MIN_POSITIVE_NUMBER.greaterThan(value)) {
+                throw new IllegalArgumentException(String.format("value(%d)는 0 또는 음수가 될 수 없습니다.", value));
+            }
+            this.value = value;
+        }
+    }
+
+    public enum IntegerConstant {
+        MIN_POSITIVE_NUMBER(1),
+        MAX_POSITIVE_NUMBER(Integer.MAX_VALUE);
+
+        private final int value;
+
+        IntegerConstant(int value) {
+            this.value = value;
+        }
+
+        public boolean greaterThan(int value) {
+            return this.value < value;
+        }
+    }
 }
