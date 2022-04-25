@@ -36,4 +36,6 @@ class MagicLiteralOrNumber {
             return value < 1;
         }
     }
+
+    
 }
