@@ -56,6 +56,10 @@ class MakeGenericMethodIfPossible {
         int compareTo(T o);
     }
 
+    /**
+     * 재귀적 타입 한정 예시
+     * <E extends java.lang.Comparable<E>>
+     */
     public static <E extends java.lang.Comparable<E>> E max(Collection<E> c) {
         if (c.isEmpty()) {
             throw new IllegalArgumentException("컬렉션이 비어 있습니다.");
