@@ -1,6 +1,8 @@
 package com.example.aboutjava.effectivejava.item30;
 
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.UnaryOperator;
 
@@ -52,5 +54,18 @@ class MakeGenericMethodIfPossible {
 
     public interface Comparable<T> {
         int compareTo(T o);
+    }
+
+    public static <E extends java.lang.Comparable<E>> E max(Collection<E> c) {
+        if (c.isEmpty()) {
+            throw new IllegalArgumentException("컬렉션이 비어 있습니다.");
+        }
+        E result = null;
+        for (E e : c) {
+            if (result == null || e.compareTo(result) > 0) {
+                result = Objects.requireNonNull(e);
+            }
+        }
+        return result;
     }
 }
