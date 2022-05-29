@@ -4,6 +4,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EmptySource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,5 +22,12 @@ class StringTest {
     @Test
     void repeat() {
         assertThat("-".repeat(2)).isEqualTo("--");
+    }
+
+    @DisplayName("String의 비어있는지 여부 확인")
+    @ParameterizedTest
+    @EmptySource
+    void isEmpty(String input) {
+        assertThat(input).isEmpty();
     }
 }
