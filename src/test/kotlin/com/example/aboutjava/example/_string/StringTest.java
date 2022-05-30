@@ -30,4 +30,11 @@ class StringTest {
     void isEmpty(String input) {
         assertThat(input).isEmpty();
     }
+
+    @DisplayName("String의 공백 문자 또는 empty 문자 여부 확인")
+    @ParameterizedTest
+    @ValueSource(strings = {"", " ", "  "})
+    void isBlank(String input) {
+        assertThat(input).isBlank();
+    }
 }
