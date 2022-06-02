@@ -1,17 +1,16 @@
 package com.example.aboutjava.example._string;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EmptySource;
-import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("`String` 의 사용법을 학습하기 위한 테스트")
 class StringTest {
+
     @DisplayName("String의 concat(): 문자열 합치기")
     @Test
     void concat() {
@@ -36,5 +35,11 @@ class StringTest {
     @ValueSource(strings = {"", " ", "  "})
     void isBlank(String input) {
         assertThat(input).isBlank();
+    }
+
+    @DisplayName("String의 Upper case 적용")
+    @Test
+    void toUpperCase() {
+        assertThat("apple".toUpperCase()).isEqualTo("APPLE");
     }
 }
