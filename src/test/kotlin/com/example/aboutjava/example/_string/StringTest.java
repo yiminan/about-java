@@ -42,4 +42,10 @@ class StringTest {
     void toUpperCase() {
         assertThat("apple".toUpperCase()).isEqualTo("APPLE");
     }
+
+    @DisplayName("String의 Lower case 적용")
+    @Test
+    void toLowerCase() {
+        assertThat("HOUSE".toLowerCase()).isEqualTo("house");
+    }
 }
