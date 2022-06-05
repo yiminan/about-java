@@ -48,4 +48,10 @@ class StringTest {
     void toLowerCase() {
         assertThat("HOUSE".toLowerCase()).isEqualTo("house");
     }
+
+    @DisplayName("문자열의 인덱스를 통한 문자 찾기")
+    @Test
+    void charAt() {
+        assertThat("banana".charAt(0)).isEqualTo('b');
+    }
 }
