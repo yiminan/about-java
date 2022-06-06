@@ -54,4 +54,10 @@ class StringTest {
     void charAt() {
         assertThat("banana".charAt(0)).isEqualTo('b');
     }
+
+    @DisplayName("문자열의 문자를 통한 인덱스 찾기")
+    @Test
+    void indexOf() {
+        assertThat("Bear".indexOf("e")).isEqualTo(1);
+    }
 }
