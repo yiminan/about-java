@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -59,5 +60,12 @@ class StringTest {
     @Test
     void indexOf() {
         assertThat("Bear".indexOf("e")).isEqualTo(1);
+    }
+
+    @DisplayName("문자열 해당 인덱스 위치의 문자 아스키 코드 번호 찾기")
+    @ParameterizedTest
+    @CsvSource(value = {"A,65", "B,66", "C,67"})
+    void codePointAt(String character, int asciiCode) {
+        assertThat(character.codePointAt(0)).isEqualTo(asciiCode);
     }
 }
