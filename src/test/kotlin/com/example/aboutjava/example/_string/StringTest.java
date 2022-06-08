@@ -68,4 +68,11 @@ class StringTest {
     void codePointAt(String character, int asciiCode) {
         assertThat(character.codePointAt(0)).isEqualTo(asciiCode);
     }
+
+    @DisplayName("문자열의 앞 뒤에 나타나는 공백 제거")
+    @ParameterizedTest
+    @ValueSource(strings = {" hello", "hello ", " hello "})
+    void trim(String input) {
+        assertThat(input.trim()).isEqualTo("hello");
+    }
 }
