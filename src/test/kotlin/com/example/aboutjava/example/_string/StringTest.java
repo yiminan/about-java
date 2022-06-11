@@ -81,4 +81,10 @@ class StringTest {
     void replace() {
         assertThat("world".replace("ld", "d")).isEqualTo("word");
     }
+
+    @DisplayName("정규식을 이용한 패턴에 맞는 문자열 교체")
+    @Test
+    void replaceAll() {
+        assertThat("world".replaceAll("^w", "b")).isEqualTo("borld");
+    }
 }
