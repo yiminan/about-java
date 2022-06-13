@@ -93,4 +93,11 @@ class StringTest {
     void replaceFirst() {
         assertThat("world".replaceFirst("w", "b")).isEqualTo("borld");
     }
+
+    @DisplayName("시작 인덱스를 통해서 문자열 자르기")
+    @ParameterizedTest
+    @CsvSource(value = {"0,abcd", "1,bcd", "2,cd", "3,d"})
+    void substringWithBeginIndex(int beginIndex, String result) {
+        assertThat("abcd".substring(beginIndex)).isEqualTo(result);
+    }
 }
