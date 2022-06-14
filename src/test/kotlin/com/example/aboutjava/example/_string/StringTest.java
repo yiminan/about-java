@@ -100,4 +100,5 @@ class StringTest {
     void substringWithBeginIndex(int beginIndex, String result) {
         assertThat("abcd".substring(beginIndex)).isEqualTo(result);
     }
+
 }
