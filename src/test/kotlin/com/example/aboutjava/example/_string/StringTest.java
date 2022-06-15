@@ -101,4 +101,10 @@ class StringTest {
         assertThat("abcd".substring(beginIndex)).isEqualTo(result);
     }
 
+    @DisplayName("문자열에 해당하는 문자가 존재하는지 확인")
+    @ParameterizedTest
+    @CsvSource(value = {"a,true", "ab,true", "bc,true", "e,false"})
+    void contains(String matchChar, boolean result) {
+        assertThat("abcd".contains(matchChar)).isEqualTo(result);
+    }
 }
