@@ -107,4 +107,10 @@ class StringTest {
     void contains(String matchChar, boolean result) {
         assertThat("abcd".contains(matchChar)).isEqualTo(result);
     }
+
+    @DisplayName("리터럴 문자와 생성자 String 구분")
+    @Test
+    void newStringWithLiteral() {
+        assertThat("Plane").isEqualTo(new String("Plane"));
+    }
 }
