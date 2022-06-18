@@ -116,7 +116,7 @@ class StringTest {
 
     @DisplayName("문자열의 마지막이 해당 문자에 해당하는지 확인")
     @ParameterizedTest
-    @CsvSource(value = {"o,true", "t,false"})
+    @CsvSource(value = {"o,true", "t,false", "lo,true"})
     void endsWith(String suffix, boolean hasSuffix) {
         assertThat("hello".endsWith(suffix)).isEqualTo(hasSuffix);
     }
