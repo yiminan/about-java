@@ -114,6 +114,12 @@ class StringTest {
         assertThat("Plane").isEqualTo(new String("Plane"));
     }
 
+    @DisplayName("리터럴 문자와 생성자 String 인스턴스가 다른지 확인")
+    @Test
+    void isSameAs() {
+        assertThat("Plane").isNotSameAs(new String("Plane"));
+    }
+
     @DisplayName("문자열의 마지막이 해당 문자에 해당하는지 확인")
     @ParameterizedTest
     @CsvSource(value = {"o,true", "t,false", "lo,true"})
