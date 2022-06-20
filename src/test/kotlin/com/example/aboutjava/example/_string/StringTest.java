@@ -83,9 +83,10 @@ class StringTest {
     }
 
     @DisplayName("정규식을 이용한 패턴에 맞는 문자열 교체")
-    @Test
-    void replaceAll() {
-        assertThat("world".replaceAll("^w", "b")).isEqualTo("borld");
+    @ParameterizedTest
+    @CsvSource(value = {"^w,b,borld"})
+    void replaceAll(String regex, String replacement, String result) {
+        assertThat("world".replaceAll(regex, replacement)).isEqualTo(result);
     }
 
     @DisplayName("정규식을 이용한 패턴에 맞는 처음부터 문자열 교체")
