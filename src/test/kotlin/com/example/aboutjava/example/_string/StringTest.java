@@ -128,9 +128,10 @@ class StringTest {
         assertThat("hello".endsWith(suffix)).isEqualTo(hasSuffix);
     }
 
-    @DisplayName("aaa")
-    @Test
-    void dsfds() {
-        assertThat()
+    @DisplayName("문자열의 동등성 확인")
+    @ParameterizedTest
+    @ValueSource(strings = {"APPLE", "BEER"})
+    void equals(String input) {
+        assertThat(input.equals(input)).isTrue();
     }
 }
