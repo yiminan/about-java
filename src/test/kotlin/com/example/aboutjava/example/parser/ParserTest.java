@@ -19,7 +19,7 @@ class ParserTest {
     @ParameterizedTest
     @ValueSource(strings = {"name:Ryan\nage:20\nsex:M", "{name:Ryan\nage:20\nsex:M}", "{name: Ryan\nage: 20\nsex: M}"})
     void convertKeyValueForYmlToObject(String ymlKeyValues) {
-        ymlKeyValues = ymlKeyValues.replaceAll("[ {}]+", "");
+        ymlKeyValues = ymlKeyValues.replaceAll("[ |{}]+", "");
 
         Map<String, String> map = Arrays.stream(ymlKeyValues.split("[\\n]+"))
                 .collect(Collectors.toMap(a -> a.substring(0, a.indexOf(":")), a -> a.substring(a.indexOf(":") + 1), (a1, b) -> b));
