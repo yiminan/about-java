@@ -109,7 +109,7 @@ class StringTest {
         assertThat("abcd".contains(matchChar)).isEqualTo(result);
     }
 
-    @DisplayName("리터럴 문자와 생성자 String 구분")
+    @DisplayName("리터럴 문자와 생성자 String 동등성 판단")
     @Test
     void newStringWithLiteral() {
         assertThat("Plane").isEqualTo(new String("Plane"));
