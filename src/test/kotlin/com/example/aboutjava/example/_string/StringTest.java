@@ -134,4 +134,11 @@ class StringTest {
     void equals(String input) {
         assertThat(input.equals(input)).isTrue();
     }
+
+    @DisplayName("문자열을 비교하여 더 앞선 문자열이 무엇인지 비교")
+    @ParameterizedTest
+    @CsvSource(value = {"a,b,-1", "b,a,1", "a,a,0"})
+    void compareTo(String comparison1, String comparison2, int result) {
+        assertThat(comparison1.compareTo(comparison2)).isEqualTo(result);
+    }
 }
