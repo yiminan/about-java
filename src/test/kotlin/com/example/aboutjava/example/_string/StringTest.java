@@ -130,7 +130,7 @@ class StringTest {
 
     @DisplayName("문자열의 동등성 확인")
     @ParameterizedTest
-    @ValueSource(strings = {"APPLE", "BEER", "CAR"})
+    @ValueSource(strings = {"APPLE", "BEER", "CAR", "apple"})
     void equals(String input) {
         assertThat(input.equals(input)).isTrue();
     }
