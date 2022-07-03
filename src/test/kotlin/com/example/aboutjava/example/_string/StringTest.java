@@ -76,7 +76,7 @@ class StringTest {
         assertThat(input.trim()).isEqualTo("hello");
     }
 
-    @DisplayName("문자열의 특정 문자 교체")
+    @DisplayName("정규식 X ,문자열의 특정 문자 교체")
     @Test
     void replace() {
         assertThat("world".replace("ld", "d")).isEqualTo("word");
