@@ -2,6 +2,9 @@ package com.example.aboutjava.example._boolean;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,9 +18,10 @@ class BooleanTest {
         assertThat(Boolean.FALSE.equals(null)).isTrue();
     }
 
-    @DisplayName("Boolean의 비교를 위한 compareTo")
-    @Test
-    void compareTo() {
-        Boolean.TRUE.compareTo();
+    @DisplayName("Boolean의 비교를 위한 compareTo 활용")
+    @ParameterizedTest
+    @CsvSource(value = {"true,0", "false,1"})
+    void compareTo(boolean value, int result) {
+        assertThat(Boolean.TRUE.compareTo(value)).isEqualTo(result);
     }
 }
