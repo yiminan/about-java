@@ -14,4 +14,10 @@ class BooleanTest {
         // when & then
         assertThat(Boolean.FALSE.equals(null)).isTrue();
     }
+
+    @DisplayName("Boolean의 비교를 위한 compareTo")
+    @Test
+    void compareTo() {
+        Boolean.TRUE.compareTo();
+    }
 }
