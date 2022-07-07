@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,10 +13,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BooleanTest {
 
     @DisplayName("Boolean의 equals가 null을 비교하여 false로 내보낼 수 있는지 여부 확인")
-    @Test
-    void equalsByNullTest() {
+    @ParameterizedTest
+    @NullAndEmptySource
+    void equalsByNullTest(String input) {
         // when & then
-        assertThat(Boolean.FALSE.equals(null)).isTrue();
+        assertThat(Boolean.FALSE.equals(input)).isFalse();
     }
 
     @DisplayName("Boolean의 비교를 위한 compareTo 활용")
