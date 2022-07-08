@@ -6,5 +6,5 @@ Example production & test codes for JAVA
 
 * "Elegant Object"
 * "Effective Java"
-* "Java Examples"
+* "Java Custom Code Examples"
 * "Java Library Examples"
