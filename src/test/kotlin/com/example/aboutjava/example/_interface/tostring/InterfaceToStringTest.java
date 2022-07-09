@@ -11,11 +11,8 @@ class InterfaceToStringTest {
     @DisplayName("구현 클래스에서 toString()을 상속하고 있는지 여부 확인")
     @Test
     void useToStringWithInterfaceTest() {
-        // given
-        Animal lion = new Lion();
-        Animal bear = new Bear();
         // when & then
-        assertThat(lion).hasToString("Lion");
-        assertThat(bear).hasToString("Bear");
+        assertThat((Animal) new Lion()).hasToString("Lion");
+        assertThat((Animal) new Bear()).hasToString("Bear");
     }
 }
