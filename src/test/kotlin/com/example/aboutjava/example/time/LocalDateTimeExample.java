@@ -11,6 +11,14 @@ import org.junit.jupiter.api.Test;
 
 class LocalDateTimeExample {
 
+    @DisplayName("LocalDateTime으로 현재 시간")
+    @Test
+    void now() {
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
+
+        assertThat(now).isInstanceOf(java.time.LocalDateTime.class);
+    }
+
     @DisplayName("ZoneOffset과 ZoneId를 이용한 Instant 생성")
     @Test
     void createInstantByZoneOffsetOrZoneId() {
