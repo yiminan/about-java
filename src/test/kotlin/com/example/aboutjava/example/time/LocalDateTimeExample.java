@@ -35,4 +35,15 @@ class LocalDateTimeExample {
 
         assertThat(utcPlus9DateTime).isEqualTo(asiaSeoulDateTime);
     }
+
+    @DisplayName("LocalDateTime 에서 N년을 추가")
+    @Test
+    void plusYears() {
+        int plusYear = 10;
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
+
+        LocalDateTime nowPlus10Years = now.plusYears(plusYear);
+
+        assertThat(nowPlus10Years.getYear()).isEqualTo(now.getYear() + plusYear);
+    }
 }
