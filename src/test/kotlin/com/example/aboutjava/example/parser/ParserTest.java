@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 class ParserTest {
 
-    @DisplayName("yml 형식의 Key,Value를 객체로 변경")
+    @DisplayName("yml 형식의 Key,Value를 특정 객체 인스턴스로 변경")
     @ParameterizedTest
     @ValueSource(strings = {"name:Ryan\nage:20\nsex:M", "{name:Ryan\nage:20\nsex:M}", "{name: Ryan\nage: 20\nsex: M}"})
     void convertKeyValueForYmlToObject(String ymlKeyValues) {
