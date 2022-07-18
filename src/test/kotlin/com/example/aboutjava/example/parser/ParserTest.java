@@ -18,7 +18,7 @@ class ParserTest {
     void convertKeyValueForYmlToObject(String ymlKeyValues) {
         ymlKeyValues = ymlKeyValues.replaceAll("[ |{}]+", "");
 
-        Map<String, String> map = Arrays.stream(ymlKeyValues.split("[\\n]+"))
+        Map<String, String> map = Arrays.stream(ymlKeyValues.split("\\n+"))
                 .collect(Collectors.toMap(a -> a.substring(0, a.indexOf(":")), a -> a.substring(a.indexOf(":") + 1), (a1, b) -> b));
 
         ObjectMapper objectMapper = new ObjectMapper();
