@@ -46,4 +46,15 @@ class LocalDateTimeExample {
 
         assertThat(nowPlus10Years.getYear()).isEqualTo(now.getYear() + plusYear);
     }
+
+    @DisplayName("LocalDateTime 에서 N년을 감소")
+    @Test
+    void minusYears() {
+        int minusYear = 10;
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
+
+        LocalDateTime nowMinus10Years = now.minusYears(minusYear);
+
+        assertThat(nowMinus10Years.getYear()).isEqualTo(now.getYear() - minusYear);
+    }
 }
