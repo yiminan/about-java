@@ -9,7 +9,7 @@ import java.time.ZoneOffset;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class LocalDateTimeExample {
+class LocalDateTimeTest {
 
     @DisplayName("LocalDateTime으로 현재 시간")
     @Test
