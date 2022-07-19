@@ -57,4 +57,13 @@ class LocalDateTimeTest {
 
         assertThat(nowMinus10Years.getYear()).isEqualTo(now.getYear() - minusYear);
     }
+
+    @DisplayName("LocalDateTime 에서 N 달을 증가")
+    @Test
+    void plusMonths() {
+        int one = 1;
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
+
+        assertThat(now.plusMonths(one).getMonthValue()).isEqualTo((now.getMonthValue() + one) % 12);
+    }
 }
