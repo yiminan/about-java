@@ -8,6 +8,8 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class LocalDateTimeTest {
 
@@ -59,11 +61,11 @@ class LocalDateTimeTest {
     }
 
     @DisplayName("LocalDateTime 에서 N 달을 증가")
-    @Test
-    void plusMonths() {
-        int one = 1;
+    @ParameterizedTest
+    @ValueSource(ints = {1, 6, 13, 24})
+    void plusMonths(int month) {
         java.time.LocalDateTime now = java.time.LocalDateTime.now();
 
-        assertThat(now.plusMonths(one).getMonthValue()).isEqualTo((now.getMonthValue() + one) % 12);
+        assertThat(now.plusMonths(month).getMonthValue()).isEqualTo((now.getMonthValue() + month) % 12);
     }
 }
