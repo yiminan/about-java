@@ -50,14 +50,14 @@ class LocalDateTimeTest {
     }
 
     @DisplayName("LocalDateTime 에서 N년을 감소")
-    @Test
-    void minusYears() {
-        int minusYear = 10;
+    @ParameterizedTest
+    @ValueSource(ints = {1, 6, 13, 24})
+    void minusYears(int year) {
         java.time.LocalDateTime now = java.time.LocalDateTime.now();
 
-        LocalDateTime nowMinus10Years = now.minusYears(minusYear);
+        LocalDateTime nowMinus10Years = now.minusYears(year);
 
-        assertThat(nowMinus10Years.getYear()).isEqualTo(now.getYear() - minusYear);
+        assertThat(nowMinus10Years.getYear()).isEqualTo(now.getYear() - year);
     }
 
     @DisplayName("LocalDateTime 에서 N 달을 증가")
