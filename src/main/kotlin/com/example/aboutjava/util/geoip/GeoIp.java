@@ -1,4 +1,4 @@
-package com.example.aboutjava.util;
+package com.example.aboutjava.util.geoip;
 
 import java.io.Serializable;
 import java.util.StringJoiner;
