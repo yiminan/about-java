@@ -17,6 +17,8 @@ repositories {
 }
 
 dependencies {
+    implementation("com.maxmind.geoip2:geoip2:2.16.1")// todo: JDK 1.8 이후부터 상위 버전 변경가능
+
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
