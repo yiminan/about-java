@@ -26,14 +26,8 @@ public final class GeoIpUtil {
 
     public static GeoIp getLocation(String ip) {
         try {
-            InetAddress ipAddress = InetAddress.getByName(ip);
-            CityResponse response = dbReader.city(ipAddress);
+            CityResponse response = dbReader.city(InetAddress.getByName(ip));
             String country = response.getCountry().getIsoCode();
-            String accessSubdivision = response.getSubdivisions()
-                    .stream()
-                    .map(v -> v.getNames().get("en"))
-                    .findFirst()
-                    .orElse(null);
             String cityName = response.getCity().getName();
             String postal = response.getPostal().getCode();
             String timezone = response.getLocation().getTimeZone();
