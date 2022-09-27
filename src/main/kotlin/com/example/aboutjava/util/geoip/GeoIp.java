@@ -1,5 +1,6 @@
 package com.example.aboutjava.util.geoip;
 
+import com.maxmind.geoip2.model.CityResponse;
 import java.io.Serializable;
 import java.util.StringJoiner;
 
@@ -24,6 +25,16 @@ public class GeoIp implements Serializable {
         this.timezone = timezone;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public static GeoIp of(String ip, CityResponse response) {
+        String country = response.getCountry().getIsoCode();
+        String cityName = response.getCity().getName();
+        String postal = response.getPostal().getCode();
+        String timezone = response.getLocation().getTimeZone();
+        String latitude = response.getLocation().getLatitude().toString();
+        String longitude = response.getLocation().getLongitude().toString();
+        return new GeoIp(ip, country, cityName, postal, timezone, latitude, longitude);
     }
 
     public String getIpAddress() {

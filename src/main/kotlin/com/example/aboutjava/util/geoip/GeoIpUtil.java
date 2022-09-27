@@ -2,7 +2,6 @@ package com.example.aboutjava.util.geoip;
 
 import com.maxmind.geoip2.DatabaseReader;
 import com.maxmind.geoip2.exception.GeoIp2Exception;
-import com.maxmind.geoip2.model.CityResponse;
 import java.io.IOException;
 import java.net.InetAddress;
 import org.slf4j.Logger;
@@ -26,14 +25,7 @@ public final class GeoIpUtil {
 
     public static GeoIp getLocation(String ip) {
         try {
-            CityResponse response = dbReader.city(InetAddress.getByName(ip));
-            String country = response.getCountry().getIsoCode();
-            String cityName = response.getCity().getName();
-            String postal = response.getPostal().getCode();
-            String timezone = response.getLocation().getTimeZone();
-            String latitude = response.getLocation().getLatitude().toString();
-            String longitude = response.getLocation().getLongitude().toString();
-            return new GeoIp(ip, country, cityName, postal, timezone, latitude, longitude);
+            return GeoIp.of(ip, dbReader.city(InetAddress.getByName(ip)));
         } catch (IOException e) {
             log.error("Unknown Host", e);
         } catch (GeoIp2Exception e) {
