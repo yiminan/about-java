@@ -16,8 +16,7 @@ public class GeoIp implements Serializable {
     private final String latitude;
     private final String longitude;
 
-    public GeoIp(String ip, String country, String city, String postal, String timezone,
-            String latitude, String longitude) {
+    public GeoIp(String ip, String country, String city, String postal, String timezone, String latitude, String longitude) {
         this.ip = ip;
         this.country = country;
         this.city = city;
