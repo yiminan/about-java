@@ -1,6 +1,9 @@
 package com.example.aboutjava.effectivejava.item18;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * "Item 18 - 상속보다는 컴포지션(구성)을 사용해야합니다"<p>

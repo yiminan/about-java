@@ -1,6 +1,10 @@
 package com.example.aboutjava.effectivejava.item3;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /**
  * 싱글턴 클래스의 객체를 직렬화 후, 역직렬화 했을 때 싱글턴이 사용되는지 여부 확인 예시<p>

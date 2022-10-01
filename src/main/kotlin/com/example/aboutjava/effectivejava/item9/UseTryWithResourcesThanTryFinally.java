@@ -1,6 +1,7 @@
 package com.example.aboutjava.effectivejava.item9;
 
-import java.io.*;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * "try-finally보다는 try-with-resources를 사용해야합니다."<p>
