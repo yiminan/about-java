@@ -21,9 +21,20 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
         }
 
         /**
+         * Bad
          * 결함이 있는 형태의 메서드
          */
         void pushAll(Iterable<E> src) {
+            for (E e : src) {
+                push(e);
+            }
+        }
+
+        /**
+         * Good
+         * 와일드 카드를 활용한 보완된 자료형 사용
+         */
+        void pushAllWithWildcard(Iterable<? extends E> src) {
             for (E e : src) {
                 push(e);
             }
