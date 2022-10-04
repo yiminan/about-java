@@ -12,7 +12,7 @@ import net.bytebuddy.dynamic.scaffold.MethodGraph.Linked;
  */
 class IncreaseApiFlexibilityByUsingQualifyingWildcard {
 
-    static class Stack<E> {
+    private static class Stack<E> {
 
         private LinkedList<E> elements;
 
