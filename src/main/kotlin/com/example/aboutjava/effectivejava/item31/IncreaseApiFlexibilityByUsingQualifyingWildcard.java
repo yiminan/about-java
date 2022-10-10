@@ -40,6 +40,9 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
             elements.add(element);
         }
 
+        /**
+         * Bad 결함이 있는 형태의 메서드
+         */
         void popAll(Collection<E> dst) {
             while (!elements.isEmpty()) {
                 dst.add(pop());
