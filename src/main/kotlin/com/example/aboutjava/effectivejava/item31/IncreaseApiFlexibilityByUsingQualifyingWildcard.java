@@ -53,6 +53,15 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
         }
 
         /**
+         * Good 와일드 카드를 활용한 보완된 자료형 사용
+         */
+        void popAllWithWildcard(Collection<? super E> dst) {
+            while (!elements.isEmpty()) {
+                dst.add(pop());
+            }
+        }
+
+        /**
          * Pop element in stack
          */
         E pop() {
