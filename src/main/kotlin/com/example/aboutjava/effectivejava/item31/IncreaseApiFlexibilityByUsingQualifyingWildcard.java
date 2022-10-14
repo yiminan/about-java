@@ -64,7 +64,7 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
         /**
          * Pop element in stack
          */
-        E pop() {
+        private E pop() {
             return elements.pop();
         }
     }
