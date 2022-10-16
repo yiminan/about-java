@@ -39,7 +39,7 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
         /**
          * Push element in stack
          */
-        void push(E element) {
+        private void push(E element) {
             elements.add(element);
         }
 
