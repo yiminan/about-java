@@ -12,6 +12,9 @@ import java.util.LinkedList;
  * 펙스(PECS): producer-extends, consumer-super<p>
  * 매개변수화 타입 T가 생산자라면 <? extends T> 를 사용하고,<p>
  * 매개변수화 타입 T가 소비자라면 <? super T> 를 사용하면 됩니다.<p>
+ * Examples)<p>
+ * Stack 의 pushAll 메소드는 Stack 을 소비하는 메소드이므로 <? super E> 를 사용합니다.<p>
+ * Stack 의 popAll 메소드는 Stack 을 생산하는 메소드이므로 <? extends E> 를 사용합니다.<p>
  */
 class IncreaseApiFlexibilityByUsingQualifyingWildcard {
 
