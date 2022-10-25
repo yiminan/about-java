@@ -40,6 +40,7 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
 
         /**
          * Good 와일드 카드를 활용한 보완된 자료형 사용
+         * 매개변수 src는 Stack 에서 사용할 E 인스턴스를 생산하므로 <? extends E> 를 사용합니다.
          */
         void pushAllWithWildcard(Iterable<? extends E> src) {
             for (E e : src) {
