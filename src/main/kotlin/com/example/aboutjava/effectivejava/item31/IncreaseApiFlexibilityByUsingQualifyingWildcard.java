@@ -67,6 +67,7 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
         /**
          * Good 와일드 카드를 활용한 보완된 자료형 사용
          * 유연성을 극대화하려면, 원소의 생산자나 소비자용 입력 매개변수에 와일드카드 타입을 사용하면 됩니다.
+         * 매개변수 dst 는 Stack 에서 사용할 E 인스턴스를 소비하므로 <? super E> 를 사용합니다.
          */
         void popAllWithWildcard(Collection<? super E> dst) {
             while (!elements.isEmpty()) {
