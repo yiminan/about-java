@@ -17,7 +17,6 @@ import java.util.LinkedList;
  * Stack 의 popAll 메소드는 Stack 을 생산하는 메소드이므로 <? extends E> 를 사용합니다.<p>
  * Iterable<? extends E> 는 Iterable<E> 의 하위 타입이므로, Iterable<? extends E> 를 매개변수로 받는 메소드는 Iterable<E> 의 모든 하위 타입을 받을 수 있습니다.<p>
  * Collection<? super E> 는 Collection<E> 의 상위 타입이므로, Collection<? super E> 를 매개변수로 받는 메소드는 Collection<E> 의 모든 상위 타입을 받을 수 있습니다.<p>
- * ...<p> // todo: 추가해야함
  */
 class IncreaseApiFlexibilityByUsingQualifyingWildcard {
 
