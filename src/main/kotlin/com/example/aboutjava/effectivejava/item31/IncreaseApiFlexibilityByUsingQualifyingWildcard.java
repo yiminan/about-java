@@ -25,7 +25,7 @@ class IncreaseApiFlexibilityByUsingQualifyingWildcard {
         private LinkedList<E> elements;
 
         private Stack() {
-            elements = new LinkedList<>();
+            elements = new LinkedList<>(); // LinkedList 가 성능에 최적화 되진 않지만, 활용 메서드가 많아서 사용되었습니다.
         }
 
         /**
