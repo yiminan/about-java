@@ -10,6 +10,7 @@ import java.util.LinkedList;
  * <p>
  * 와일드타입을 써야하는 공식<p>
  * 펙스(PECS): producer-extends, consumer-super<p>
+ * PECS 공식은 와일드카드 타입을 사용하는 기본 원칙이다.<p>
  * 매개변수화 타입 T가 생산자라면 <? extends T> 를 사용하고,<p>
  * 매개변수화 타입 T가 소비자라면 <? super T> 를 사용하면 됩니다.<p>
  * Examples)<p>
