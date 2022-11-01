@@ -18,6 +18,12 @@ import java.util.LinkedList;
  * Stack 의 popAll 메소드는 Stack 을 생산하는 메소드이므로 <? extends E> 를 사용합니다.<p>
  * Iterable<? extends E> 는 Iterable<E> 의 하위 타입이므로, Iterable<? extends E> 를 매개변수로 받는 메소드는 Iterable<E> 의 모든 하위 타입을 받을 수 있습니다.<p>
  * Collection<? super E> 는 Collection<E> 의 상위 타입이므로, Collection<? super E> 를 매개변수로 받는 메소드는 Collection<E> 의 모든 상위 타입을 받을 수 있습니다.<p>
+ * 핵심 정리)<p>
+ * 조금 복잡하더라도 와일드카드 타입을 적용하면 API가 유연해진다.<p>
+ * 그래서 널리 쓰일 라이브러리를 작성한다면 와일드 카드 타입을 적절히 사용해주어야한다.<p>
+ * PECS 공식을 기억해야한다.<p>
+ * 즉, 생산자(producer)는 extends를 소비자(consumer)는 super를 사용한다.<p>
+ * Comparable 과 Comparator 는 모두 소비자라는 사실도 잊지 않아야 한다.
  */
 class IncreaseApiFlexibilityByUsingQualifyingWildcard {
 
