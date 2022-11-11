@@ -9,9 +9,9 @@ import java.util.List;
  * 가변인수 메서드를 호출하면 가변인수를 담기 위한 배열이 자동으로 하나 만들어진다.<p>
  * 메서드를 선언할 때 실체화 불가 타입으로 varargs 매개변수를 선언하면 컴파일러가 경고를 보낸다.<p>
  * 가변인수 메서드를 호출할 때도 varargs 매개변수가 실체화 불가 타입으로 추론되면, 그 호출에 대해서도 경고를 낸다.<p>
+ * 
  */
 class BeCarefulToUseGenericAndMutableVariableConsistently {
-
     static void dangerous(List<String>... stringLists) {
         List<Integer> intList = List.of(42);
         Object[] objects = stringLists;
