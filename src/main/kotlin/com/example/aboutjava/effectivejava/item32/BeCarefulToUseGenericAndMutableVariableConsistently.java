@@ -19,4 +19,11 @@ class BeCarefulToUseGenericAndMutableVariableConsistently {
         objects[0] = intList; // 힙 오염 발생
         String s = stringLists[0].get(0); // ClassCastException
     }
+
+    /**
+     * Non-Safety: 자신의 제네릭 매개변수 배열의 참조를 노출한다.
+     */
+    static <T> T[] toArray(T... args) {
+        return args;
+    }
 }
