@@ -10,6 +10,7 @@ import java.util.List;
  * 메서드를 선언할 때 실체화 불가 타입으로 varargs 매개변수를 선언하면 컴파일러가 경고를 보낸다.<p>
  * 가변인수 메서드를 호출할 때도 varargs 매개변수가 실체화 불가 타입으로 추론되면, 그 호출에 대해서도 경고를 낸다.<p>
  * 제네릭 타입 시스템이 약속한 타입 안전성을 유지시키야하는데, '제네릭과 varargs 를 혼용하면 타입 안전성이 깨집니다.'<p>
+ * 타입 안전성이 깨지니 제네릭 varargs 배열 매개변수에 값을 저장하는 것은 안전하지 않습니다.<p>
  */
 class BeCarefulToUseGenericAndMutableVariableConsistently {
     static void dangerous(List<String>... stringLists) {
