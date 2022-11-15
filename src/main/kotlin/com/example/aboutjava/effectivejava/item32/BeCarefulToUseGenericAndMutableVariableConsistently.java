@@ -1,6 +1,7 @@
 package com.example.aboutjava.effectivejava.item32;
 
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Item 32 - 제네릭과 가변인수를 함께 쓸 때는 신중해야합니다.<p>
@@ -21,9 +22,22 @@ class BeCarefulToUseGenericAndMutableVariableConsistently {
     }
 
     /**
-     * Non-Safety: 자신의 제네릭 매개변수 배열의 참조를 노출한다.
+     * Non-Safety: 자신의 제네릭 매개변수 배열의 참조를 노출합니다.
      */
     static <T> T[] toArray(T... args) {
         return args;
+    }
+
+    /**
+     * T 타입 인수 3개를 받아 그중 2개를 무작위로 골라 담은 배열을 반환합니다.
+     * 제네릭 가변인수를 받는 toArray 메서드를 호출한다는 점만 빼면, 위험하지 않고 경고도 내지 않을 것입니다.
+     */
+    static <T> T[] pickTwo(T a, T b, T c) {
+        switch (ThreadLocalRandom.current().nextInt(3)) {
+            case 0: return toArray(a, b);
+            case 1: return toArray(a, c);
+            case 2: return toArray(b, c);
+        }
+        throw new AssertionError(); // 도달할 수 없다.
     }
 }
