@@ -13,6 +13,10 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 class BeCarefulToUseGenericAndMutableVariableConsistently {
 
+    public static void main(String[] args) {
+
+    }
+
     static void dangerous(List<String>... stringLists) {
         List<Integer> intList = List.of(42);
         Object[] objects = stringLists;
