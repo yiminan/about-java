@@ -1,6 +1,6 @@
 # about-java
 
-Example production & test codes for JAVA with libraries
+Example production & test codes for Java/Kotlin with libraries
 
 ## Reference Books
 
