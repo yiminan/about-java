@@ -14,13 +14,8 @@ import java.util.concurrent.ThreadLocalRandom;
 class BeCarefulToUseGenericAndMutableVariableConsistently {
 
     public static void main(String[] args) {
-        // 제네릭과 가변인수를 혼용하면 타입 안전성이 깨집니다.
-        // 타입 안전성이 깨지니 제네릭 varargs 배열 매개변수에 값을 저장하는 것은 안전하지 않습니다.
-        List<String>[] stringLists = new List[1]; // (1) 컴파일 오류
-        List<Integer> intList = List.of(42);
-        Object[] objects = stringLists;
-        objects[0] = intList; // (2) 런타임 오류
-        String s = stringLists[0].get(0); // (3) 런타임 오류
+        // 컴파일은 문제없지만, 실행하려면 ClassCastException이 발생합니다.
+        String[] attributes = pickTwo("좋은", "빠른", "저렴한");
     }
 
     static void dangerous(List<String>... stringLists) {
