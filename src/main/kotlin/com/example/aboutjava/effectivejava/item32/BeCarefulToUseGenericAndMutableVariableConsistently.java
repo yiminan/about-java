@@ -43,8 +43,9 @@ class BeCarefulToUseGenericAndMutableVariableConsistently {
                 return toArray(a, c);
             case 2:
                 return toArray(b, c);
+            default:
+                throw new AssertionError();
         }
-        throw new AssertionError(); // 도달할 수 없다.
     }
 
     /**
