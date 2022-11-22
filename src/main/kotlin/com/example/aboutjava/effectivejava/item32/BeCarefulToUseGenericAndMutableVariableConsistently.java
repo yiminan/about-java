@@ -49,7 +49,8 @@ class BeCarefulToUseGenericAndMutableVariableConsistently {
     }
 
     /**
-     * 제네릭 varargs 매개변수를 안전하게 사용하는 메서드
+     * "제네릭 varargs 매개변수를 안전하게 사용하는 메서드"
+     * 제네릭이나 매개변수화 타입의 varargs 매개변수를 받는 모든 메서드에 @SafeVarargs 애너테이션을 달아야 합니다.
      */
     @SafeVarargs
     static <T> List<T> flatten(List<? extends T>... lists) {
