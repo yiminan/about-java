@@ -53,7 +53,18 @@ class BeCarefulToUseGenericAndMutableVariableConsistently {
      * 제네릭이나 매개변수화 타입의 varargs 매개변수를 받는 모든 메서드에 @SafeVarargs 애너테이션을 달아야 합니다.
      */
     @SafeVarargs
-    static <T> List<T> flatten(List<? extends T>... lists) {
+    static <T> List<T> flatten1(List<? extends T>... lists) {
+        List<T> result = new ArrayList<>();
+        for (List<? extends T> list : lists) {
+            result.addAll(list);
+        }
+        return result;
+    }
+
+    /**
+     * "Upper bounded wildcard"를 활용한 좋은 파라미터 타입 활용
+     */
+    static <T> List<T> flatten2(List<List<? extends T>> lists) {
         List<T> result = new ArrayList<>();
         for (List<? extends T> list : lists) {
             result.addAll(list);
