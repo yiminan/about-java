@@ -65,6 +65,7 @@ class BeCarefulToUseGenericAndMutableVariableConsistently {
      * "Upper bounded wildcard"를 활용한 좋은 파라미터 타입 활용
      * 상속된 타입이하로 한정하는 와일드카드 활용
      * 단, 와일드카드는 타입 안전성을 보장하지 않습니다.
+     * 타입 안정성을 보장하기 위해서는 Generic 을 활용해야 합니다.
      */
     static <T> List<T> flatten2(List<List<? extends T>> lists) {
         List<T> result = new ArrayList<>();
