@@ -5,6 +5,9 @@ package com.example.aboutjava.effectivejava.item33;
  */
 class ConsiderTypeSafeHeterogeneousContainer {
 
+    /**
+     * Type safe heterogeneous container pattern - API
+     */
     interface Favorites {
 
         public <T> void putFavorite(Class<T> type, T instance);
