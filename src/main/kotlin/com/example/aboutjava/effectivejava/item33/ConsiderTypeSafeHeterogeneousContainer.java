@@ -12,6 +12,6 @@ class ConsiderTypeSafeHeterogeneousContainer {
 
         public <T> void putFavorite(Class<T> type, T instance);
 
-        public <T> void getFavorite(Class<T> type);
+        public <T> T getFavorite(Class<T> type);
     }
 }
