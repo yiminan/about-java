@@ -16,4 +16,6 @@ class UseEnumTypeInsteadOfIntConstant {
     private static final int ORANGE_BLOOD = 2;
 
     enum Apple {FUJI, PIPPIN, GRANNY_SMITH}
+
+    enum Orange {NAVEL, TEMPLE, BLOOD}
 }
