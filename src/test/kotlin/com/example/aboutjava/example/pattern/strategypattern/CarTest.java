@@ -5,7 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("전략 패턴을 사용한 차 테스트")
+@DisplayName("전략 패턴을 사용한 차")
 class CarTest {
 
     @Test
