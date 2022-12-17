@@ -6,6 +6,7 @@ class RandomMovingStrategy implements MovingStrategy {
 
     private static final int RANDOM_RANGE = 10;
     private static final int MOVE_RESTRICT = 4;
+    private static final Random RANDOM = new Random();
 
     @Override
     public boolean movable() {
@@ -13,7 +14,6 @@ class RandomMovingStrategy implements MovingStrategy {
     }
 
     private int getGenerateRandomNumber() {
-        Random random = new Random();
-        return random.nextInt(RANDOM_RANGE);
+        return RANDOM.nextInt(RANDOM_RANGE);
     }
 }
