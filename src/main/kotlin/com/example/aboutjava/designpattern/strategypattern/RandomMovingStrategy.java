@@ -1,4 +1,4 @@
-package com.example.aboutjava.example.pattern.strategypattern;
+package com.example.aboutjava.designpattern.strategypattern;
 
 import java.util.Random;
 
