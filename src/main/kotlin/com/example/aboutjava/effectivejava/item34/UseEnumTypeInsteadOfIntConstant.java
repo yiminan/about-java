@@ -19,7 +19,7 @@ class UseEnumTypeInsteadOfIntConstant {
 
     enum Orange {NAVEL, TEMPLE, BLOOD}
 
-    enum Operation {
+    private enum Operation {
         PLUS("+") {
             public double apply(double x, double y) {
                 return x + y;
