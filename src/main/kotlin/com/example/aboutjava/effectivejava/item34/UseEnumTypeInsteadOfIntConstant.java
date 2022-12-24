@@ -15,9 +15,9 @@ class UseEnumTypeInsteadOfIntConstant {
     private static final int ORANGE_TEMPLE = 1;
     private static final int ORANGE_BLOOD = 2;
 
-    enum Apple {FUJI, PIPPIN, GRANNY_SMITH}
+    private enum Apple {FUJI, PIPPIN, GRANNY_SMITH}
 
-    enum Orange {NAVEL, TEMPLE, BLOOD}
+    private enum Orange {NAVEL, TEMPLE, BLOOD}
 
     private enum Operation {
         PLUS("+") {
