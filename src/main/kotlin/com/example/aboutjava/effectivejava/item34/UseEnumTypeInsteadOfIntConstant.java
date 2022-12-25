@@ -19,6 +19,9 @@ class UseEnumTypeInsteadOfIntConstant {
 
     private enum Orange {NAVEL, TEMPLE, BLOOD}
 
+    /**
+     * 상수별 메서드 구현을 활용한 열거 타입
+     */
     private enum Operation {
         PLUS("+") {
             public double apply(double x, double y) {
