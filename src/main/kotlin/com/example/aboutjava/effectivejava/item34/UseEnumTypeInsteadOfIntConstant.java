@@ -56,5 +56,7 @@ class UseEnumTypeInsteadOfIntConstant {
                     "symbol='" + symbol + '\'' +
                     '}';
         }
+
+        abstract double apply(double x, double y);
     }
 }
