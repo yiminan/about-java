@@ -60,4 +60,8 @@ class UseEnumTypeInsteadOfIntConstant {
 
         abstract double apply(double x, double y);
     }
+
+    private enum PayrollDay {
+
+    }
 }
