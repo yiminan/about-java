@@ -60,6 +60,9 @@ class UseEnumTypeInsteadOfIntConstant {
         abstract double apply(double x, double y);
     }
 
+    /**
+     * 전략 열거 타입 패턴
+     */
     private enum PayrollDay {
         MONDAY(PayType.WEEKDAY), TUESDAY(PayType.WEEKDAY), WEDNESDAY(PayType.WEEKDAY),
         THURSDAY(PayType.WEEKDAY), FRIDAY(PayType.WEEKDAY),
@@ -75,6 +78,9 @@ class UseEnumTypeInsteadOfIntConstant {
             return payType.pay(hoursWorked, payRate);
         }
 
+        /**
+         * 전략 열거 타입
+         */
         enum PayType {
             WEEKDAY {
                 int overtimePay(int minsWorked, int payRate) {
