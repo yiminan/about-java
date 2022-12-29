@@ -2,6 +2,8 @@ package com.example.aboutjava.effectivejava.item34;
 
 /**
  * Item 34 - int 상수 대신 열거 타입을 사용하라.<p>
+ * <p>
+ *
  */
 class UseEnumTypeInsteadOfIntConstant {
 
