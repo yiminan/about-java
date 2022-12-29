@@ -68,7 +68,7 @@ class UseEnumTypeInsteadOfIntConstant {
     }
 
     /**
-     * 전략 열거 타입 패턴
+     * 전략 열거 타입 패턴 **
      */
     private enum PayrollDay {
         MONDAY(PayType.WEEKDAY), TUESDAY(PayType.WEEKDAY), WEDNESDAY(PayType.WEEKDAY),
