@@ -9,7 +9,7 @@ public class UseInstanceFieldInsteadInOriginalMethod {
     /**
      * "잘못된 형태의 enum 사용 예" ordinal 메서드는 열거 타입 상수가 정의된 순서를 반환한다.<p> 동작은 하지만 유지보수에 끔찍하다.<p>
      */
-    private enum Ensemble {
+    private enum BadCase {
         SOLO, DUET, TRIO, QUARTET, QUINTET,
         SEXTET, SEPTET, OCTET, NONET, DECTET;
 
