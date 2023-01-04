@@ -20,7 +20,7 @@ public class UseInstanceFieldInsteadInOriginalMethod {
     }
 
     /**
-     * "잘사용된 형태의 enum 사용 예"
+     * "잘 사용된 형태의 enum 사용 예"
      */
     private enum GoodCase {
         SOLO(1), DUET(2), TRIO(3), QUARTET(4), QUINTET(5),
