@@ -3,6 +3,10 @@ package com.example.aboutjava.effectivejava.item35;
 /**
  * Item 35 - ordinal 인덱스 대신 인스턴스 필드를 사용하라.<p>
  * <p>
+ * Enum의 API 문서를 보면 ordinal에 대해 이렇게 쓰여 있다.<p>
+ * "대부분 프로그래머는 이 메서드를 쓸 일이 없다. <p>
+ * 이 메서드는 EnumSet과 EnumMap 같이 열거 타입 기반의 범용 자료 구조에 쓸 목적으로 설계되었다."<p>
+ * 따라서 이런 용도가 아니라면 ordinal 메서드는 절대 사용하지 말자.
  */
 public class UseInstanceFieldInsteadInOriginalMethod {
 
