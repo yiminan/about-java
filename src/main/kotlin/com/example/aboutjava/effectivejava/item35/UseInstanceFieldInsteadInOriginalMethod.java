@@ -8,7 +8,7 @@ package com.example.aboutjava.effectivejava.item35;
  * 이 메서드는 EnumSet과 EnumMap 같이 열거 타입 기반의 범용 자료 구조에 쓸 목적으로 설계되었다."<p>
  * 따라서 이런 용도가 아니라면 ordinal 메서드는 절대 사용하지 말자.
  */
-public class UseInstanceFieldInsteadInOriginalMethod {
+class UseInstanceFieldInsteadInOriginalMethod {
 
     /**
      * "잘못된 형태의 enum 사용 예" ordinal 메서드는 열거 타입 상수가 정의된 순서를 반환한다.<p> 동작은 하지만 유지보수에 끔찍하다.<p>
