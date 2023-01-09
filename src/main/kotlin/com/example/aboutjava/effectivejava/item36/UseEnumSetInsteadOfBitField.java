@@ -5,6 +5,9 @@ package com.example.aboutjava.effectivejava.item36;
  */
 class UseEnumSetInsteadOfBitField {
 
+    /**
+     * 비트 필드 열거 상수 - 구닥다리 기법!<p>
+     */
     private class Text {
         public static final int STYLE_BOLD = 1 << 0;
         public static final int STYLE_ITALIC = 1 << 1;
