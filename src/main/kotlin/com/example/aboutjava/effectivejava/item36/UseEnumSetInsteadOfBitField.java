@@ -10,7 +10,7 @@ class UseEnumSetInsteadOfBitField {
     /**
      * 비트 필드 열거 상수 - 구닥다리 기법!<p>
      */
-    private class OldText {
+    private static class OldText {
 
         public static final int STYLE_BOLD = 1 << 0;
         public static final int STYLE_ITALIC = 1 << 1;
@@ -22,6 +22,9 @@ class UseEnumSetInsteadOfBitField {
         }
     }
 
+    /**
+     * EnumSet - 비트 필드를 대체하는 현대적 기법!<p>
+     */
     private static class NewText {
 
         public enum Style {BOLD, ITALIC, UNDERLINE, STRIKETHROUGH}
