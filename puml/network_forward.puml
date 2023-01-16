@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber "<b>#.</b>"
+
+Client -> Server: GET /doc HTTP/1.1
+note left: Initial request
+
+Server --> Server: GET /v2/doc HTTP/1.1
+note right: Forward to new version
+
+Client <-- Server: HTTP/1.1 200 OK
+note right: Return resource representation
+
+@enduml
