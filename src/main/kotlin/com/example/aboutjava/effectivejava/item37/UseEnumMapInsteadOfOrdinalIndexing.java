@@ -22,4 +22,22 @@ class UseEnumMapInsteadOfOrdinalIndexing {
             return name;
         }
     }
+
+    private enum Phase {
+        SOLID, LIQUID, GAS;
+
+        public enum Transition {
+            MELT(SOLID, LIQUID), FREEZE(LIQUID, SOLID),
+            BOIL(LIQUID, GAS), CONDENSE(GAS, LIQUID),
+            SUBLIME(SOLID, GAS), DEPOSIT(GAS, SOLID);
+
+            private final Phase from;
+            private final Phase to;
+
+            Transition(Phase from, Phase to) {
+                this.from = from;
+                this.to = to;
+            }
+        }
+    }
 }
