@@ -6,5 +6,5 @@ Example production & test codes for Java/Kotlin with libraries
 
 * "Elegant Object"
 * "Effective Java"
-* "Java Custom Code Examples"
+* "Java Custom Code Library Examples"
 * "Java Library Examples"
