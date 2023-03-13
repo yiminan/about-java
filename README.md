@@ -2,7 +2,7 @@
 
 Example production & test codes for Java/Kotlin with libraries
 
-## Reference Books
+## Reference
 
 * "Elegant Object"
 * "Effective Java"
